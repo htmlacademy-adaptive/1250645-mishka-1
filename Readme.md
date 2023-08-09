@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Глеб](https://up.htmlacademy.ru/adaptive-individual/1/user/1250645).
-* Наставник: `Неизвестно`.
+* Наставник: [Артём Картавый](https://htmlacademy.ru/profile/id942149).
 
 ---
 
