@@ -8,7 +8,7 @@
     <header class="main-header">
       <nav class="navigation">
         <a class="navigation__logo">
-          <img class="navigation__logo-image" src="img/logo/logo-mobile.png" width="86" height="35" alt="Логотип магазина &laquo;Мишка&raquo;" decoding="async">
+          <img class="navigation__logo-image" src="img/logo/logo.png" width="86" height="35" alt="Логотип магазина &laquo;Мишка&raquo;" decoding="async">
         </a>
         <button class="navigation__menu-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="navigation__menu">
@@ -99,17 +99,35 @@
       </section>
       <section class="feedback">
         <h2 class="feedback__title">Отзывы</h2>
-        <div class="feedback__list">
-          <figure class="feedback__item">
+        <ul class="feedback__list">
+          <li class="feedback__item feedback__item--current">
             <blockquote class="feedback__quote">
               <p class="feedback__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
             </blockquote>
-            <figcaption class="feedback__author">
+            <p class="feedback__author">
               <b class="feedback__author-name">Анастасия Красильникова</b>
               <a class="feedback__author-link" href="#">@misssssiskras</a>
-            </figcaption>
-          </figure>
-        </div>
+            </p>
+          </li>
+          <li class="feedback__item">
+            <blockquote class="feedback__quote">
+              <p class="feedback__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+            </blockquote>
+            <p class="feedback__author">
+              <b class="feedback__author-name">Екатерина Красильникова</b>
+              <a class="feedback__author-link" href="#">@misssssiskras2</a>
+            </p>
+          </li>
+          <li class="feedback__item">
+            <blockquote class="feedback__quote">
+              <p class="feedback__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+            </blockquote>
+            <p class="feedback__author">
+              <b class="feedback__author-name">Елена Красильникова</b>
+              <a class="feedback__author-link" href="#">@misssssiskras3</a>
+            </p>
+          </li>
+        </ul>
         <button class="feedback__button feedback__button--previous" type="button">
           <span class="visually-hidden">Предыдущий отзыв</span>
         </button>
@@ -117,6 +135,29 @@
           <span class="visually-hidden">Следующий отзыв</span>
         </button>
         <a class="feedback__write button" href="#">Написать</button>
+      </section>
+      <section class="contacts">
+        <h2 class="contacts__title">Контакты</h2>
+        <address class="contacts__address">
+          <dl class="contacts__list">
+            <div class="contacts__item-wrapper">
+              <dt class="contacts__item">e-mail:</dt>
+              <dd class="contacts__item-value">
+                <a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+              </dd>
+            </div>
+            <div class="contacts__item-wrapper">
+              <dt class="contacts__item">адрес:</dt>
+              <dd class="contacts__item-value">
+                г. Санкт-Петербург<br>ул. Большая Конюшенная<br>д. 19/8, офис 101
+              </dd>
+            </div>
+          </dl>
+        </address>
+        <div class="contacts__map">
+          <img class="contacts__map-image" src="img/map.jpg" width="320" height="455" alt="Карта Санкт-Петербурга с отмеченным местоположением магазина &laquo;Мишка&raquo;">
+        </div>
+        <a class="contacts__write button" href="#">Напишите нам</button>
       </section>
     </main>
     <footer class="main-footer">
@@ -146,5 +187,27 @@
         </a>
       </p>
     </footer>
+    <div class="modal-to-cart">
+      <h2 class="modal-to-cart__title">Добавить в корзину</h2>
+      <form class="modal-to-cart__form" action="http://echo.htmlacademy.ru" method="post">
+        <p class="modal-to-cart__prompt">Выберите размер:</p>
+        <label class="modal-to-cart__label">
+          <input class="visually-hidden modal-to-cart__radio-input" type="radio" name="size" value="small" checked>
+          <span class="modal-to-cart__radio-marker"></span>
+          S
+        </label>
+        <label class="modal-to-cart__label">
+          <input class="visually-hidden modal-to-cart__radio-input" type="radio" name="size" value="medium">
+          <span class="modal-to-cart__radio-marker"></span>
+          M
+        </label>
+        <label class="modal-to-cart__label">
+          <input class="visually-hidden modal-to-cart__radio-input" type="radio" name="size" value="large">
+          <span class="modal-to-cart__radio-marker"></span>
+          L
+        </label>
+        <button class="modal-to-cart__button button--secondary" type="submit">Добавить</button>
+      </form>
+    </div>
   </body>
 </html>
