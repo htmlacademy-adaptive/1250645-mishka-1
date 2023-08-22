@@ -1,0 +1,23 @@
+.hero {
+  padding-top: 73px;
+  background-color: #f9f9f9;
+  background-image: url("../img/house-with-toys.jpg");
+  background-repeat: no-repeat;
+  background-position: center -16px;
+}
+
+.hero__categories {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero__title {
+  font-family: "Open Sans";
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  width: 260px;
+  margin: 0 auto 120px;
+  text-align: center;
+}
