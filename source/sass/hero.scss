@@ -1,9 +1,9 @@
 .hero {
-  padding-top: 73px;
+  padding-top: 72px;
   background-color: #f9f9f9;
   background-image: url("../img/house-with-toys.jpg");
   background-repeat: no-repeat;
-  background-position: center -16px;
+  background-position: center 0;
 }
 
 .hero__categories {
@@ -17,7 +17,6 @@
   font-size: 27px;
   font-weight: 700;
   line-height: 30px;
-  width: 260px;
-  margin: 0 auto 120px;
+  margin: 0 30px 120px;
   text-align: center;
 }

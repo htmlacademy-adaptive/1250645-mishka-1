@@ -8,10 +8,12 @@
   <body class="page-body">
     <header class="main-header">
       <nav class="navigation">
-        <a class="navigation__logo">
-          <img class="navigation__logo-image" src="img/logo/logo.svg" width="86" height="35" alt="Логотип магазина &laquo;Мишка&raquo;">
-        </a>
-        <button class="navigation__menu-toggle navigation__menu-toggle--open" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="navigation__content-wrapper">
+          <a class="navigation__logo">
+            <img class="navigation__logo-image" src="img/logo/logo.svg" width="86" height="35" alt="Логотип магазина &laquo;Мишка&raquo;">
+          </a>
+          <button class="navigation__menu-toggle navigation__menu-toggle--open" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        </div>
         <ul class="navigation__menu navigation__menu--hidden">
           <li class="navigation__menu-item">
             <a class="link" href="catalog.html">Каталог товаров</a>
@@ -20,7 +22,7 @@
             <a class="link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="navigation__menu-item">
-            <button class="button button--secondary" type="button">
+            <button class="navigation__menu-button button button--secondary" type="button">
               <svg class="button__icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.2" d="M17.6932 16.0568L14.2159 12.5795C15.2386 11.25 15.75 9.61364 15.75 7.875C15.75 3.47727 12.2727 0 7.875 0C3.47727 0 0 3.47727 0 7.875C0 12.2727 3.47727 15.75 7.875 15.75C9.61364 15.75 11.25 15.1364 12.5795 14.2159L16.0568 17.6932C16.2614 17.8977 16.4659 18 16.875 18C17.4886 18 18 17.4886 18 16.875C18 16.6705 17.8977 16.3636 17.6932 16.0568ZM2.25 7.875C2.25 4.80682 4.80682 2.25 7.875 2.25C10.9432 2.25 13.5 4.80682 13.5 7.875C13.5 10.9432 10.9432 13.5 7.875 13.5C4.80682 13.5 2.25 10.9432 2.25 7.875Z" fill="black"/>
               </svg>
@@ -41,7 +43,7 @@
     <main class="main-container">
       <h1 class="visually-hidden">Магазин &laquo;Мишка&raquo; - игрушки и предметы интерьера ручной работы</h1>
       <section class="hero">
-          <h2 class="hero__title">Милые штуки ручной работы&nbsp;для дома</h2>
+          <h2 class="hero__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h2>
           <ul class="hero__categories">
             <li class="hero__category ">
               <a class="category-link category-link--interior" href="#">
@@ -60,28 +62,30 @@
           </ul>
       </section>
       <section class="weekly-goods">
-        <hgroup class="weekly-goods__header">
-          <h2 class="weekly-goods__title">Товар недели</h2>
-          <p class="weekly-goods__subtitle">Вязаные корзинки</p>
-        </hgroup>
-        <p class="weekly-goods__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
-        <dl class="weekly-goods__properties">
-          <div class="weekly-goods__property-wrapper">
-            <dt class="weekly-goods__property">Цвет:</dt>
-            <dd class="weekly-goods__property-value">тиффани/серый</dd>
-          </div>
-          <div class="weekly-goods__property-wrapper">
-            <dt class="weekly-goods__property">Диаметр:</dt>
-            <dd class="weekly-goods__property-value">25см</dd>
-          </div>
-          <div class="weekly-goods__property-wrapper">
-            <dt class="weekly-goods__property">Высота:</dt>
-            <dd class="weekly-goods__property-value">15 см</dd>
-          </div>
-        </dl>
-        <img class="weekly-goods__image" src="img/knitted-baskets.jpg" width="260" height="315" alt="3 вязаные корзинки разного размера и разсцветки." decoding="async">
-        <b class="weekly-goods__price">Цена: 990 руб.</b>
-        <button class="weekly-goods__button button button--primary" type="button">Заказать</button>
+        <div class="weekly-goods__content-wrapper">
+          <hgroup class="weekly-goods__header">
+            <h2 class="weekly-goods__title">Товар недели</h2>
+            <p class="weekly-goods__subtitle">Вязаные корзинки</p>
+          </hgroup>
+          <p class="weekly-goods__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+          <dl class="weekly-goods__properties">
+            <div class="weekly-goods__property-wrapper">
+              <dt class="weekly-goods__property">Цвет:</dt>
+              <dd class="weekly-goods__property-value">тиффани/серый</dd>
+            </div>
+            <div class="weekly-goods__property-wrapper">
+              <dt class="weekly-goods__property">Диаметр:</dt>
+              <dd class="weekly-goods__property-value">25см</dd>
+            </div>
+            <div class="weekly-goods__property-wrapper">
+              <dt class="weekly-goods__property">Высота:</dt>
+              <dd class="weekly-goods__property-value">15 см</dd>
+            </div>
+          </dl>
+          <img class="weekly-goods__image" src="img/knitted-baskets.jpg" width="260" height="315" alt="3 вязаные корзинки разного размера и разсцветки." decoding="async">
+          <b class="weekly-goods__price">Цена: 990 руб.</b>
+          <button class="weekly-goods__button button button--primary" type="button">Заказать</button>
+        </div>
       </section>
       <section class="about">
         <h2 class="about__title">Коротко о нас:</h2>
@@ -107,43 +111,45 @@
         </ul>
       </section>
       <section class="feedback">
-        <h2 class="feedback__title">Отзывы</h2>
-        <ul class="feedback__list">
-          <li class="feedback__item feedback__item--current">
-            <blockquote class="feedback__quote">
-              <p class="feedback__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-            </blockquote>
-            <p class="feedback__author">
-              <b class="feedback__author-name">Анастасия Красильникова</b>
-              <a class="feedback__author-link" href="#">@misssssiskras</a>
-            </p>
-          </li>
-          <li class="feedback__item">
-            <blockquote class="feedback__quote">
-              <p class="feedback__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-            </blockquote>
-            <p class="feedback__author">
-              <b class="feedback__author-name">Екатерина Красильникова</b>
-              <a class="feedback__author-link" href="#">@misssssiskras2</a>
-            </p>
-          </li>
-          <li class="feedback__item">
-            <blockquote class="feedback__quote">
-              <p class="feedback__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-            </blockquote>
-            <p class="feedback__author">
-              <b class="feedback__author-name">Елена Красильникова</b>
-              <a class="feedback__author-link" href="#">@misssssiskras3</a>
-            </p>
-          </li>
-        </ul>
-        <button class="feedback__button feedback__button--previous" type="button">
-          <span class="visually-hidden">Предыдущий отзыв</span>
-        </button>
-        <button class="feedback__button feedback__button--next" type="button">
-          <span class="visually-hidden">Следующий отзыв</span>
-        </button>
-        <a class="feedback__write button" href="#">Написать</a>
+        <div class="feedback__content-wrapper">
+          <h2 class="feedback__title">Отзывы</h2>
+          <ul class="feedback__list">
+            <li class="feedback__item feedback__item--current">
+              <blockquote class="feedback__quote">
+                <p class="feedback__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+              </blockquote>
+              <p class="feedback__author">
+                <b class="feedback__author-name">Анастасия Красильникова</b>
+                <a class="feedback__author-link" href="#">@misssssiskras</a>
+              </p>
+            </li>
+            <li class="feedback__item">
+              <blockquote class="feedback__quote">
+                <p class="feedback__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+              </blockquote>
+              <p class="feedback__author">
+                <b class="feedback__author-name">Екатерина Красильникова</b>
+                <a class="feedback__author-link" href="#">@misssssiskras2</a>
+              </p>
+            </li>
+            <li class="feedback__item">
+              <blockquote class="feedback__quote">
+                <p class="feedback__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+              </blockquote>
+              <p class="feedback__author">
+                <b class="feedback__author-name">Елена Красильникова</b>
+                <a class="feedback__author-link" href="#">@misssssiskras3</a>
+              </p>
+            </li>
+          </ul>
+          <button class="feedback__button feedback__button--previous" type="button">
+            <span class="visually-hidden">Предыдущий отзыв</span>
+          </button>
+          <button class="feedback__button feedback__button--next" type="button">
+            <span class="visually-hidden">Следующий отзыв</span>
+          </button>
+          <a class="feedback__write button" href="#">Написать</a>
+        </div>
       </section>
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
@@ -219,4 +225,19 @@
       </form>
     </div>
   </body>
+  <script>
+    const btn = document.querySelector(".navigation__menu-toggle");
+    const menu = document.querySelector(".navigation__menu");
+    btn.addEventListener("click", () => {
+      if (btn.classList.contains("navigation__menu-toggle--open")) {
+        btn.classList.remove("navigation__menu-toggle--open");
+        btn.classList.add("navigation__menu-toggle--close");
+        menu.classList.remove("navigation__menu--hidden");
+      } else {
+        btn.classList.remove("navigation__menu-toggle--close");
+        btn.classList.add("navigation__menu-toggle--open");
+        menu.classList.add("navigation__menu--hidden");
+      }
+    });
+  </script>
 </html>

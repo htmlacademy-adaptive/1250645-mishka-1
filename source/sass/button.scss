@@ -1,0 +1,26 @@
+.button {
+  display: block;
+  background-color: #ffffff;
+  border: 2px solid #444444;
+  padding: 14px 20px;
+  color: #444;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &--secondary {
+    border: none;
+    text-transform: none;
+    padding: 0;
+    color: #000;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: initial;
+  }
+
+}
