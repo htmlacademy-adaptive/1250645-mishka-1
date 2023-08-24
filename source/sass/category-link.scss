@@ -1,40 +1,37 @@
 .category-link {
   display: block;
+  position: relative;
   font-family: "Open Sans", sans-serif;
   font-size: 19px;
   font-weight: 700;
   color: #ffffff;
   line-height: 24px;
-  padding: 24px 0 18px;
+  padding: 24px 30px 18px;
   text-decoration: none;
+  display: flex;
+  justify-content: space-between;
 
   &--interior {
     background-color: #63d1bb;
+
+    &::after {
+      content: url("../img/icon/lamp.svg");
+      opacity: 0.5;
+      margin-right: 6px;
+    }
+
   }
 
   &--toys {
     background-color: #56c3b2;
-  }
 
-}
 
-.category-link__wrapper {
-  width: 260px;
-  margin: 0 auto;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
+    &::after {
+      content: url("../img/icon/brick.svg");
+      opacity: 0.5;
+      margin-right: -3px;
+    }
 
-  &--interior:after {
-    content: url("../img/icon/lamp.svg");
-    opacity: 0.5;
-    margin-right: 6px;
-  }
-
-  &--toy:after {
-    content: url("../img/icon/brick.svg");
-    opacity: 0.5;
-    margin-right: -3px;
   }
 
 }

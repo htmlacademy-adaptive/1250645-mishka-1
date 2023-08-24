@@ -14,12 +14,12 @@
           </a>
           <button class="navigation__menu-toggle navigation__menu-toggle--open" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
-        <ul class="navigation__menu navigation__menu--hidden">
+        <ul class="navigation__menu navigation__menu--hidden text text--dark">
           <li class="navigation__menu-item">
-            <a class="link" href="catalog.html">Каталог товаров</a>
+            <a class="navigation__menu-link link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="navigation__menu-item">
-            <a class="link" href="form.html">Вязание на заказ</a>
+            <a class="navigation__menu-link link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="navigation__menu-item">
             <button class="navigation__menu-button button button--secondary" type="button">
@@ -30,7 +30,7 @@
             </button>
           </li>
           <li class="navigation__menu-item">
-            <a class="link" href="#">
+            <a class="navigation__menu-link link" href="#">
               <svg class="link__icon" width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.2" d="M20.1884 6.85716H16.6377L13.1884 0.380944C12.9855 -8.61287e-06 12.5797 -0.0952351 12.1739 0.0952412C11.7681 0.285717 11.6667 0.66667 11.8696 1.04762L15.0145 6.85716H5.7826L8.92753 1.04762C9.13043 0.66667 8.92754 0.285717 8.6232 0.0952412C8.2174 -0.0952351 7.8116 0.0952295 7.6087 0.380944L4.1594 6.85716H0.811583C0.405785 6.85716 0 7.14286 0 7.61905C0 8 0.304336 8.38094 0.811583 8.38094H1.01449L1.92753 11.2381C1.72463 11.3333 1.62317 11.5238 1.62317 11.8095C1.62317 12.1905 1.92753 12.4762 2.33332 12.4762L4.05797 18H16.942L18.6667 12.4762C19.0725 12.4762 19.3768 12.1905 19.3768 11.8095C19.3768 11.619 19.2754 11.3333 19.0725 11.2381L19.9855 8.38094H20.1884C20.5942 8.38094 21 8.09524 21 7.61905C21 7.14286 20.5942 6.85716 20.1884 6.85716ZM15.6232 16.4762H5.07247L3.85506 12.381H16.942L15.6232 16.4762ZM17.2464 10.9524H3.34782L2.53623 8.28573H18.058L17.2464 10.9524Z" fill="black"/>
               </svg>
@@ -43,32 +43,24 @@
     <main class="main-container">
       <h1 class="visually-hidden">Магазин &laquo;Мишка&raquo; - игрушки и предметы интерьера ручной работы</h1>
       <section class="hero">
-          <h2 class="hero__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h2>
+          <h2 class="hero__title text text--dominant text--dark">Милые штуки ручной работы&nbsp;для&nbsp;дома</h2>
           <ul class="hero__categories">
             <li class="hero__category ">
-              <a class="category-link category-link--interior" href="#">
-                <span class="category-link__wrapper category-link__wrapper--interior">
-                  Предметы<br>интерьера
-                </span>
-              </a>
+              <a class="category-link category-link--interior" href="#">Предметы<br>интерьера</a>
             </li>
             <li class="hero__category">
-              <a class="category-link category-link--toys" href="#">
-                <span class="category-link__wrapper category-link__wrapper--toy">
-                  Детские<br>игрушки
-                </span>
-              </a>
+              <a class="category-link category-link--toys" href="#">Детские<br>игрушки</a>
             </li>
           </ul>
       </section>
       <section class="weekly-goods">
         <div class="weekly-goods__content-wrapper">
           <hgroup class="weekly-goods__header">
-            <h2 class="weekly-goods__title">Товар недели</h2>
-            <p class="weekly-goods__subtitle">Вязаные корзинки</p>
+            <h2 class="weekly-goods__title text text--legend">Товар недели</h2>
+            <p class="weekly-goods__subtitle text text--dark">Вязаные корзинки</p>
           </hgroup>
-          <p class="weekly-goods__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
-          <dl class="weekly-goods__properties">
+          <p class="weekly-goods__description text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+          <dl class="weekly-goods__properties text text--weekly-specs">
             <div class="weekly-goods__property-wrapper">
               <dt class="weekly-goods__property">Цвет:</dt>
               <dd class="weekly-goods__property-value">тиффани/серый</dd>
@@ -83,8 +75,8 @@
             </div>
           </dl>
           <img class="weekly-goods__image" src="img/knitted-baskets.jpg" width="260" height="315" alt="3 вязаные корзинки разного размера и разсцветки." decoding="async">
-          <b class="weekly-goods__price">Цена: 990 руб.</b>
-          <button class="weekly-goods__button button button--primary" type="button">Заказать</button>
+          <b class="weekly-goods__price text text--price">Цена: 990 руб.</b>
+          <button class="weekly-goods__button button button--primary text text--button" type="button">Заказать</button>
         </div>
       </section>
       <section class="about">
