@@ -3,12 +3,6 @@
   padding: 21px 30px 22px;
 }
 
-.navigation__content-wrapper {
-  // width: 260px;
-  // margin: 0 30px;
-  // position: relative;
-}
-
 .navigation__logo {
   display: block;
   width: 86px;
@@ -52,10 +46,6 @@
   top: 100%;
   left:0;
   right:0;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px;
   z-index: 1;
 
   &--hidden {

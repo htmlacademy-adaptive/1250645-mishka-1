@@ -6,13 +6,46 @@
   background-position: center 0;
 }
 
+.hero__title {
+  margin: 0 30px 120px;
+  text-align: center;
+}
+
 .hero__categories {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.hero__title {
-  margin: 0 30px 120px;
-  text-align: center;
+.hero__link {
+  padding: 24px 30px 18px;
+  display: flex;
+  justify-content: space-between;
+
+  &--interior {
+    background-color: #63d1bb;
+
+    &::after {
+      content: url("../img/icon/lamp.svg");
+      opacity: 0.5;
+      margin-right: 6px;
+    }
+
+  }
+
+  &--toys {
+    background-color: #56c3b2;
+
+    &::after {
+      content: url("../img/icon/brick.svg");
+      opacity: 0.5;
+      margin-right: -3px;
+    }
+
+  }
+
 }
+
+
+
+

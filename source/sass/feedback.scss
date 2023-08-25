@@ -1,9 +1,21 @@
 .feedback {
-
+  padding: 29px 30px 45px;
 }
 
-.feedback__content-wrapper {
-  display: block;
-  width: 260px;
-  margin: 0 auto;
+.feedback__title {
+  margin-bottom: 14px;
+}
+
+.feedback__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feedback__quote {
+  margin: 0 0 33px;
+}
+
+.feedback__author {
+  margin: 0 0 30px;
 }

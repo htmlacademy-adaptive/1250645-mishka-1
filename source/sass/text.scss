@@ -7,10 +7,18 @@
     line-height: 20px;
   }
 
-  &--dominant {
-    font-size: 27px;
+  &--navigation-menu {
+    font-size: 17px;
     font-weight: 700;
-    line-height: 30px;
+    line-height: 24px;
+    color: #000000;
+  }
+
+  &--category {
+    font-size: 19px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 24px;
   }
 
   &--legend {
@@ -46,6 +54,12 @@
     text-transform: uppercase;
   }
 
+  &--about {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #000000;
+  }
 
   &--dark {
     color: #000000;
