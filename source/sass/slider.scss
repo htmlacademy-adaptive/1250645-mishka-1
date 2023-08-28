@@ -1,0 +1,32 @@
+.slider__buttons {
+  display: flex;
+}
+
+.slider__button {
+  border: none;
+  background-color: #ffffff;
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: auto;
+  flex-grow:1;
+
+  &--previous {
+    background-image: url("../img/icon/arrow-left.svg");
+  }
+
+  &--next {
+    background-image: url("../img/icon/arrow-left.svg");
+    transform: scaleX(-1);
+
+  }
+
+}
+
+.slider__buttons-delimiter {
+  width: 1px;
+  background-color: #ececec;
+}

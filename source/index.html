@@ -14,7 +14,7 @@
           </a>
           <button class="navigation__menu-toggle navigation__menu-toggle--open" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
-        <ul class="navigation__menu navigation__menu--hidden text text--navigation-menu">
+        <ul class="navigation__menu navigation__menu--hidden">
           <li class="navigation__menu-item">
             <a class="navigation__menu-link link" href="catalog.html">Каталог товаров</a>
           </li>
@@ -44,7 +44,7 @@
       <h1 class="visually-hidden">Магазин &laquo;Мишка&raquo; - игрушки и предметы интерьера ручной работы</h1>
       <section class="hero">
           <h2 class="hero__title header">Милые штуки ручной работы&nbsp;для&nbsp;дома</h2>
-          <ul class="hero__categories text text--category">
+          <ul class="hero__categories">
             <li class="hero__category ">
               <a class="hero__link hero__link--interior link" href="#">Предметы<br>интерьера</a>
             </li>
@@ -104,44 +104,53 @@
       </section>
       <section class="main-container__center-wrapper feedback">
         <h2 class="feedback__title subheader">Отзывы</h2>
-        <ul class="feedback__list">
-          <li class="feedback__item feedback__item--current">
-            <figure class="feedback__quote quote">
-              <blockquote class="quote__container">
-                <p class="quote__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-              </blockquote>
-              <figcaption class="quote__attribution">
-                <b class="quote__author-name">Анастасия Красильникова</b>
-                <a class="quote__author-link link" href="#">@misssssiskras</a>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="feedback__item">
-            <blockquote class="feedback__quote quote">
-              <p class="quote__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-            </blockquote>
-            <p class="feedback__author">
-              <b class="feedback__author-name">Екатерина Красильникова</b>
-              <a class="feedback__author-link" href="#">@misssssiskras2</a>
-            </p>
-          </li>
-          <li class="feedback__item">
-            <blockquote class="feedback__quote quote">
-              <p class="quote__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-            </blockquote>
-            <p class="feedback__author">
-              <b class="feedback__author-name">Елена Красильникова</b>
-              <a class="feedback__author-link" href="#">@misssssiskras3</a>
-            </p>
-          </li>
-        </ul>
-        <button class="feedback__button feedback__button--previous" type="button">
-          <span class="visually-hidden">Предыдущий отзыв</span>
-        </button>
-        <button class="feedback__button feedback__button--next" type="button">
-          <span class="visually-hidden">Следующий отзыв</span>
-        </button>
-        <a class="feedback__write button" href="#">Написать</a>
+        <div class="feedback__wrapper slider">
+          <ul class="feedback__list slider__list">
+            <li class="feedback__item slider__item">
+              <figure class="feedback__quote quote">
+                <blockquote class="quote__container">
+                  <p class="quote__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                </blockquote>
+                <figcaption class="quote__attribution">
+                  <b class="quote__author-name">Анастасия Красильникова</b>
+                  <a class="quote__author-link link" href="#">@misssssiskras</a>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="feedback__item slider__item">
+              <figure class="feedback__quote quote">
+                <blockquote class="quote__container">
+                  <p class="quote__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                </blockquote>
+                <figcaption class="quote__attribution">
+                  <b class="quote__author-name">Екатерина Красильникова</b>
+                  <a class="quote__author-link link" href="#">@misssssiskras2</a>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="feedback__item slider__item">
+              <figure class="feedback__quote quote">
+                <blockquote class="quote__container">
+                  <p class="quote__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                </blockquote>
+                <figcaption class="quote__attribution">
+                  <b class="quote__author-name">Елена Красильникова</b>
+                  <a class="quote__author-link link" href="#">@misssssiskras3</a>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+          <div class="feedback__buttons slider__buttons">
+            <button class="slider__button slider__button--previous" type="button">
+              <span class="visually-hidden">Предыдущий отзыв</span>
+            </button>
+            <span class="slider__buttons-delimiter"></span>
+            <button class="slider__button slider__button--next" type="button">
+              <span class="visually-hidden">Следующий отзыв</span>
+            </button>
+          </div>
+        </div>
+        <a class="feedback__write button link" href="#">Написать</a>
       </section>
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
