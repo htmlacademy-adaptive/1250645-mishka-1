@@ -1,8 +1,5 @@
-.main-container {
-  position: relative;
-}
-
 .main-container__section {
+  position: relative;
 
   &--decorated::after {
     content: '';
@@ -12,6 +9,9 @@
     right: 0;
     height: 6px;
     background-color: #f1f1f1;
+
+    bottom: 0;
+    transform: translateY(100%);
   }
 
 }

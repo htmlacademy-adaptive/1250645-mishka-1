@@ -1,0 +1,59 @@
+.contacts {
+  padding: 38px 0 39px;
+}
+
+.contacts__wrapper {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.contacts__title {
+  margin-bottom: 28px;
+}
+
+.contacts__list {
+  margin: 0;
+}
+
+.contacts__address {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #444444;
+  margin-bottom: 62px;
+}
+
+.contacts__email {
+  color: #444444;
+}
+
+.contacts__item-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:last-child) {
+    margin-bottom: 36px;
+  }
+
+}
+
+.contacts__item-value {
+  width: 183px;
+  margin: 0;
+}
+
+.contacts__map {
+  position: relative;
+  margin-bottom: 42px;
+
+  &::after {
+    content: url("../img/icon/map-pin.svg");
+    display: block;
+    position: absolute;
+    top: 145px;
+    left: 138px;
+  }
+
+}

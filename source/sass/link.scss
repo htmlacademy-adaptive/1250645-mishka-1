@@ -2,4 +2,10 @@
   font-family: "Open Sans";
   font-style: normal;
   text-decoration: none;
+
+  &--decorated {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #62d1ba;
+  }
+
 }
