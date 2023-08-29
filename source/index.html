@@ -214,42 +214,52 @@
         </a>
       </p>
     </footer>
-    <div class="modal-to-cart modal-to-cart--hidden">
-      <h2 class="modal-to-cart__title">Добавить в корзину</h2>
-      <form class="modal-to-cart__form" action="http://echo.htmlacademy.ru" method="post">
-        <p class="modal-to-cart__prompt">Выберите размер:</p>
-        <label class="modal-to-cart__custom-control custom-control custom-control--secondary">
-          <input class="visually-hidden custom-control__input" type="radio" name="size" value="small" checked>
-          <span class="custom-control__marker custom-control__marker--radio-alternate"></span>
-          S
-        </label>
-        <label class="modal-to-cart__custom-control custom-control custom-control--secondary">
-          <input class="visually-hidden custom-control__input" type="radio" name="size" value="medium">
-          <span class="custom-control__marker custom-control__marker--radio-alternate"></span>
-          M
-        </label>
-        <label class="modal-to-cart__custom-control custom-control custom-control--secondary">
-          <input class="visually-hidden custom-control__input" type="radio" name="size" value="large">
-          <span class="custom-control__marker custom-control__marker--radio-alternate"></span>
-          L
-        </label>
-        <button class="modal-to-cart__button button button--secondary" type="submit">Добавить</button>
-      </form>
+    <div class="modal-container modal-container--hide">
+      <div class="modal-to-cart">
+        <h2 class="modal-to-cart__title">Добавить в корзину</h2>
+        <form class="modal-to-cart__form" action="http://echo.htmlacademy.ru" method="post">
+          <p class="modal-to-cart__prompt">Выберите размер:</p>
+          <label class="modal-to-cart__custom-control custom-control custom-control--secondary">
+            <input class="visually-hidden custom-control__input" type="radio" name="size" value="small" checked>
+            <span class="custom-control__marker custom-control__marker--radio-alternate"></span>
+            S
+          </label>
+          <label class="modal-to-cart__custom-control custom-control custom-control--secondary">
+            <input class="visually-hidden custom-control__input" type="radio" name="size" value="medium">
+            <span class="custom-control__marker custom-control__marker--radio-alternate"></span>
+            M
+          </label>
+          <label class="modal-to-cart__custom-control custom-control custom-control--secondary">
+            <input class="visually-hidden custom-control__input" type="radio" name="size" value="large">
+            <span class="custom-control__marker custom-control__marker--radio-alternate"></span>
+            L
+          </label>
+          <button class="modal-to-cart__button button button--secondary" type="submit">Добавить</button>
+        </form>
+      </div>
     </div>
   </body>
   <script>
-    const btn = document.querySelector(".navigation__menu-toggle");
-    const menu = document.querySelector(".navigation__menu");
-    btn.addEventListener("click", () => {
-      if (btn.classList.contains("navigation__menu-toggle--open")) {
-        btn.classList.remove("navigation__menu-toggle--open");
-        btn.classList.add("navigation__menu-toggle--close");
-        menu.classList.remove("navigation__menu--hidden");
+    const navMenuToggle = document.querySelector(".navigation__menu-toggle");
+    const navMenu = document.querySelector(".navigation__menu");
+    navMenuToggle.addEventListener("click", () => {
+      if (navMenuToggle.classList.contains("navigation__menu-toggle--open")) {
+        navMenuToggle.classList.remove("navigation__menu-toggle--open");
+        navMenuToggle.classList.add("navigation__menu-toggle--close");
+        navMenu.classList.remove("navigation__menu--hidden");
       } else {
-        btn.classList.remove("navigation__menu-toggle--close");
-        btn.classList.add("navigation__menu-toggle--open");
-        menu.classList.add("navigation__menu--hidden");
+        navMenuToggle.classList.remove("navigation__menu-toggle--close");
+        navMenuToggle.classList.add("navigation__menu-toggle--open");
+        navMenu.classList.add("navigation__menu--hidden");
       }
+    });
+    const modalContainer = document.querySelector(".modal-container");
+    const modalShowButton = document.querySelector(".weekly-goods__button");
+    modalShowButton.addEventListener("click", () => modalContainer.classList.remove("modal-container--hide"));
+    modalContainer.addEventListener("click", (event) => {
+      if (this === event.target) {
+          this.classList.add("modal-container--hide");
+        }
     });
   </script>
 </html>
