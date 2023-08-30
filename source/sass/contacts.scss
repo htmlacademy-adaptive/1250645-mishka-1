@@ -52,8 +52,9 @@
     content: url("../img/icon/map-pin.svg");
     display: block;
     position: absolute;
-    top: 145px;
-    left: 138px;
+    top: 54%;
+    left: 53.5%;
+    transform: translate(-50%, -100%);
   }
 
 }

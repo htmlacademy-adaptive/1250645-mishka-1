@@ -61,3 +61,20 @@
   width: 100%;
 }
 
+.weekly-goods__modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  &--hidden {
+    display: none;
+  }
+
+}
+
+.weekly-goods__modal-controls {
+  margin: 0 0 31px;
+}
+

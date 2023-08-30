@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
     <title>Магазин &laquo;Мишка&raquo;</title>
   </head>
   <body class="page-body">
@@ -76,6 +77,32 @@
         <img class="weekly-goods__image" src="img/knitted-baskets.jpg" width="260" height="315" alt="3 вязаные корзинки разного размера и разсцветки." decoding="async">
         <b class="weekly-goods__price text text--price">Цена: 990 руб.</b>
         <button class="weekly-goods__button button button--primary text text--button" type="button">Заказать</button>
+        <div class="weekly-goods__modal weekly-goods__modal--hidden modal-to-cart">
+          <div class="weekly-goods__modal-window modal-to-cart__window">
+            <h2 class="weekly-goods__modal-title modal-to-cart__title">Добавить в&nbsp;корзину</h2>
+            <form class="weekly-goods__modal-form modal-to-cart__form" action="http://echo.htmlacademy.ru" method="post">
+              <p class="weekly-goods__modal-prompt modal-to-cart__prompt">Выберите размер:</p>
+              <p class="weekly-goods__modal-controls modal-to-cart__controls">
+                <label class="modal-to-cart__custom-control custom-control custom-control--secondary">
+                  <input class="visually-hidden custom-control__input" type="radio" name="size" value="small" checked>
+                  <span class="custom-control__marker custom-control__marker--radio-alternate"></span>
+                  S
+                </label>
+                <label class="modal-to-cart__custom-control custom-control custom-control--secondary">
+                  <input class="visually-hidden custom-control__input" type="radio" name="size" value="medium">
+                  <span class="custom-control__marker custom-control__marker--radio-alternate"></span>
+                  M
+                </label>
+                <label class="modal-to-cart__custom-control custom-control custom-control--secondary">
+                  <input class="visually-hidden custom-control__input" type="radio" name="size" value="large">
+                  <span class="custom-control__marker custom-control__marker--radio-alternate"></span>
+                  L
+                </label>
+              </p>
+              <button class="weekly-goods__modal-button modal-to-cart__button button button--secondary" type="submit">Добавить</button>
+            </form>
+          </div>
+        </div>
       </section>
       <section class="about">
         <h2 class="about__title subheader">Коротко о нас:</h2>
@@ -214,52 +241,5 @@
         </a>
       </p>
     </footer>
-    <div class="modal-container modal-container--hide">
-      <div class="modal-to-cart">
-        <h2 class="modal-to-cart__title">Добавить в корзину</h2>
-        <form class="modal-to-cart__form" action="http://echo.htmlacademy.ru" method="post">
-          <p class="modal-to-cart__prompt">Выберите размер:</p>
-          <label class="modal-to-cart__custom-control custom-control custom-control--secondary">
-            <input class="visually-hidden custom-control__input" type="radio" name="size" value="small" checked>
-            <span class="custom-control__marker custom-control__marker--radio-alternate"></span>
-            S
-          </label>
-          <label class="modal-to-cart__custom-control custom-control custom-control--secondary">
-            <input class="visually-hidden custom-control__input" type="radio" name="size" value="medium">
-            <span class="custom-control__marker custom-control__marker--radio-alternate"></span>
-            M
-          </label>
-          <label class="modal-to-cart__custom-control custom-control custom-control--secondary">
-            <input class="visually-hidden custom-control__input" type="radio" name="size" value="large">
-            <span class="custom-control__marker custom-control__marker--radio-alternate"></span>
-            L
-          </label>
-          <button class="modal-to-cart__button button button--secondary" type="submit">Добавить</button>
-        </form>
-      </div>
-    </div>
   </body>
-  <script>
-    const navMenuToggle = document.querySelector(".navigation__menu-toggle");
-    const navMenu = document.querySelector(".navigation__menu");
-    navMenuToggle.addEventListener("click", () => {
-      if (navMenuToggle.classList.contains("navigation__menu-toggle--open")) {
-        navMenuToggle.classList.remove("navigation__menu-toggle--open");
-        navMenuToggle.classList.add("navigation__menu-toggle--close");
-        navMenu.classList.remove("navigation__menu--hidden");
-      } else {
-        navMenuToggle.classList.remove("navigation__menu-toggle--close");
-        navMenuToggle.classList.add("navigation__menu-toggle--open");
-        navMenu.classList.add("navigation__menu--hidden");
-      }
-    });
-    const modalContainer = document.querySelector(".modal-container");
-    const modalShowButton = document.querySelector(".weekly-goods__button");
-    modalShowButton.addEventListener("click", () => modalContainer.classList.remove("modal-container--hide"));
-    modalContainer.addEventListener("click", (event) => {
-      if (this === event.target) {
-          this.classList.add("modal-container--hide");
-        }
-    });
-  </script>
 </html>
