@@ -13,14 +13,22 @@
   text-align: center;
   cursor: pointer;
 
-  &--secondary {
+  &--textual {
     font-size: 17px;
-    font-weight: 700;
     line-height: 24px;
     color: #000000;
     text-transform: none;
     border: none;
     padding: 0;
+  }
+
+  &--alternate {
+    font-size: 17px;
+    line-height: 16px;
+    color: #ffffff;
+    background-color: #63d1bb;
+    border: none;
+    padding: 18px 30px;
   }
 
 }

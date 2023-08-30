@@ -13,10 +13,6 @@
   box-sizing: border-box;
 }
 
-.custom-control__input::checked ~  {
-
-}
-
 .custom-control__marker {
   position: absolute;
   top: 0;
@@ -27,4 +23,13 @@
   border: 2px solid rgba(68, 68, 68, 0.1);
   cursor: pointer;
   box-sizing: border-box;
+}
+
+.custom-control:hover .custom-control__marker {
+  border-color: rgba(68, 68, 68, 0.3);
+
+}
+
+.custom-control__input:checked ~ .custom-control__marker {
+  border-color: #63d1bb;
 }
