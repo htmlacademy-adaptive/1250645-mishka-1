@@ -4,6 +4,7 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 16px;
+  color: #000000;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
@@ -11,6 +12,13 @@
   background: #ffffff;
   position: relative;
   box-sizing: border-box;
+
+  &--alternate {
+    line-height: 18px;
+    justify-content: flex-start;
+    position: static;
+  }
+
 }
 
 .custom-control__marker {
@@ -23,13 +31,54 @@
   border: 2px solid rgba(68, 68, 68, 0.1);
   cursor: pointer;
   box-sizing: border-box;
+  flex-shrink: 0;
+
+  &--radio {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border: 2px solid #444444;
+    border-radius: 50%;
+  }
+
 }
 
-.custom-control:hover .custom-control__marker {
+.custom-control__marker:hover {
   border-color: rgba(68, 68, 68, 0.3);
-
 }
 
-.custom-control__input:checked ~ .custom-control__marker {
-  border-color: #63d1bb;
+.custom-control__marker--radio:hover {
+  border-color: #62d1ba;
+}
+
+.custom-control__marker--radio:active {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.custom-control__input:checked  {
+
+  ~ .custom-control__marker {
+    border-color: #63d1bb;
+  }
+
+  ~ .custom-control__marker--radio::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #62d1ba;
+  }
+
+  ~ .custom-control__marker--radio:active {
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+
 }

@@ -1,0 +1,28 @@
+.knitting-order {
+  padding: 17px 30px 55px;
+  background-color: #ffffff;
+}
+
+.knitting-order__prompt {
+  margin: 0 0 29px;
+  padding: 0 5px 0 0;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.knitting-order__section {
+  margin: 0;
+  padding: 46px 0 31px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 11px;
+  border: none;
+  border-top: 1px solid #62d1ba;
+}
+
+.knitting-order__section-name {
+  width: 60px;
+}
