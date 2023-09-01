@@ -47,53 +47,48 @@
         <form class="knitting-order__form" action="http://echo.htmlacademy.ru" method="post">
           <fieldset class="knitting-order__section">
             <legend class="knitting-order__section-name legend">Тип</legend>
-            <label class="knitting-order__custom-control custom-control custom-control--alternate">
-              <input class="visually-hidden custom-control__input" type="radio" name="type" value="accessory" checked>
-              <span class="custom-control__marker custom-control__marker--radio"></span>
+            <label class="knitting-order__custom-control custom-control">
+              <input class="custom-control__input input input--radio" type="radio" name="type" value="accessory" checked>
               Аксессуар для интерьера
             </label>
-            <label class="knitting-order__custom-control custom-control custom-control--alternate">
-              <input class="visually-hidden custom-control__input" type="radio" name="type" value="toy">
-              <span class="custom-control__marker custom-control__marker--radio"></span>
+            <label class="knitting-order__custom-control custom-control">
+              <input class="custom-control__input input input--radio" type="radio" name="type" value="toy">
               Детская игрушка
             </label>
           </fieldset>
           <fieldset class="knitting-order__section">
             <legend class="knitting-order__section-name legend">Цвет</legend>
-            <label class="knitting-order__custom-control custom-control">
-              <!-- <input class="visually-hidden custom-control__input" type="checkbox" name="white" checked> -->
-              <input class="" style="appearance: none; width: 32px; height: 32px; border: 2px solid lime; border-radius: 50%" type="checkbox" name="white" checked>
-              <!-- <span class="custom-control__marker custom-control__marker--checkbox"></span> -->
-              Белый
-            </label>
-            <label class="knitting-order__custom-control custom-control">
-              <input class="visually-hidden custom-control__input" type="checkbox" name="gray" checked>
-              <span class="custom-control__marker custom-control__marker--checkbox"></span>
-              Серый
-            </label>
-            <label class="knitting-order__custom-control custom-control">
-              <input class="visually-hidden custom-control__input" type="checkbox" name="tiffany">
-              <span class="custom-control__marker custom-control__marker--checkbox"></span>
-              Тиффани
-            </label>
-            <label class="knitting-order__custom-control custom-control">
-              <input class="visually-hidden custom-control__input" type="checkbox" name="black">
-              <span class="custom-control__marker custom-control__marker--checkbox"></span>
-              Черный
-            </label>
-            <label class="knitting-order__custom-control custom-control">
-              <input class="visually-hidden custom-control__input" type="checkbox" name="pink">
-              <span class="custom-control__marker custom-control__marker--checkbox"></span>
-              Розовый
-            </label>
-            <label class="knitting-order__custom-control custom-control">
-              <input class="visually-hidden custom-control__input" type="checkbox" name="orange">
-              <span class="custom-control__marker custom-control__marker--checkbox"></span>
-              Оранжевый
-            </label>
+            <p class="knitting-order__control control">
+              <label class="control__label" for="color-white">Белый</label>
+              <input class="control__input control__input--small input input--checkbox" id="color-white" type="checkbox" name="white" checked>
+            </p>
+            <p class="knitting-order__control control">
+              <label class="control__label" for="color-gray">Серый</label>
+              <input class="control__input control__input--small input input--checkbox" id="color-gray" type="checkbox" name="gray" checked>
+            </p>
+            <p class="knitting-order__control control">
+              <label class="control__label" for="color-tiffany">Тиффани</label>
+              <input class="control__input control__input--small input input--checkbox" id="color-tiffany" type="checkbox" name="tiffany">
+            </p>
+            <p class="knitting-order__control control">
+              <label class="control__label" for="color-black">Черный</label>
+              <input class="control__input control__input--small input input--checkbox" id="color-black" type="checkbox" name="black">
+            </p>
+            <p class="knitting-order__control control">
+              <label class="control__label" for="color-pink">Розовый</label>
+              <input class="control__input control__input--small input input--checkbox" id="color-pink" type="checkbox" name="pink">
+            </p>
+            <p class="knitting-order__control control">
+              <label class="control__label" for="color-orange">Оранжевый</label>
+              <input class="control__input control__input--small input input--checkbox" id="color-orange" type="checkbox" name="orange">
+            </p>
           </fieldset>
           <fieldset class="knitting-order__section">
             <legend class="knitting-order__section-name legend">ФИО</legend>
+            <label class="knitting-order__custom-control custom-control custom-control--alternate" for="first-name">
+              Имя:
+              <input class="custom-control__input input input--text" type="text" name="first-name" id="first-name" placeholder="Введите ваше имя*" required>
+            </label>
             <label class="knitting-order__label" for="first-name">Имя:</label>
             <input class="knitting-order__input input" type="text" name="first-name" id="first-name" placeholder="Введите ваше имя*" required>
             <label class="knitting-order__label" for="surname">Фамилия:</label>
@@ -115,7 +110,7 @@
             </span>
           </p>
           <p class="knitting-order__section">
-            <span class="knitting-order__section-name legend">E-mail</span>
+            <span class="knitting-order__section-name knitting-order__section-name--long legend">E-mail</span>
             <label class="visually-hidden" for="email">Адрес электронной почты</label>
             <span  class="knitting-order__input decorated-input">
               <input class="decorated-input__input input input--with-icon" type="email" name="email" id="email" placeholder="Ваш Email*" required>

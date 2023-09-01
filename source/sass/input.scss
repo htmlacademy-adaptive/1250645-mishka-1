@@ -1,0 +1,45 @@
+.input {
+  appearance: none;
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid #444444;
+
+  &:checked {
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover {
+    border-color: #62d1ba;
+  }
+
+  &:active {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
+
+  &--radio {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    &:checked {
+      background-image: url("../img/icon/circle.svg");
+    }
+
+  }
+
+  &--checkbox {
+    width: 38px;
+    height: 38px;
+
+    &:checked {
+      background-image: url("../img/icon/tick.svg");
+    }
+
+  }
+
+  &--text {
+
+  }
+
+}
