@@ -20,7 +20,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
-    color: #000;
+    color: #000000;
     opacity: 0.3;
   }
 
@@ -30,20 +30,27 @@
   }
 
   @supports not selector(:focus-visible) {
-      &:focus {
-        outline: none;
-        border-color: #62d1ba;
-      }
+    &:focus {
+      outline: none;
+      border-color: #62d1ba;
+    }
   }
 
   &--radio {
-    @extend %toggle;
+    appearance: none;
+    border: 2px solid #444444;
+    cursor: pointer;
     border-radius: 50%;
 
     &:checked {
       background-image: url("../img/icon/circle.svg");
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
+    &:active {
+      border-color: rgba(68, 68, 68, 0.3);
+    }
   }
 
   &--radio-alternate {
@@ -59,16 +66,22 @@
     &:checked {
       border-color: #62d1ba;
     }
-
   }
 
   &--checkbox {
-    @extend %toggle;
+    appearance: none;
+    border: 2px solid #444444;
+    cursor: pointer;
 
     &:checked {
       background-image: url("../img/icon/tick.svg");
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
+    &:active {
+      border-color: rgba(68, 68, 68, 0.3);
+    }
   }
 
   &--space-reserved {
@@ -80,21 +93,4 @@
     resize: none;
     padding: 17px;
   }
-
-}
-
-%toggle {
-  appearance: none;
-  border: 2px solid #444444;
-  cursor: pointer;
-
-  &:checked {
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  &:active {
-    border-color: rgba(68, 68, 68, 0.3);
-  }
-
 }
