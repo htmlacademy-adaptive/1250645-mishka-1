@@ -74,30 +74,27 @@
         </dl>
         <img class="weekly-goods__image" src="img/knitted-baskets.jpg" width="260" height="315" alt="3 вязаные корзинки разного размера и разсцветки." decoding="async">
         <b class="weekly-goods__price text text--price">Цена: 990 руб.</b>
-        <button class="weekly-goods__button button text text--button" type="button">Заказать</button>
+        <button class="weekly-goods__button button" type="button">Заказать</button>
         <div class="weekly-goods__modal weekly-goods__modal--hidden modal-to-cart">
           <div class="weekly-goods__modal-window modal-to-cart__window">
             <h2 class="weekly-goods__modal-title modal-to-cart__title">Добавить в&nbsp;корзину</h2>
             <form class="weekly-goods__modal-form modal-to-cart__form" action="http://echo.htmlacademy.ru" method="post">
               <p class="weekly-goods__modal-prompt modal-to-cart__prompt">Выберите размер:</p>
               <p class="weekly-goods__modal-controls modal-to-cart__controls">
-                <label class="modal-to-cart__custom-control custom-control custom-control--secondary">
-                  <input class="visually-hidden custom-control__input" type="radio" name="size" value="small" checked>
-                  <span class="custom-control__marker custom-control__marker--radio-alternate"></span>
-                  S
-                </label>
-                <label class="modal-to-cart__custom-control custom-control custom-control--secondary">
-                  <input class="visually-hidden custom-control__input" type="radio" name="size" value="medium">
-                  <span class="custom-control__marker custom-control__marker--radio-alternate"></span>
-                  M
-                </label>
-                <label class="modal-to-cart__custom-control custom-control custom-control--secondary">
-                  <input class="visually-hidden custom-control__input" type="radio" name="size" value="large">
-                  <span class="custom-control__marker custom-control__marker--radio-alternate"></span>
-                  L
-                </label>
+                <span class="modal-to-cart__control control control--merged">
+                  <label class="control__label" for="size-small">S</label>
+                  <input class="control__input input input--radio-alternate" id="size-small" type="radio" name="size" value="small" checked>
+                </span>
+                <span class="modal-to-cart__control control control--merged">
+                  <label class="control__label" for="size-medium">M</label>
+                  <input class="control__input input input--radio-alternate" id="size-medium" type="radio" name="size" value="medium">
+                </span>
+                <span class="modal-to-cart__control control control--merged">
+                  <label class="control__label" for="size-large">L</label>
+                  <input class="control__input input input--radio-alternate" id="size-large" type="radio" name="size" value="large">
+                </span>
               </p>
-              <button class="weekly-goods__modal-button modal-to-cart__button button button--alternate" type="submit">Добавить</button>
+              <button class="weekly-goods__modal-button modal-to-cart__button button button--colored" type="submit">Добавить</button>
             </form>
           </div>
         </div>

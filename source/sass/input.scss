@@ -1,25 +1,43 @@
 .input {
-  appearance: none;
-  display: block;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #444444;
   box-sizing: border-box;
-  border: 2px solid #444444;
-
-  &:checked {
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  padding: 0;
+  border: none;
+  border-bottom: 2px solid #000000;
 
   &:hover {
     border-color: #62d1ba;
   }
 
-  &:active {
-    border-color: rgba(68, 68, 68, 0.3);
+  &::placeholder {
+    font-family: "Open Sans";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    color: #000;
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: #62d1ba;
+  }
+
+  @supports not selector(:focus-visible) {
+      &:focus {
+        outline: none;
+        border-color: #62d1ba;
+      }
   }
 
   &--radio {
-    width: 40px;
-    height: 40px;
+    @extend %toggle;
     border-radius: 50%;
 
     &:checked {
@@ -28,9 +46,24 @@
 
   }
 
+  &--radio-alternate {
+    appearance: none;
+    cursor: pointer;
+    border: 2px solid rgba(68, 68, 68, 0.1);
+
+    &:hover {
+      border-color: rgba(68, 68, 68, 0.3);
+    }
+
+    &:active,
+    &:checked {
+      border-color: #62d1ba;
+    }
+
+  }
+
   &--checkbox {
-    width: 38px;
-    height: 38px;
+    @extend %toggle;
 
     &:checked {
       background-image: url("../img/icon/tick.svg");
@@ -38,8 +71,32 @@
 
   }
 
-  &--text {
+  &--space-reserved {
+    padding-right: 39px;
+  }
 
+  &--textarea {
+    border: 2px solid #000000;
+    resize: none;
+    padding: 17px;
   }
 
 }
+
+%toggle {
+  appearance: none;
+  border: 2px solid #444444;
+  cursor: pointer;
+
+  &:checked {
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:active {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
+
+}
+
+
