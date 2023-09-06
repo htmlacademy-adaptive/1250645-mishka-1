@@ -1,7 +1,7 @@
 .product-card {
   display: flex;
   flex-direction: column;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
 
   &:hover .product-card__description {
