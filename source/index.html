@@ -57,8 +57,8 @@
           <h2 class="weekly-goods__title legend">Товар недели</h2>
           <p class="weekly-goods__subtitle subheader">Вязаные корзинки</p>
         </hgroup>
-        <p class="weekly-goods__description text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
-        <dl class="weekly-goods__properties text text--weekly-specs">
+        <p class="weekly-goods__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+        <dl class="weekly-goods__properties">
           <div class="weekly-goods__property-wrapper">
             <dt class="weekly-goods__property">Цвет:</dt>
             <dd class="weekly-goods__property-value">тиффани/серый</dd>
@@ -73,35 +73,12 @@
           </div>
         </dl>
         <img class="weekly-goods__image" src="img/knitted-baskets.jpg" width="260" height="315" alt="3 вязаные корзинки разного размера и разсцветки." decoding="async">
-        <b class="weekly-goods__price text text--price">Цена: 990 руб.</b>
+        <b class="weekly-goods__price">Цена: 990 руб.</b>
         <button class="weekly-goods__button button" type="button">Заказать</button>
-        <div class="weekly-goods__modal weekly-goods__modal--hidden modal-to-cart">
-          <div class="weekly-goods__modal-window modal-to-cart__window">
-            <h2 class="weekly-goods__modal-title modal-to-cart__title">Добавить в&nbsp;корзину</h2>
-            <form class="weekly-goods__modal-form modal-to-cart__form" action="http://echo.htmlacademy.ru" method="post">
-              <p class="weekly-goods__modal-prompt modal-to-cart__prompt">Выберите размер:</p>
-              <p class="weekly-goods__modal-controls modal-to-cart__controls">
-                <span class="modal-to-cart__control control control--merged">
-                  <label class="control__label" for="size-small">S</label>
-                  <input class="control__input input input--radio-alternate" id="size-small" type="radio" name="size" value="small" checked>
-                </span>
-                <span class="modal-to-cart__control control control--merged">
-                  <label class="control__label" for="size-medium">M</label>
-                  <input class="control__input input input--radio-alternate" id="size-medium" type="radio" name="size" value="medium">
-                </span>
-                <span class="modal-to-cart__control control control--merged">
-                  <label class="control__label" for="size-large">L</label>
-                  <input class="control__input input input--radio-alternate" id="size-large" type="radio" name="size" value="large">
-                </span>
-              </p>
-              <button class="weekly-goods__modal-button modal-to-cart__button button button--colored" type="submit">Добавить</button>
-            </form>
-          </div>
-        </div>
       </section>
       <section class="about">
         <h2 class="about__title subheader">Коротко о нас:</h2>
-        <ul class="about__list text text--about">
+        <ul class="about__list">
           <li class="about__item about__item--ecological">
             <h3 class="about__item-title">Экологически<br>чистые материалы</h3>
           </li>
@@ -236,5 +213,27 @@
         </a>
       </p>
     </footer>
+    <div class="modal-to-cart modal-to-cart--hidden">
+      <div class="modal-to-cart__window">
+        <h2 class="modal-to-cart__title">Добавить в&nbsp;корзину</h2>
+        <form class="modal-to-cart__form" action="http://echo.htmlacademy.ru" method="post">
+          <p class="modal-to-cart__prompt">Выберите размер:</p>
+          <p class="modal-to-cart__controls">
+            <span class="modal-to-cart__control control control--merged">
+              <label class="control__label" for="size-small">S</label>
+              <input class="control__input input input--radio-alternate" id="size-small" type="radio" name="size" value="small" checked>
+            </span>
+            <span class="modal-to-cart__control control control--merged">
+              <label class="control__label" for="size-medium">M</label>
+              <input class="control__input input input--radio-alternate" id="size-medium" type="radio" name="size" value="medium">
+            </span>
+            <span class="modal-to-cart__control control control--merged">
+              <label class="control__label" for="size-large">L</label>
+              <input class="control__input input input--radio-alternate" id="size-large" type="radio" name="size" value="large">
+            </span>
+          </p>
+          <button class="modal-to-cart__button button button--colored" type="submit">Добавить</button>
+        </form>
+      </div>
   </body>
 </html>

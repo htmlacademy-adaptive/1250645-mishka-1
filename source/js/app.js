@@ -1,3 +1,15 @@
+const modal = document.querySelector(".modal-to-cart");
+const modalSubmitButton = document.querySelector(".modal-to-cart__button");
+function showModal() {
+  modal.classList.remove("modal-to-cart--hidden");
+}
+modal.addEventListener("click", function(event) {
+    if (this === event.target) {
+      this.classList.add("modal-to-cart--hidden");
+    }
+});
+modalSubmitButton.addEventListener("click", () => modal.classList.add("modal-to-cart--hidden"));
+
 const navMenuToggle = document.querySelector(".navigation__menu-toggle");
 const navMenu = document.querySelector(".navigation__menu");
 navMenuToggle.addEventListener("click", function() {
@@ -12,13 +24,10 @@ navMenuToggle.addEventListener("click", function() {
   }
 });
 
-const modalShowButton = document.querySelector(".weekly-goods__button");
-const modal = document.querySelector(".weekly-goods__modal");
-const modalFormButton = document.querySelector(".weekly-goods__modal-button");
-modalShowButton.addEventListener("click", () => modal.classList.remove("weekly-goods__modal--hidden"));
-modal.addEventListener("click", function(event) {
-    if (this === event.target) {
-        modal.classList.add("weekly-goods__modal--hidden");
-    }
+const modalShowButtons = document.querySelectorAll(".product-card__button");
+modalShowButtons.forEach(button => {
+  button.addEventListener("click", showModal)
 });
-modalFormButton.addEventListener("click", () => modal.classList.add("weekly-goods__modal--hidden"));
+
+const modalShowButton = document.querySelector(".weekly-goods__button");
+modalShowButton.addEventListener("click", showModal);

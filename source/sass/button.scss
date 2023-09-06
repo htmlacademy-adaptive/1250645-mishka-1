@@ -2,7 +2,7 @@
   display: block;
   background-color: #ffffff;
   border: 2px solid #444444;
-  padding: 14px 20px;
+  padding: 14px 18px;
   font-family: "Open Sans";
   font-style: normal;
   color: #444444;
@@ -20,6 +20,52 @@
     text-transform: none;
     border: none;
     padding: 0;
+  }
+
+  &--icon-only {
+    color: rgba(0, 0, 0, 0.2);
+    border: none;
+    padding: 0;
+
+    .button__icon {
+      display: block;
+      margin: auto;
+    }
+
+    &:hover {
+      color: #63d1bb;
+    }
+
+    &:active {
+      color: rgba(99, 209, 187, 0.3);
+    }
+
+  }
+
+  &--play {
+    border: none;
+    padding: 0;
+    border-radius: 20px;
+    background-image: url("../img/icon/play.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: transform 150ms;
+
+    .button__icon {
+      display: block;
+      margin: auto;
+    }
+
+    &:hover {
+      transform: scale(120%);
+    }
+
+    &:active {
+      transform: scale(80%);
+      opacity: 0.3;
+    }
+
   }
 
   &--alternate {
