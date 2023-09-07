@@ -1,6 +1,8 @@
+@use "common/variables";
+
 .catalog__content {
   padding: 30px 30px 58px;
-  background-color: #ffffff;
+  background-color: variables.$primary-background-color;
 }
 
 .catalog__list {

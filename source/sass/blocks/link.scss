@@ -1,5 +1,7 @@
+@use "common/variables";
+
 .link {
-  font-family: "Open Sans", sans-serif;
+  font-family: variables.$font-stack;
   font-style: normal;
   text-decoration: none;
 

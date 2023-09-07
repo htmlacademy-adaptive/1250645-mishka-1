@@ -1,6 +1,8 @@
+@use "common/variables";
+
 .main-footer {
   padding: 25px 30px 23px;
-  background-color: #f1f1f1;
+  background-color: variables.$secondary-background-color;
 }
 
 .main-footer__socials {

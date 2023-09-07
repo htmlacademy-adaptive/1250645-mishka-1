@@ -1,6 +1,8 @@
+@use "common/variables";
+
 .hero {
   padding-top: 72px;
-  background-color: #f9f9f9;
+  background-color: variables.$hero-background-color;
   background-image: url("../img/house-with-toys.jpg");
   background-repeat: no-repeat;
   background-position: center 0;
@@ -20,14 +22,14 @@
 .hero__link {
   font-size: 19px;
   font-weight: 700;
-  color: #ffffff;
+  color: variables.$color-white;
   line-height: 24px;
   padding: 24px 30px 18px;
   display: flex;
   justify-content: space-between;
 
   &--interior {
-    background-color: #63d1bb;
+    background-color: variables.$color-turquoise;
 
     &::after {
       content: url("../img/icon/lamp.svg");
@@ -37,7 +39,7 @@
   }
 
   &--toys {
-    background-color: #56c3b2;
+    background-color: variables.$color-dark-turquoise;
 
     &::after {
       content: url("../img/icon/brick.svg");

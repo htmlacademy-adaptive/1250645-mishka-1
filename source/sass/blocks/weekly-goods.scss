@@ -1,9 +1,11 @@
+@use "common/variables";
+
 .weekly-goods {
-  font-family: "Open Sans", sans-serif;
+  font-family: variables.$font-stack;
   font-style: normal;
-  color: #444444;
+  color: variables.$secondary-color;
   padding: 31px 30px 36px;
-  background-color: #ffffff;
+  background-color: variables.$primary-background-color;
 }
 
 .weekly-goods__header {

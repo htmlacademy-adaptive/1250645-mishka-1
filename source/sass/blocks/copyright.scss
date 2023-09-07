@@ -1,5 +1,7 @@
+@use "common/variables";
+
 .copyright {
-  font-family: "Open Sans", sans-serif;
+  font-family: variables.$font-stack;
   font-size: 19px;
   font-style: normal;
   font-weight: 700;

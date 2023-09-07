@@ -1,5 +1,7 @@
+@use "common/variables";
+
 .modal-to-cart {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: variables.$primary-transparent-background-color;
   display: flex;
   position: fixed;
   width: 100%;
@@ -19,9 +21,9 @@
   margin: auto;
   border-top: 1px solid #c6c6c6;
   border-bottom: 1px solid #c6c6c6;
-  background-color: #ffffff;
+  background-color: variables.$primary-background-color;
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
-  font-family: "Open Sans", sans-serif;
+  font-family: variables.$font-stack;
   font-style: normal;
 }
 
@@ -33,7 +35,7 @@
   font-size: 25px;
   font-weight: 700;
   line-height: 30px;
-  color: #000000;
+  color: variables.$primary-color;
   text-transform: uppercase;
 }
 
