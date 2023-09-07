@@ -1,0 +1,37 @@
+@use "common/variables";
+
+.about {
+  padding: 31px 30px 29px;
+  background-color: variables.$primary-background-color;
+}
+
+.about__title {
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+.about__list {
+  font-family: variables.$font-stack;
+  font-style: normal;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  color: variables.$primary-color;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about__item {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.about__item-title {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}

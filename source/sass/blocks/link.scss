@@ -1,0 +1,12 @@
+@use "common/variables";
+
+.link {
+  font-family: variables.$font-stack;
+  font-style: normal;
+  text-decoration: none;
+
+  &--decorated {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #62d1ba;
+  }
+}

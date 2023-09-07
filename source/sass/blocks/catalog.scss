@@ -1,0 +1,16 @@
+@use "common/variables";
+
+.catalog__content {
+  padding: 30px 30px 58px;
+  background-color: variables.$primary-background-color;
+}
+
+.catalog__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog__item {
+  margin: 0 0 30px;
+}

@@ -1,0 +1,10 @@
+@use "common/variables";
+
+.feedback {
+  padding: 29px 30px 45px;
+  background-color: variables.$primary-background-color;
+}
+
+.feedback__title {
+  margin-bottom: 14px;
+}

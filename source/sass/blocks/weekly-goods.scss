@@ -1,0 +1,74 @@
+@use "common/variables";
+
+.weekly-goods {
+  font-family: variables.$font-stack;
+  font-style: normal;
+  color: variables.$secondary-color;
+  padding: 31px 30px 36px;
+  background-color: variables.$primary-background-color;
+}
+
+.weekly-goods__header {
+  margin-bottom: 17px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+.weekly-goods__title {
+  margin: 0;
+  order: 1;
+}
+
+.weekly-goods__subtitle {
+  margin: 0;
+}
+
+.weekly-goods__description {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 0;
+  margin-bottom: 21px;
+}
+
+.weekly-goods__properties {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+.weekly-goods__property-wrapper {
+  padding-top: 7px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+  justify-content: space-between;
+}
+
+.weekly-goods__property-value {
+  width: 162px;
+  margin: 0;
+}
+
+.weekly-goods__image {
+  display: block;
+  margin-bottom: 26px;
+  width: 100%;
+  height: auto;
+}
+
+.weekly-goods__price {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  display: block;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.weekly-goods__button {
+  width: 100%;
+}

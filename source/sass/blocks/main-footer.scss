@@ -1,0 +1,16 @@
+@use "common/variables";
+
+.main-footer {
+  padding: 25px 30px 23px;
+  background-color: variables.$secondary-background-color;
+}
+
+.main-footer__socials {
+  margin-bottom: 28px;
+}
+
+.main-footer__copyright {
+  margin: 0;
+  padding-top: 22px;
+  border-top: 1px solid #e5e5e5;
+}

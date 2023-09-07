@@ -1,0 +1,73 @@
+@use "common/variables";
+
+.navigation {
+  position: relative;
+  padding: 21px 30px 22px;
+}
+
+.navigation__logo {
+  display: block;
+  width: 86px;
+  margin: 0 auto;
+}
+
+.navigation__logo-image {
+  display: block;
+}
+
+.navigation__menu-toggle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &--open {
+    right: 31px;
+    width: 20px;
+    height: 14px;
+  }
+
+  &--close {
+    right: 30px;
+    width: 21px;
+    height: 20px;
+  }
+}
+
+.navigation__menu {
+  position: absolute;
+  background-color: variables.$primary-background-color;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.navigation__menu-item {
+  border-top: 1px solid #ececec;
+
+  &:last-child {
+    border-bottom: 1px solid #ececec;
+  }
+}
+
+.navigation__menu-link {
+  display: block;
+  padding: 28px 0 27px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  color: variables.$primary-color;
+}
+
+.navigation__menu-button {
+  width: 100%;
+  padding: 28px 0 27px;
+}
