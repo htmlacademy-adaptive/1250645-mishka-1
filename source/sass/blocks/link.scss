@@ -1,12 +1,34 @@
 @use "common/variables";
 
 .link {
-  font-family: variables.$font-stack;
-  font-style: normal;
+  display: inline-block;
+  color: #000000;
   text-decoration: none;
 
-  &--decorated {
+  &--emphasising {
     padding-bottom: 3px;
     border-bottom: 1px solid #62d1ba;
+  }
+
+  &--decorated {
+    display: inline-grid;
+    grid-template-columns: 46px 1fr;
+    align-items: center;
+  }
+
+  @media (min-width: variables.$tablet-min-width) {
+    &--decorated {
+      display: flex;
+
+      .link__icon {
+        margin-right: 32px;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    display: flex;
+    align-items: center;
   }
 }

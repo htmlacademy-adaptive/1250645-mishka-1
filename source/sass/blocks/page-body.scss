@@ -1,7 +1,10 @@
 @use "common/variables";
 
 .page-body {
-  margin: 0;
+  min-width: 320px;
   padding: 0;
+  margin: 0;
   background-color: variables.$primary-background-color;
+  font-family: variables.$font-stack;
+  font-style: normal;
 }
