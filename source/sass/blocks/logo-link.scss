@@ -1,0 +1,47 @@
+@use "common/variables";
+
+.logo-link {
+  display: block;
+
+  &--footer {
+    @media (max-width: variables.$mobile-max-width) {
+      display: none;
+    }
+
+    @media (min-width: variables.$tablet-min-width) {
+      .logo-link__image {
+        display: block;
+      }
+    }
+  }
+}
+
+.logo-link__image {
+  display: block;
+
+  &--tablet {
+    display: none;
+  }
+
+  &--desktop {
+    display: none;
+  }
+
+  @media (min-width: variables.$tablet-min-width) {
+    display: none;
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
+  }
+}

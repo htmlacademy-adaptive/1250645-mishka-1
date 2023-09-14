@@ -1,15 +1,10 @@
 @use "common/variables";
 
 .control {
-  font-family: variables.$font-stack;
-  font-style: normal;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 18px;
-  color: variables.$primary-color;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  // color: variables.$primary-color;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: flex-start;
 
   &--one-line {
     flex-direction: row;
@@ -21,20 +16,16 @@
   }
 
   &--merged {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
     align-items: center;
 
-    .control__label {
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;
-      justify-self: center;
-    }
-
     .control__input {
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
       height: 100%;
     }
   }

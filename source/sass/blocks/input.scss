@@ -1,16 +1,31 @@
 @use "common/variables";
 
 .input {
-  font-family: variables.$font-stack;
-  font-style: normal;
-  font-size: 19px;
-  font-weight: 400;
-  line-height: 18px;
-  color: variables.$secondary-color;
-  box-sizing: border-box;
-  padding: 0;
-  border: none;
-  border-bottom: 2px solid variables.$primary-color;
+  // font-family: variables.$font-stack;
+  // font-style: normal;
+  // font-size: 19px;
+  // font-weight: 400;
+  // line-height: 18px;
+  // color: variables.$secondary-color;
+  // padding: 0;
+  // border: none;
+  // border-bottom: 2px solid variables.$primary-color;
+
+  &--radio-alternate {
+    appearance: none;
+    border: 2px solid rgba(68, 68, 68, 0.1);
+    border-radius: 0;
+    cursor: pointer;
+
+    &:hover {
+      border-color: variables.$input-interaction-color;
+    }
+
+    &:active,
+    &:checked {
+      border-color: variables.$form-hover-color;
+    }
+  }
 
   &:hover {
     border-color: variables.$form-hover-color;
@@ -52,21 +67,6 @@
 
     &:active {
       border-color: variables.$input-interaction-color;
-    }
-  }
-
-  &--radio-alternate {
-    appearance: none;
-    cursor: pointer;
-    border: 2px solid rgba(68, 68, 68, 0.1);
-
-    &:hover {
-      border-color: variables.$input-interaction-color;
-    }
-
-    &:active,
-    &:checked {
-      border-color: variables.$form-hover-color;
     }
   }
 

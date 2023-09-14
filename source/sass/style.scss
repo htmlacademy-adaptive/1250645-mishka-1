@@ -5,6 +5,7 @@
 @use "blocks/input";
 @use "blocks/header";
 @use "blocks/subheader";
+@use "blocks/logo-link";
 @use "blocks/legend";
 @use "blocks/quote";
 @use "blocks/about";
@@ -21,7 +22,7 @@
 @use "blocks/main-footer";
 @use "blocks/main-header";
 @use "blocks/manufacturing";
-@use "blocks/modal-to-cart";
+@use "blocks/put-to-cart";
 @use "blocks/page-body";
 @use "blocks/product-card";
 @use "blocks/socials";

@@ -1,16 +1,34 @@
 @use "common/variables";
 
 .main-footer {
-  padding: 25px 30px 23px;
+  padding: 0 30px;
   background-color: variables.$secondary-background-color;
+
+  @media (min-width: variables.$tablet-min-width) {
+    display: flex;
+    align-items: center;
+    padding: 51px 50px 58px;
+  }
 }
 
-.main-footer__socials {
-  margin-bottom: 28px;
+.main-footer__socials-wrapper {
+  width: 54.7%;
+  padding: 25px 0 28px;
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet-min-width) {
+    width: 22%;
+    padding: 0;
+  }
 }
 
 .main-footer__copyright {
+  padding: 22px 0;
   margin: 0;
-  padding-top: 22px;
   border-top: 1px solid #e5e5e5;
+
+  @media (min-width: variables.$tablet-min-width) {
+    padding: 0;
+    border-top: none;
+  }
 }

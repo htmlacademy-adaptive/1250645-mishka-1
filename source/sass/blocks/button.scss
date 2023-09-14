@@ -33,6 +33,16 @@
     }
   }
 
+  &--colored {
+    padding: 18px 30px;
+    border: none;
+    color: variables.$color-white;
+    background-color: variables.$color-turquoise;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 16px;
+  }
+
   &--icon-only {
     color: rgba(0, 0, 0, 0.2);
     border: none;
@@ -94,14 +104,5 @@
     font-size: 17px;
     line-height: 16px;
     padding: 16px 24px;
-  }
-
-  &--colored {
-    font-size: 17px;
-    line-height: 16px;
-    color: variables.$color-white;
-    background-color: variables.$color-turquoise;
-    border: none;
-    padding: 18px 30px;
   }
 }

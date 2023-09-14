@@ -1,11 +1,22 @@
 .socials {
-  padding: 0;
-  list-style-type: none;
   display: flex;
   column-gap: 29px;
   justify-content: center;
+  flex-wrap: wrap;
+  padding: 2px 0 2px;
+  margin: 0;
+  list-style-type: none;
+}
+
+.socials__item {
+  display: flex;
+  align-items: center;
 }
 
 .socials__link {
   color: #231f20;
+}
+
+.socials__icon {
+  display: block;
 }

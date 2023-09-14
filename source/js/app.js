@@ -9,18 +9,6 @@ function switchMenuButton() {
   }
 }
 
-const modal = document.querySelector(".modal-to-cart");
-const modalSubmitButton = document.querySelector(".modal-to-cart__button");
-function showModal() {
-  modal.classList.remove("modal-to-cart--hidden");
-}
-modal?.addEventListener("click", function(event) {
-    if (this === event.target) {
-      this.classList.add("modal-to-cart--hidden");
-    }
-});
-modalSubmitButton?.addEventListener("click", () => modal.classList.add("modal-to-cart--hidden"));
-
 const nav = document.querySelector(".navigation");
 const navMenuToggle = document.querySelector(".navigation__menu-toggle");
 navMenuToggle.addEventListener("click", function() {
@@ -32,10 +20,26 @@ navMenuToggle.addEventListener("click", function() {
   switchMenuButton();
 });
 
+function showModal() {
+  modal.classList.remove("page-body__modal--hidden");
+  addListenerToPutToCart(() => modal.classList.add("page-body__modal--hidden"));
+}
+
+const modal = document.querySelector(".page-body__modal");
+modal?.addEventListener("click", function(event) {
+  if (this === event.target) {
+    this.classList.add("page-body__modal--hidden");
+  }
+});
+
 const modalShowButtons = document.querySelectorAll(".product-card__button");
 modalShowButtons.forEach(button => {
   button.addEventListener("click", showModal)
 });
+
+function addListenerToPutToCart(eventHandlerCallback) {
+  document.querySelector(".put-to-cart__button")?.addEventListener("click", eventHandlerCallback);
+}
 
 const modalShowButton = document.querySelector(".weekly-goods__button");
 modalShowButton?.addEventListener("click", showModal);

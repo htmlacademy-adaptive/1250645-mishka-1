@@ -1,0 +1,70 @@
+@use "common/variables";
+
+.put-to-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: variables.$primary-background-color;
+}
+
+.put-to-cart__title {
+  margin: 0 54px 14px 58px;
+  color: variables.$primary-color;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: variables.$tablet-min-width) {
+    margin: 0 0 11px;
+    font-size: 30px;
+    line-height: 57px;
+    letter-spacing: -0.19px;
+  }
+}
+
+.put-to-cart__form {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.put-to-cart__prompt {
+  align-self: center;
+  margin: 0 0 22px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+
+  @media (min-width: variables.$tablet-min-width) {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+}
+
+.put-to-cart__controls {
+  display: flex;
+  column-gap: 7px;
+  row-gap: 7px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 0 31px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.put-to-cart__control {
+  padding: 18px 22px;
+  flex: 1;
+
+  @media (min-width: variables.$tablet-min-width) {
+    width: 112px;
+  }
+}
+
+.put-to-cart__button {
+  width: 100%;
+}
