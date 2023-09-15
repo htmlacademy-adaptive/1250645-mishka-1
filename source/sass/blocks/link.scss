@@ -5,11 +5,6 @@
   color: #000000;
   text-decoration: none;
 
-  &--emphasising {
-    padding-bottom: 3px;
-    border-bottom: 1px solid #62d1ba;
-  }
-
   &--decorated {
     display: inline-grid;
     grid-template-columns: 46px 1fr;
@@ -30,5 +25,10 @@
   @media (min-width: variables.$desktop-min-width) {
     display: flex;
     align-items: center;
+  }
+
+  &--emphasising {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #62d1ba;
   }
 }

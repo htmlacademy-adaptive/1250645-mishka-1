@@ -1,11 +1,9 @@
 @use "common/variables";
 
-.main-container {
-  background-color: variables.$secondary-background-color;
-}
-
 .main-container__header {
   padding: 74px 30px;
+  margin: 0;
+  background-color: variables.$secondary-background-color;
   text-align: center;
 }
 
