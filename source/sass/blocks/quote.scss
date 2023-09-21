@@ -1,21 +1,33 @@
 @use "common/variables";
 
 .quote {
-  font-family: variables.$font-stack;
-  font-style: normal;
+  display: grid;
+  grid-template-rows: auto min-content;
+  align-items: center;
+  padding: 0;
+  margin: 0;
   color: variables.$secondary-color;
   font-size: 15px;
   font-weight: 400;
   line-height: 30px;
-  display: block;
-  margin: 0;
-  padding: 0;
+
+  @media (min-width: variables.$tablet-min-width) {
+    font-size: 17px;
+  }
 }
 
 .quote__container {
   display: block;
-  margin: 0 0 33px;
+  margin: 0 0 18px;
   padding: 0;
+
+  @media (min-width: variables.$tablet-min-width) {
+    margin-bottom: 61px;
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    margin-bottom: 44px;
+  }
 }
 
 .quote__text {
@@ -26,13 +38,27 @@
 
 .quote__attribution {
   font-size: 17px;
-  line-height: 27px;
+
+  @media (min-width: variables.$tablet-min-width) {
+    max-width: 70%;
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    max-width: 75%;
+  }
 }
 
 .quote__author-name {
+  display: block;
+  margin-bottom: 3px;
   color: variables.$primary-color;
   font-weight: 700;
   line-height: 24px;
+
+  @media (min-width: variables.$tablet-min-width) and (max-width: variables.$tablet-max-width) {
+    margin-bottom: 4px;
+    font-size: 18px;
+  }
 }
 
 .quote__author-link {

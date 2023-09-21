@@ -28,7 +28,31 @@
   }
 
   &--emphasising {
-    padding-bottom: 3px;
-    border-bottom: 1px solid #62d1ba;
+    text-decoration: underline #62d1ba solid;
+    text-underline-offset: 6px;
+
+    @media (min-width: variables.$tablet-min-width) {
+      text-underline-offset: 8px;
+    }
+
+    @media (min-width: variables.$desktop-min-width) {
+      text-underline-offset: 12px;
+    }
+  }
+
+  &--button {
+    padding: 14px 18px;
+    border: 2px solid variables.$secondary-color;
+    background-color: variables.$primary-background-color;
+    color: variables.$secondary-color;
+    font-family: inherit;
+    font-style: inherit;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+
+    @media (min-width: variables.$desktop-min-width) {
+      display: inline-block;
+    }
   }
 }

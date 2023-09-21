@@ -1,32 +1,70 @@
 @use "common/variables";
 
 .about {
-  padding: 31px 30px 29px;
+  padding: 31px 30px 30px;
   background-color: variables.$primary-background-color;
+
+  @media (min-width: variables.$tablet-min-width) {
+    padding: 56px 50px 26px;
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    padding: 68px 175px 32px;
+  }
 }
 
 .about__title {
   margin-top: 0;
   margin-bottom: 28px;
+
+  @media (min-width: variables.$tablet-min-width) {
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    margin-bottom: 39px;
+  }
 }
 
 .about__list {
-  font-family: variables.$font-stack;
-  font-style: normal;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  color: variables.$primary-color;
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
-  color: variables.$primary-color;
   list-style-type: none;
-  padding: 0;
-  margin: 0;
+
+  @media (min-width: variables.$tablet-min-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 
 .about__item {
   margin-bottom: 30px;
+  flex-basis: 100%;
 
-  &:last-child {
-    margin-bottom: 0;
+  @media (max-width: variables.$mobile-max-width) {
+    &:nth-child(2n + 2) {
+      order: 1;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: variables.$tablet-min-width) {
+    flex-basis: 50%;
+    padding-right: 50px;
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    margin-bottom: 57px;
   }
 }
 

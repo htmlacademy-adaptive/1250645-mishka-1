@@ -29,13 +29,22 @@
   }
 
   @media (min-width: variables.$desktop-min-width) {
-    padding-top: 110px;
-    padding-bottom: 17px;
+    // padding-top: 110px;
+    // padding-bottom: 17px;
+    padding: 110px 0 17px;
 
     &::after {
       height: 34px;
       background-size: 1250px 100%;
     }
+  }
+}
+
+.hero__wrapper {
+  @media (min-width: variables.$desktop-min-width) {
+    max-width: 1500px;
+    padding: 0 50px;
+    margin: 0 auto;
   }
 }
 

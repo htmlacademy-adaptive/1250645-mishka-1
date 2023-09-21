@@ -7,9 +7,6 @@
   color: variables.$secondary-color;
   font-family: inherit;
   font-style: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: inherit;
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
@@ -21,6 +18,9 @@
     padding: 0;
     border: none;
     color: variables.$primary-color;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
     text-transform: none;
     text-align: start;
 

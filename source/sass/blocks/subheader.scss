@@ -1,12 +1,18 @@
 @use "common/variables";
 
 .subheader {
-  font-family: variables.$font-stack;
-  font-style: normal;
+  color: variables.$primary-color;
   font-size: 25px;
   font-weight: 700;
   line-height: 30px;
-  color: variables.$primary-color;
-  display: block;
-  margin: 0;
+
+  @media (min-width: variables.$tablet-min-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
