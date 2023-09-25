@@ -44,13 +44,12 @@
   }
 
   &--icon-only {
-    color: rgba(0, 0, 0, 0.2);
-    border: none;
     padding: 0;
+    border: none;
+    color: rgba(0, 0, 0, 0.2);
 
     .button__icon {
       display: block;
-      margin: auto;
     }
 
     &:hover {
