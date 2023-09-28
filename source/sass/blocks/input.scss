@@ -1,15 +1,40 @@
 @use "common/variables";
 
 .input {
-  // font-family: variables.$font-stack;
-  // font-style: normal;
-  // font-size: 19px;
-  // font-weight: 400;
-  // line-height: 18px;
-  // color: variables.$secondary-color;
-  // padding: 0;
-  // border: none;
-  // border-bottom: 2px solid variables.$primary-color;
+  padding: 0;
+  border: none;
+  border-bottom: 2px solid variables.$primary-color;
+  border-radius: 0;
+  color: variables.$secondary-color;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 18px;
+
+  &::placeholder {
+    color: variables.$primary-color;
+    font-family: variables.$font-stack;
+    font-style: normal;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 18px;
+    opacity: 0.3;
+
+    @media (min-width: variables.$tablet-min-width) {
+      font-size: 19px;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: variables.$form-hover-color;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: none;
+      border-color: variables.$form-hover-color;
+    }
+  }
 
   &--radio-alternate {
     appearance: none;
@@ -31,38 +56,26 @@
     border-color: variables.$form-hover-color;
   }
 
-  &::placeholder {
-    font-family: variables.$font-stack;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
-    color: variables.$primary-color;
-    opacity: 0.3;
-  }
-
-  &:focus-visible {
-    outline: none;
-    border-color: variables.$form-hover-color;
-  }
-
-  @supports not selector(:focus-visible) {
-    &:focus {
-      outline: none;
-      border-color: variables.$form-hover-color;
-    }
-  }
-
   &--radio {
+    position: relative;
+
     appearance: none;
     border: 2px solid variables.$secondary-color;
     cursor: pointer;
     border-radius: 50%;
 
-    &:checked {
-      background-image: url("../img/icon/circle.svg");
-      background-repeat: no-repeat;
-      background-position: center;
+    &:checked::before {
+      content: "";
+      position: absolute;
+      width: 43%;
+      height: 43%;
+      border-radius: 50%;
+      background-color: variables.$form-hover-color;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
     }
 
     &:active {
@@ -71,14 +84,27 @@
   }
 
   &--checkbox {
+    position: relative;
     appearance: none;
     border: 2px solid variables.$secondary-color;
+    border-radius: 0;
     cursor: pointer;
 
-    &:checked {
+    &:checked::before {
+      content: "";
+      position: absolute;
       background-image: url("../img/icon/tick.svg");
-      background-repeat: no-repeat;
-      background-position: center;
+      width: 24px;
+      height: 17px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+
+      @media (min-width: variables.$tablet-min-width) {
+        transform: scale(1.37);
+      }
     }
 
     &:active {
@@ -88,6 +114,16 @@
 
   &--space-reserved {
     padding-right: 39px;
+
+    @media (min-width: variables.$tablet-min-width) and (max-width: variables.$tablet-max-width) {
+      padding-right: 60px;
+    }
+  }
+
+  &--text {
+    @media (min-width: variables.$tablet-min-width) {
+      padding-left: 17px;
+    }
   }
 
   &--textarea {

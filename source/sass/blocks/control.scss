@@ -1,10 +1,8 @@
 @use "common/variables";
 
 .control {
-  // color: variables.$primary-color;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: flex-start;
+  display: flex;
+  flex-direction: column;
 
   &--one-line {
     flex-direction: row;
@@ -17,7 +15,6 @@
 
   &--merged {
     position: relative;
-    display: flex;
     justify-content: center;
     align-items: center;
 
@@ -25,29 +22,52 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
       height: 100%;
     }
+  }
+
+  @media (min-width: variables.$tablet-min-width) {
+    flex-direction: row;
+    align-items: center;
+
+    &--simple {
+      .control__label {
+        margin-right: 24px;
+      }
+    }
+  }
+}
+
+.control__label {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+
+  @media (min-width: variables.$tablet-min-width) {
+    font-size: 19px;
   }
 }
 
 .control__input {
   margin: 0;
+  width: 100%;
   height: 52px;
   flex-shrink: 0;
-  align-self: stretch;
-  order: 1;
+  flex-grow: 1;
 
   &--radio {
     width: 40px;
     height: 40px;
     margin-right: 20px;
+    flex-grow: 0;
   }
 
   &--checkbox {
     width: 38px;
     height: 38px;
     margin-right: 22px;
+    flex-grow: 0;
   }
 
   &--textarea {
@@ -66,11 +86,29 @@
       opacity: 1;
     }
   }
+
+  @media (min-width: variables.$tablet-min-width) {
+    width: auto;
+    background-color: transparent;
+
+    &--radio {
+      width: 50px;
+      height: 50px;
+      margin-right: 27px;
+    }
+
+    &--checkbox {
+      width: 52px;
+      height: 52px;
+      margin-right: 29px;
+    }
+  }
 }
 
 .control__decorated-input-wrapper {
   position: relative;
-  align-self: stretch;
+  display: block;
+  flex-grow: 1;
 
   .control__input {
     width: 100%;
@@ -90,5 +128,15 @@
   &--email {
     top: 16px;
     right: 3px;
+  }
+
+  @media (min-width: variables.$tablet-min-width) and (max-width: variables.$tablet-max-width) {
+    &--phone {
+      right: 26px;
+    }
+
+    &--email {
+      right: 22px;
+    }
   }
 }
