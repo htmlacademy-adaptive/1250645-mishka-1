@@ -5,36 +5,104 @@
   background-color: variables.$hero-background-color;
   background-image: url("../img/house-with-toys.jpg");
   background-repeat: no-repeat;
-  background-position: center 0;
+  background-position: center -18px;
+  background-size: 568.5px 373px;
+
+  @media (min-width: variables.$tablet-min-width) {
+    position: relative;
+    padding: 110px 50px 12px;
+    background-position: center bottom;
+    background-origin: content-box;
+    background-size: auto;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/decoration/zigzag-pattern.svg");
+      background-position: center;
+    }
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    padding: 110px 0 17px;
+
+    &::after {
+      height: 34px;
+      background-size: 1250px 100%;
+    }
+  }
+}
+
+.hero__wrapper {
+  @media (min-width: variables.$desktop-min-width) {
+    max-width: 1500px;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
 }
 
 .hero__title {
+  min-height: 90px;
   margin: 0 30px 120px;
   text-align: center;
+
+  @media (min-width: variables.$tablet-min-width) {
+    min-height: 100px;
+    margin-bottom: 372px;
+  }
+
+  @media (min-width: variables.$tablet-min-width) {
+    min-height: 114px;
+    margin-bottom: 355px;
+  }
 }
 
 .hero__categories {
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: variables.$tablet-min-width) {
+    display: flex;
+  }
+}
+
+.hero__category {
+  @media (min-width: variables.$tablet-min-width) {
+    flex: 1;
+    display: flex;
+  }
 }
 
 .hero__link {
+  display: flex;
+  padding: 22px 27px 20px 30px;
+  justify-content: space-between;
+  color: variables.$color-white;
   font-size: 19px;
   font-weight: 700;
-  color: variables.$color-white;
   line-height: 24px;
-  padding: 24px 30px 18px;
-  display: flex;
-  justify-content: space-between;
+  text-decoration: none;
+
+  &::after {
+    flex-shrink: 0;
+    width: 60px;
+    margin-left: 15px;
+    line-height: 0;
+    text-align: center;
+    opacity: 0.5;
+  }
 
   &--interior {
     background-color: variables.$color-turquoise;
 
     &::after {
       content: url("../img/icon/lamp.svg");
-      opacity: 0.5;
-      margin-right: 6px;
     }
   }
 
@@ -43,8 +111,24 @@
 
     &::after {
       content: url("../img/icon/brick.svg");
-      opacity: 0.5;
-      margin-right: -3px;
+    }
+  }
+
+  @media (min-width: variables.$tablet-min-width) {
+    flex: 1;
+    padding: 25px 33px 27px 36px;
+    font-size: 20px;
+    line-height: 30px;
+
+    &::after {
+      margin-top: 5px;
+    }
+
+    &--interior {
+      &::after {
+        padding-right: 3px;
+        text-align: right;
+      }
     }
   }
 }

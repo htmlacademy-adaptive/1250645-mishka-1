@@ -1,10 +1,54 @@
 @use "common/variables";
 
 .feedback {
-  padding: 29px 30px 45px;
+  padding: 28px 30px 45px;
   background-color: variables.$primary-background-color;
+
+  @media (min-width: variables.$tablet-min-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 79px 50px 115px;
+    background-image: url("../img/feedback-background.jpg");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    padding: 78px 0 163px 175px;
+  }
 }
 
 .feedback__title {
-  margin-bottom: 14px;
+  margin: 0;
+
+  @media (min-width: variables.$tablet-min-width) {
+    max-width: 70%;
+    margin: 4px 0 38px;
+  }
+
+  @media (min-width: variables.$tablet-min-width) {
+    margin-top: 0;
+    margin-bottom: 35px;
+  }
+}
+
+.feedback__slider {
+  @media (min-width: variables.$tablet-min-width) {
+    flex: 0 0 100%;
+    order: 1;
+  }
+}
+
+.feedback__write-button {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+
+  @media (min-width: variables.$tablet-min-width) {
+    flex: 0 0 175px;
+    margin-bottom: 40px;
+    font-size: 17px;
+  }
 }

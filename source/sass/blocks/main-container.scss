@@ -1,28 +1,86 @@
 @use "common/variables";
 
-.main-container {
+.main-container__header-wrapper {
   background-color: variables.$secondary-background-color;
+
+  @media (min-width: variables.$tablet-min-width) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/decoration/zigzag-pattern.svg");
+      background-position: center;
+    }
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    &::after {
+      height: 34px;
+      background-size: 1150px 100%;
+    }
+  }
 }
 
 .main-container__header {
+  max-width: 1500px;
   padding: 74px 30px;
+  margin: 0 auto;
   text-align: center;
+
+  @media (min-width: variables.$tablet-min-width) {
+    padding: 57px 50px 87px;
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    padding: 58px 50px 113px;
+  }
+}
+
+.main-container__section-wrapper {
+  @media (min-width: variables.$desktop-min-width) {
+    max-width: 1500px;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
+}
+
+.main-container__content-wrapper {
+  background-color: variables.$primary-background-color;
+}
+
+.main-container__content {
+  max-width: 1500px;
+  padding: 30px 30px 58px;
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet-min-width) {
+    padding: 67px 50px 64px;
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    padding: 111px 50px 105px;
+  }
 }
 
 .main-container__section {
   &--decorated {
     position: relative;
+    border-bottom: 6px solid variables.$secondary-background-color;
+    border-image: url("../img/decoration/zigzag-line-pattern.svg") 6 0 repeat;
 
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 0;
-      right: 0;
-      height: 6px;
-      background-color: variables.$secondary-background-color;
-      bottom: 0;
-      transform: translateY(100%);
+    @media (min-width: variables.$tablet-min-width) {
+      border-bottom: 17px solid variables.$secondary-background-color;
+      border-image-repeat: stretch;
+    }
+
+    @media (min-width: variables.$desktop-min-width) {
+      border-bottom: 23px solid variables.$secondary-background-color;
     }
   }
 }

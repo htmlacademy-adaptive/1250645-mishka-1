@@ -1,13 +1,13 @@
 @use "common/variables";
 
 .legend {
-  font-family: variables.$font-stack;
-  font-style: normal;
+  color: variables.$color-turquoise;
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
-  color: variables.$color-turquoise;
   text-transform: uppercase;
-  padding: 0;
-  margin: 0;
+
+  @media (min-width: variables.$tablet-min-width) {
+    line-height: 17px;
+  }
 }

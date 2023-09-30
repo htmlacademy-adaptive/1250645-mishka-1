@@ -1,13 +1,19 @@
 @use "common/variables";
 
 .copyright {
-  font-family: variables.$font-stack;
-  font-size: 19px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 18px;
   display: flex;
-  column-gap: 27px;
   justify-content: center;
   align-items: center;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.copyright__logo {
+  display: block;
+  margin-left: 27px;
+}
+
+.copyright__logo-image {
+  display: block;
 }

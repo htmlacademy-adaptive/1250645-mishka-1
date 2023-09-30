@@ -9,37 +9,63 @@ function switchMenuButton() {
   }
 }
 
-const modal = document.querySelector(".modal-to-cart");
-const modalSubmitButton = document.querySelector(".modal-to-cart__button");
-function showModal() {
-  modal.classList.remove("modal-to-cart--hidden");
-}
-modal?.addEventListener("click", function(event) {
-    if (this === event.target) {
-      this.classList.add("modal-to-cart--hidden");
-    }
-});
-modalSubmitButton?.addEventListener("click", () => modal.classList.add("modal-to-cart--hidden"));
-
+const nav = document.querySelector(".navigation");
 const navMenuToggle = document.querySelector(".navigation__menu-toggle");
-const navMenu = document.querySelector(".navigation__menu");
 navMenuToggle.addEventListener("click", function() {
-  if (this.classList.contains("navigation__menu-toggle--open")) {
-    switchMenuButton();
-    this.classList.remove("navigation__menu-toggle--open");
-    this.classList.add("navigation__menu-toggle--close");
-    navMenu.classList.remove("navigation__menu--hidden");
+  if (nav.classList.contains("navigation--collapsed")) {
+    nav.classList.remove("navigation--collapsed");
   } else {
-    switchMenuButton();
-    this.classList.remove("navigation__menu-toggle--close");
-    this.classList.add("navigation__menu-toggle--open");
-    navMenu.classList.add("navigation__menu--hidden");
+    nav.classList.add("navigation--collapsed");
+  }
+  switchMenuButton();
+});
+
+function showModal() {
+  modal.classList.remove("page-body__modal--hidden");
+  addListenerToPutToCart(() => modal.classList.add("page-body__modal--hidden"));
+}
+
+const modal = document.querySelector(".page-body__modal");
+modal?.addEventListener("click", function(event) {
+  if (this === event.target) {
+    this.classList.add("page-body__modal--hidden");
   }
 });
 
 const modalShowButtons = document.querySelectorAll(".product-card__button");
 modalShowButtons.forEach(button => {
   button.addEventListener("click", showModal)
+});
+
+function addListenerToPutToCart(eventHandlerCallback) {
+  document.querySelector(".put-to-cart__button")?.addEventListener("click", eventHandlerCallback);
+}
+
+const slider = document.querySelector(".slider__list");
+const slides = Array.from(document.querySelectorAll(".slider__item"));
+const previousButton = document.querySelector(".slider__button--previous");
+const nextButton = document.querySelector(".slider__button--next");
+nextButton?.addEventListener('click', () => {
+  if (slider.scrollLeft + slider.clientWidth === slider.scrollWidth) {
+    slider.scrollBy({
+      left: -slider.scrollLeft
+    });
+  } else {
+    slider.scrollBy({
+      left: slider.clientWidth
+    });
+  }
+});
+previousButton?.addEventListener('click', () => {
+  if (slider.scrollLeft === 0) {
+    slider.scrollBy({
+      left: slider.scrollWidth - slider.clientWidth
+    });
+  } else {
+    slider.scrollBy({
+      left: -slider.clientWidth
+    });
+  }
 });
 
 const modalShowButton = document.querySelector(".weekly-goods__button");
