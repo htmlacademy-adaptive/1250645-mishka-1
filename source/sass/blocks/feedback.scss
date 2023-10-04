@@ -15,7 +15,7 @@
   }
 
   @media (min-width: variables.$desktop-min-width) {
-    padding: 78px 0 163px 175px;
+    padding: 78px 0 162px 175px;
   }
 }
 
@@ -27,9 +27,10 @@
     margin: 4px 0 38px;
   }
 
-  @media (min-width: variables.$tablet-min-width) {
+  @media (min-width: variables.$desktop-min-width) {
     margin-top: 0;
     margin-bottom: 35px;
+    margin-left: -1px;
   }
 }
 
@@ -50,5 +51,9 @@
     flex: 0 0 175px;
     margin-bottom: 40px;
     font-size: 17px;
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    margin-top: 1px;
   }
 }

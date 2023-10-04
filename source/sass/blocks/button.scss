@@ -24,6 +24,10 @@
     text-transform: none;
     text-align: start;
 
+    .button__icon {
+      margin-left: 2px;
+    }
+
     @media (min-width: variables.$tablet-min-width) {
       display: flex;
 

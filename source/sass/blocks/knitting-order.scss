@@ -233,7 +233,7 @@
     align-items: center;
   }
 
-  @media (min-width: variables.$tablet-min-width) {
+  @media (min-width: variables.$desktop-min-width) {
     padding: 0 225px 50px;
   }
 }

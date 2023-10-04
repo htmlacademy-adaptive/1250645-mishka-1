@@ -17,10 +17,9 @@
   text-align: center;
 
   @media (min-width: variables.$tablet-min-width) {
-    margin: 0 0 11px;
+    margin: 0 92px 12px;
     font-size: 30px;
     line-height: 57px;
-    letter-spacing: -0.19px;
   }
 }
 
@@ -40,7 +39,7 @@
 
   @media (min-width: variables.$tablet-min-width) {
     font-size: 17px;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
   }
 }
 

@@ -12,6 +12,14 @@
 .copyright__logo {
   display: block;
   margin-left: 27px;
+
+  @media (min-width: variables.$tablet-min-width) {
+    margin-left: 26px;
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    margin-left: 28px;
+  }
 }
 
 .copyright__logo-image {

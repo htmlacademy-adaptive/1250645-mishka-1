@@ -25,11 +25,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 50px 19px;
+    padding: 0 50px 18px;
 
     &::before {
       content: url("../img/icon/flag.svg");
       display: block;
+      margin-right: 3px;
       line-height: 0;
       order: 2;
     }
@@ -55,12 +56,13 @@
   margin: 0 0 28px;
 
   @media (min-width: variables.$tablet-min-width) {
-    margin: 22px 0 49px;
+    margin: 23px 0 49px;
     order: 1;
   }
 
   @media (min-width: variables.$desktop-min-width) {
     margin: 0;
+    margin-left: -1px;
     padding: 79px 40px 35px 0;
   }
 }
@@ -81,6 +83,7 @@
 
   @media (min-width: variables.$desktop-min-width) {
     grid-column: 2 / 3;
+    margin-left: -1px;
   }
 }
 
@@ -145,23 +148,23 @@
 
 .contacts__map {
   position: relative;
-  margin-bottom: 42px;
+  margin-bottom: 41px;
 
-  &::after {
-    content: url("../img/icon/map-pin.svg");
-    position: absolute;
-    top: 54%;
-    left: 53.5%;
-    transform: translate(-50%, -100%);
-  }
+  // &::after {
+  //   content: url("../img/icon/map-pin.svg");
+  //   position: absolute;
+  //   top: 54%;
+  //   left: 53.5%;
+  //   transform: translate(-50%, -100%);
+  // }
 
   @media (min-width: variables.$tablet-min-width) {
     margin-bottom: 55px;
 
-    &::after {
-      top: 53.3%;
-      left: 51.7%;
-    }
+    // &::after {
+    //   top: 53.3%;
+    //   left: 51.7%;
+    // }
   }
 
   @media (min-width: variables.$desktop-min-width) {
@@ -174,31 +177,15 @@
 .contacts__map-image {
   display: block;
   width: 100%;
-
-  &--tablet {
-    display: none;
-  }
-
-  &--desktop {
-    display: none;
-  }
+  border: 0;
 
   @media (min-width: variables.$tablet-min-width) {
-    display: none;
-
-    &--tablet {
-      display: block;
-    }
+    height: auto;
+    aspect-ratio: 768 / 457;
   }
 
   @media (min-width: variables.$desktop-min-width) {
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-    }
+    aspect-ratio: 525 / 457;
   }
 }
 
@@ -213,6 +200,7 @@
     display: block;
     width: 30%;
     margin: 0 auto;
+    font-size: 17px;
   }
 
   @media (min-width: variables.$desktop-min-width) {

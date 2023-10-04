@@ -8,12 +8,16 @@
     grid-template-columns: 1fr 167px;
     margin-bottom: 0;
   }
+
+  @media (min-width: variables.$desktop-min-width) {
+    grid-template-columns: 1fr 175px;
+  }
 }
 
 .slider__list {
   display: flex;
   padding: 0;
-  margin: 0 0 30px;
+  margin: 0 0 29px;
   overflow-x: auto;
   list-style-type: none;
   scrollbar-width: none;
@@ -67,7 +71,7 @@
   }
 
   @media (min-width: variables.$desktop-min-width) {
-    margin: 0 auto 15px;
+    margin: 0 auto 16px;
   }
 }
 
@@ -93,11 +97,13 @@
   &--previous {
     order: 1;
     background-image: url("../img/icon/arrow-left.svg");
+    background-position-x: 47%;
   }
 
   &--next {
     order: 3;
     background-image: url("../img/icon/arrow-left.svg");
+    background-position-x: 53%;
     transform: scaleX(-1);
   }
 
