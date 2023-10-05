@@ -16,13 +16,13 @@
   line-height: 24px;
 
   @media (min-width: variables.$tablet-min-width) {
-    padding: 54px 50px 13px;
+    padding: 54px 50px 15px;
     font-size: 17px;
     line-height: 30px;
   }
 
   @media (min-width: variables.$desktop-min-width) {
-    padding: 98px 225px 13px;
+    padding: 98px 225px 14px;
   }
 }
 
@@ -51,8 +51,8 @@
   align-items: flex-start;
 
   &--type {
-    padding: 37px 0 39px;
-    row-gap: 11px;
+    padding: 38px 0 40px;
+    row-gap: 13px;
   }
 
   &--color {
@@ -61,7 +61,7 @@
   }
 
   &--name {
-    padding: 36px 0 42px;
+    padding: 36px 0 41px;
     row-gap: 22px;
   }
 
@@ -81,11 +81,18 @@
     padding: 50px;
     margin: 0 auto;
     border: none;
-    row-gap: 24px;
+    row-gap: 26px;
     align-items: center;
+
+    &--type {
+      .knitting-order__control {
+        margin-left: 3px;
+      }
+    }
 
     &--color {
       grid-template-columns: 167px 39.2% 1fr;
+      row-gap: 24px;
 
       .knitting-order__control {
         padding-right: 30px;
@@ -95,6 +102,10 @@
           grid-column: 3 / 4;
         }
       }
+    }
+
+    &--name {
+      row-gap: 24px;
     }
 
     &--contacts {
@@ -117,8 +128,14 @@
     padding-right: 225px;
     grid-template-columns: 175px 1fr;
 
+    &--type {
+      .knitting-order__control {
+        margin-left: 1px;
+      }
+    }
+
     &--color {
-      padding-right: 50px;
+      padding: 48px 50px 52px;
       grid-template-columns: 175px repeat(3, 25%);
 
       .knitting-order__control {
@@ -137,11 +154,13 @@
     }
 
     &--info {
+      padding-bottom: 49px;
+
       .knitting-order__section-name {
         flex: 0 0 175px;
         align-self: flex-start;
-        padding-left: 60px;
-        padding-right: 30px;
+        padding-left: 62px;
+        padding-right: 28px;
       }
     }
   }
@@ -216,8 +235,8 @@
 
   @media (min-width: variables.$desktop-min-width) {
     flex-basis: 175px;
-    padding-left: 60px;
-    padding-right: 30px;
+    padding-left: 62px;
+    padding-right: 28px;
   }
 }
 

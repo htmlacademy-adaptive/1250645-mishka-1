@@ -29,12 +29,12 @@
 
 .main-container__header {
   max-width: 1500px;
-  padding: 74px 30px;
+  padding: 72px 30px 74px;
   margin: 0 auto;
   text-align: center;
 
   @media (min-width: variables.$tablet-min-width) {
-    padding: 57px 50px 87px;
+    padding: 56px 50px 87px;
   }
 
   @media (min-width: variables.$desktop-min-width) {
