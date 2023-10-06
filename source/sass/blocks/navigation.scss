@@ -83,38 +83,6 @@
   }
 }
 
-.navigation__logo {
-  display: block;
-}
-
-.navigation__logo-image {
-  display: block;
-
-  @media (min-width: variables.$tablet-min-width) {
-    display: none;
-  }
-
-  &--tablet {
-    display: none;
-
-    @media (min-width: variables.$tablet-min-width) {
-      display: block;
-    }
-
-    @media (min-width: variables.$desktop-min-width) {
-      display: none;
-    }
-  }
-
-  &--desktop {
-    display: none;
-
-    @media (min-width: variables.$desktop-min-width) {
-      display: block;
-    }
-  }
-}
-
 .navigation__menu-toggle {
   position: absolute;
   top: 50%;

@@ -20,10 +20,47 @@
   color: #000000;
   text-decoration: none;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &--decorated {
     display: inline-grid;
     grid-template-columns: 46px 1fr;
     align-items: center;
+
+    .link__icon {
+      opacity: 0.2;
+    }
+
+    &:hover {
+      opacity: 1;
+
+      .link__icon {
+        color: variables.$color-turquoise;
+        opacity: 1;
+      }
+
+      .link__text {
+        opacity: 0.6;
+      }
+    }
+
+    &:active {
+      opacity: 1;
+
+      .link__icon {
+        opacity: 0.3;
+      }
+
+      .link__text {
+        opacity: 0.3;
+      }
+    }
   }
 
   @media (min-width: variables.$tablet-min-width) {
