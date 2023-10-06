@@ -1,7 +1,7 @@
 @use "common/variables";
 
 .manufacturing {
-  padding: 22px 0 33px;
+  padding: 21px 0 33px;
   border: 1px solid #ececec;
 
   @media (min-width: variables.$tablet-min-width) {
@@ -19,7 +19,7 @@
 
 .manufacturing__title {
   display: flex;
-  margin: 0 34px 26px;
+  margin: 0 33px 26px;
   align-items: center;
   color: variables.$primary-color;
   font-size: 17px;
@@ -31,10 +31,11 @@
     display: block;
     margin-right: 25px;
     flex-shrink: 0;
+    line-height: 0;
   }
 
   @media (min-width: variables.$tablet-min-width) {
-    padding: 38px 42px 24px;
+    padding: 38px 41px 24px;
     margin: 0;
     border: 1px solid #ececec;
     border-bottom: none;
@@ -42,13 +43,13 @@
 
     &::before {
       margin-right: 33px;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
     }
   }
 
   @media (min-width: variables.$desktop-min-width) {
     display: block;
-    padding: 46px 80px 28px;
+    padding: 46px 79px 27px;
     border-left: none;
 
     &::before {
@@ -98,17 +99,17 @@
 }
 
 .manufacturing__wrapper {
-  margin: 0 34px 0;
+  margin: 0 33px 0;
 
   @media (min-width: variables.$tablet-min-width) {
-    padding: 0 42px 46px;
+    padding: 0 39px 45px;
     margin: 0;
     border: 1px solid #ececec;
     border-top: none;
   }
 
   @media (min-width: variables.$desktop-min-width) {
-    padding: 0 57px 59px 80px;
+    padding: 0 57px 59px 79px;
     border-left: none;
   }
 }
@@ -119,11 +120,13 @@
   line-height: 24px;
   color: variables.$secondary-color;
   margin: 0 0 41px;
-  letter-spacing: -0.1px;
+  letter-spacing: -0.03px;
 
   @media (min-width: variables.$tablet-min-width) {
+    margin-bottom: 40px;
     font-size: 15px;
     line-height: 30px;
+    letter-spacing: normal;
   }
 
   @media (min-width: variables.$desktop-min-width) {
@@ -138,6 +141,17 @@
   line-height: 16px;
 
   @media (min-width: variables.$tablet-min-width) {
+    $side-margin: 2px;
+
+    width: calc(100% - $side-margin * 2);
+    margin-left: $side-margin;
+    margin-right: $side-margin;
     font-size: 17px;
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    width: 100%;
+    margin-left: 1px;
+    margin-right: 0;
   }
 }

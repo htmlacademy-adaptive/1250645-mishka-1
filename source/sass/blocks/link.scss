@@ -1,5 +1,20 @@
 @use "common/variables";
 
+@mixin button-like() {
+  border: 2px solid variables.$secondary-color;
+  background-color: variables.$primary-background-color;
+  color: variables.$secondary-color;
+  font-family: inherit;
+  font-style: inherit;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+
+  @media (min-width: variables.$desktop-min-width) {
+      display: inline-block;
+  }
+}
+
 .link {
   display: inline-block;
   color: #000000;
@@ -45,18 +60,13 @@
   }
 
   &--button {
+    @include button-like();
     padding: 14px 18px;
-    border: 2px solid variables.$secondary-color;
-    background-color: variables.$primary-background-color;
-    color: variables.$secondary-color;
-    font-family: inherit;
-    font-style: inherit;
-    text-transform: uppercase;
-    text-align: center;
-    cursor: pointer;
+  }
 
-    @media (min-width: variables.$desktop-min-width) {
-      display: inline-block;
-    }
+  &--button-big {
+    @include button-like();
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }

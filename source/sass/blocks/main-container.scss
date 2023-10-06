@@ -34,11 +34,11 @@
   text-align: center;
 
   @media (min-width: variables.$tablet-min-width) {
-    padding: 56px 50px 87px;
+    padding: 56px 100px 87px;
   }
 
   @media (min-width: variables.$desktop-min-width) {
-    padding: 58px 50px 113px;
+    padding: 58px 150px 113px;
   }
 }
 
