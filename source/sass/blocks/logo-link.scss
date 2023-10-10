@@ -30,6 +30,24 @@
 
       .logo-link__image {
         display: block;
+        color: #000000;
+      }
+
+      &[href]:hover {
+        opacity: 1;
+
+        .logo-link__image {
+          color: #46c1ae;
+        }
+      }
+
+      &[href]:active {
+        opacity: 1;
+
+        .logo-link__image {
+          color: #46c1ae;
+          opacity: 0.3;
+        }
       }
     }
   }

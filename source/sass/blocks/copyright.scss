@@ -4,14 +4,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #000000;
+  text-decoration: none;
   font-size: 19px;
   font-weight: 700;
   line-height: 18px;
+
+  &:hover .copyright__logo {
+    color: #46c1ae;
+  }
+
+  &:active .copyright__logo {
+    color: #46c1ae;
+    opacity: 0.3;
+  }
 }
 
 .copyright__logo {
   display: block;
   margin-left: 27px;
+  color: #63d1bb;
 
   @media (min-width: variables.$tablet-min-width) {
     margin-left: 26px;
@@ -20,8 +32,4 @@
   @media (min-width: variables.$desktop-min-width) {
     margin-left: 28px;
   }
-}
-
-.copyright__logo-image {
-  display: block;
 }

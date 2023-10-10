@@ -10,7 +10,7 @@
 
   @media (min-width: variables.$tablet-min-width) {
     position: relative;
-    padding: 111px 50px 12px;
+    padding: 101px 50px 12px;
     background-position: center bottom;
     background-origin: content-box;
     background-size: auto;
@@ -29,7 +29,7 @@
   }
 
   @media (min-width: variables.$desktop-min-width) {
-    padding: 114px 0 17px;
+    padding: 104px 0 17px;
 
     &::after {
       height: 34px;
@@ -89,6 +89,7 @@
   font-weight: 700;
   line-height: 24px;
   text-decoration: none;
+  transition: margin 0.2s, padding 0.2s, opacity 0.2s;
 
   &::after {
     flex-shrink: 0;
@@ -97,6 +98,14 @@
     line-height: 0;
     text-align: center;
     opacity: 0.5;
+  }
+
+  &:hover::after {
+    opacity: 0.7;
+  }
+
+  &:active::after {
+    opacity: 0.3;
   }
 
   &--interior {
@@ -110,6 +119,10 @@
 
     .hero__link-text {
       margin-top: 1px;
+    }
+
+    &:hover, &:active {
+      background-color: #59d5bc;
     }
   }
 
@@ -125,6 +138,10 @@
     .hero__link-text {
       margin-top: 3px;
     }
+
+    &:hover, &:active {
+      background-color: #46c1ae;
+    }
   }
 
   @media (min-width: variables.$tablet-min-width) {
@@ -135,6 +152,11 @@
 
     &::after {
       margin-top: 5px;
+    }
+
+    &:hover {
+      padding-bottom: 32px;
+      margin-top: -5px;
     }
 
     &--interior {

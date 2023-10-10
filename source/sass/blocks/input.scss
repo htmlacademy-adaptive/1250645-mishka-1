@@ -24,6 +24,10 @@
     }
   }
 
+  &:hover {
+    border-color: variables.$form-hover-color;
+  }
+
   &:focus-visible {
     outline: none;
     border-color: variables.$form-hover-color;
@@ -50,10 +54,6 @@
     &:checked {
       border-color: variables.$form-hover-color;
     }
-  }
-
-  &:hover {
-    border-color: variables.$form-hover-color;
   }
 
   &--radio {

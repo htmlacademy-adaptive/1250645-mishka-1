@@ -1,5 +1,23 @@
 @use "common/variables";
 
+@mixin menu-button() {
+  border: none;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &:hover {
+    background-color: transparent;
+    opacity: 0.7;
+  }
+
+  &:active {
+    background-color: transparent;
+    opacity: 0.3;
+  }
+}
+
 .button {
   padding: 14px 18px;
   border: 2px solid variables.$secondary-color;
@@ -10,6 +28,48 @@
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #444444;
+  }
+
+  &:active {
+    color: #ffffff;
+    background-color: #444444;
+
+    .button__label {
+      opacity: 0.3;
+    }
+  }
+
+  &--icon {
+    padding: 0;
+    border: none;
+    color: variables.$primary-color;
+
+    .button__icon {
+      opacity: 0.2;
+    }
+
+    &:hover {
+      background-color: transparent;
+
+      .button__icon {
+        color: variables.$color-turquoise;
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      background-color: transparent;
+
+      .button__icon {
+        color: variables.$color-turquoise;
+        opacity: 0.3;
+      }
+    }
+  }
 
   &--link {
     display: inline-grid;
@@ -26,6 +86,35 @@
 
     .button__icon {
       margin-left: 2px;
+      opacity: 0.2;
+    }
+
+    &:hover {
+      color: variables.$primary-color;
+      background-color: transparent;
+
+      .button__icon {
+        color: variables.$color-turquoise;
+        opacity: 1;
+      }
+
+      .button__label {
+        opacity: 0.6;
+      }
+    }
+
+    &:active {
+      color: variables.$primary-color;
+      background-color: transparent;
+
+      .button__icon {
+        color: variables.$color-turquoise;
+        opacity: 0.3;
+      }
+
+      .button__label {
+        opacity: 0.3;
+      }
     }
 
     @media (min-width: variables.$tablet-min-width) {
@@ -45,23 +134,18 @@
     font-size: 17px;
     font-weight: 700;
     line-height: 16px;
-  }
-
-  &--icon-only {
-    padding: 0;
-    border: none;
-    color: rgba(0, 0, 0, 0.2);
-
-    .button__icon {
-      display: block;
-    }
 
     &:hover {
-      color: variables.$color-turquoise;
+      background-color: #21ceaa;
     }
 
     &:active {
-      color: rgba(99, 209, 187, 0.3);
+      background-color: #21ceaa;
+      opacity: 0.5;
+
+      .button__label {
+        opacity: 1;
+      }
     }
   }
 
@@ -86,21 +170,13 @@
   }
 
   &--menu-open {
-    border: none;
-    padding: 0;
+    @include menu-button();
     background-image: url("../img/icon/menu-open.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
   }
 
   &--menu-close {
-    border: none;
-    padding: 0;
+    @include menu-button();
     background-image: url("../img/icon/menu-close.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
   }
 
   &--alternate {

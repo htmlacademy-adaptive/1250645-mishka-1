@@ -14,6 +14,14 @@
 
   @media (min-width: variables.$tablet-min-width) and (max-width: variables.$tablet-max-width) {
     flex-direction: row;
+
+    &:hover .product-card__description {
+      box-shadow: 6px 0 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active .product-card__description {
+      box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.1);
+    }
   }
 }
 

@@ -123,7 +123,7 @@
       .navigation__menu-item {
         display: flex;
         max-width: 55%;
-        padding: 20px 36px 0 0;
+        padding: 20px 36px 10px 0;
         margin: 0;
         margin-right: calc((100% - 433px) / 12);
         border: 0;
@@ -201,7 +201,7 @@
 
       .navigation__menu-item {
         display: flex;
-        padding: 19px 31px 0;
+        padding: 19px 31px 10px;
         margin: 0;
         background-color: transparent;
       }
@@ -218,7 +218,7 @@
 
   @media (min-width: variables.$tablet-min-width) {
     display: block;
-    padding: 21px 50px 0 0;
+    padding: 21px 50px 10px 0;
     margin: 0;
     color: #444444;
     background-color: #f9f9f9;

@@ -10,6 +10,22 @@
   text-align: center;
   cursor: pointer;
 
+  &[href]:hover {
+    color: #ffffff;
+    background-color: #444444;
+    opacity: 1;
+  }
+
+  &[href]:active {
+    color: #ffffff;
+    background-color: #444444;
+    opacity: 1;
+
+    .link__label {
+      opacity: 0.3;
+    }
+  }
+
   @media (min-width: variables.$desktop-min-width) {
       display: inline-block;
   }
@@ -20,11 +36,11 @@
   color: #000000;
   text-decoration: none;
 
-  &:hover {
+  &[href]:hover {
     opacity: 0.6;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.3;
   }
 
@@ -37,7 +53,7 @@
       opacity: 0.2;
     }
 
-    &:hover {
+    &[href]:hover {
       opacity: 1;
 
       .link__icon {
@@ -50,10 +66,11 @@
       }
     }
 
-    &:active {
+    &[href]:active {
       opacity: 1;
 
       .link__icon {
+        color: variables.$color-turquoise;
         opacity: 0.3;
       }
 
@@ -61,10 +78,8 @@
         opacity: 0.3;
       }
     }
-  }
 
-  @media (min-width: variables.$tablet-min-width) {
-    &--decorated {
+    @media (min-width: variables.$tablet-min-width) {
       display: flex;
 
       .link__icon {
@@ -72,20 +87,26 @@
         flex-shrink: 0;
       }
     }
-  }
 
-  @media (min-width: variables.$desktop-min-width) {
-    display: flex;
-    align-items: center;
-
-    &--decorated {
+    @media (min-width: variables.$desktop-min-width) {
       padding-right: 2px;
     }
   }
 
-  &--emphasising {
+  &--emphasizing {
     text-decoration: underline #62d1ba solid;
     text-underline-offset: 6px;
+
+    &[href]:hover {
+      color: #46c1ae;
+      opacity: 1;
+    }
+
+    &[href]:active {
+      color: #46c1ae;
+      text-decoration: none;
+      opacity: 1;
+    }
 
     @media (min-width: variables.$tablet-min-width) {
       text-underline-offset: 8px;
@@ -93,6 +114,13 @@
 
     @media (min-width: variables.$desktop-min-width) {
       text-underline-offset: 13px;
+    }
+  }
+
+  &--image {
+    &[href]:hover,
+    &[href]:active {
+      opacity: 1;
     }
   }
 
