@@ -43,7 +43,7 @@
     }
   }
 
-  &--icon {
+  &--icon-only {
     padding: 0;
     border: none;
     color: variables.$primary-color;
@@ -51,23 +51,23 @@
     .button__icon {
       opacity: 0.2;
     }
+  }
 
-    &:hover {
-      background-color: transparent;
+  &--icon-only:hover {
+    background-color: transparent;
 
-      .button__icon {
-        color: variables.$color-turquoise;
-        opacity: 1;
-      }
+    .button__icon {
+      color: variables.$color-turquoise;
+      opacity: 1;
     }
+  }
 
-    &:active {
-      background-color: transparent;
+  &--icon-only:active {
+    background-color: transparent;
 
-      .button__icon {
-        color: variables.$color-turquoise;
-        opacity: 0.3;
-      }
+    .button__icon {
+      color: variables.$color-turquoise;
+      opacity: 0.3;
     }
   }
 
@@ -89,40 +89,40 @@
       opacity: 0.2;
     }
 
-    &:hover {
-      color: variables.$primary-color;
-      background-color: transparent;
-
-      .button__icon {
-        color: variables.$color-turquoise;
-        opacity: 1;
-      }
-
-      .button__label {
-        opacity: 0.6;
-      }
-    }
-
-    &:active {
-      color: variables.$primary-color;
-      background-color: transparent;
-
-      .button__icon {
-        color: variables.$color-turquoise;
-        opacity: 0.3;
-      }
-
-      .button__label {
-        opacity: 0.3;
-      }
-    }
-
     @media (min-width: variables.$tablet-min-width) {
       display: flex;
 
       .button__label {
         display: none;
       }
+    }
+  }
+
+  &--link:hover {
+    color: variables.$primary-color;
+    background-color: transparent;
+
+    .button__icon {
+      color: variables.$color-turquoise;
+      opacity: 1;
+    }
+
+    .button__label {
+      opacity: 0.6;
+    }
+  }
+
+  &--link:active {
+    color: variables.$primary-color;
+    background-color: transparent;
+
+    .button__icon {
+      color: variables.$color-turquoise;
+      opacity: 0.3;
+    }
+
+    .button__label {
+      opacity: 0.3;
     }
   }
 
@@ -134,18 +134,18 @@
     font-size: 17px;
     font-weight: 700;
     line-height: 16px;
+  }
 
-    &:hover {
-      background-color: #21ceaa;
-    }
+  &--colored:hover {
+    background-color: #21ceaa;
+  }
 
-    &:active {
-      background-color: #21ceaa;
-      opacity: 0.5;
+  &--colored:active {
+    background-color: #21ceaa;
+    opacity: 0.5;
 
-      .button__label {
-        opacity: 1;
-      }
+    .button__label {
+      opacity: 1;
     }
   }
 
