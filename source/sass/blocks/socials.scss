@@ -15,6 +15,15 @@
 
 .socials__link {
   color: #231f20;
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:active {
+    color: #46c1ae;
+    opacity: 0.3;
+  }
 }
 
 .socials__icon {

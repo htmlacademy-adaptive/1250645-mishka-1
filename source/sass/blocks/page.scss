@@ -1,0 +1,9 @@
+.page__page-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page__main-container {
+  flex-grow: 1;
+}

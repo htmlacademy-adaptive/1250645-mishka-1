@@ -26,15 +26,16 @@
 
 .page-body__modal-window {
   width: 100%;
-  padding: 28px 30px 46px;
+  padding: 29px 30px 46px;
   border-top: 1px solid #c6c6c6;
   border-bottom: 1px solid #c6c6c6;
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
 
   @media (min-width: variables.$tablet-min-width) {
     width: 566px;
-    padding-left: 108px;
-    padding-right: 108px;
+    // padding-left: 108px;
+    // padding-right: 108px;
+    padding: 38px 0 46px;
     padding-top: 38px;
     margin: 0 auto;
   }

@@ -10,7 +10,7 @@
 
   @media (min-width: variables.$tablet-min-width) {
     position: relative;
-    padding: 110px 50px 12px;
+    padding: 101px 50px 12px;
     background-position: center bottom;
     background-origin: content-box;
     background-size: auto;
@@ -29,7 +29,7 @@
   }
 
   @media (min-width: variables.$desktop-min-width) {
-    padding: 110px 0 17px;
+    padding: 104px 0 17px;
 
     &::after {
       height: 34px;
@@ -53,10 +53,10 @@
 
   @media (min-width: variables.$tablet-min-width) {
     min-height: 100px;
-    margin-bottom: 372px;
+    margin-bottom: 371px;
   }
 
-  @media (min-width: variables.$tablet-min-width) {
+  @media (min-width: variables.$desktop-min-width) {
     min-height: 114px;
     margin-bottom: 355px;
   }
@@ -81,13 +81,15 @@
 
 .hero__link {
   display: flex;
-  padding: 22px 27px 20px 30px;
+  padding-left: 30px;
+  padding-right: 27px;
   justify-content: space-between;
   color: variables.$color-white;
   font-size: 19px;
   font-weight: 700;
   line-height: 24px;
   text-decoration: none;
+  transition: margin 0.2s, padding 0.2s, opacity 0.2s;
 
   &::after {
     flex-shrink: 0;
@@ -98,19 +100,49 @@
     opacity: 0.5;
   }
 
+  &:hover::after {
+    opacity: 0.7;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+
   &--interior {
+    padding-top: 23px;
+    padding-bottom: 18px;
     background-color: variables.$color-turquoise;
 
     &::after {
       content: url("../img/icon/lamp.svg");
     }
+
+    .hero__link-text {
+      margin-top: 1px;
+    }
+
+    &:hover,
+    &:active {
+      background-color: #59d5bc;
+    }
   }
 
   &--toys {
+    padding-top: 21px;
+    padding-bottom: 22px;
     background-color: variables.$color-dark-turquoise;
 
     &::after {
       content: url("../img/icon/brick.svg");
+    }
+
+    .hero__link-text {
+      margin-top: 3px;
+    }
+
+    &:hover,
+    &:active {
+      background-color: #46c1ae;
     }
   }
 
@@ -124,11 +156,29 @@
       margin-top: 5px;
     }
 
+    &:hover {
+      padding-bottom: 32px;
+      margin-top: -5px;
+    }
+
     &--interior {
       &::after {
         padding-right: 3px;
         text-align: right;
       }
+    }
+
+    &--toys {
+      .hero__link-text {
+        margin-top: 1px;
+      }
+    }
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    &::after {
+      margin-top: 5px;
+      margin-right: 2px;
     }
   }
 }

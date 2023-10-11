@@ -45,6 +45,7 @@
 
   @media (min-width: variables.$desktop-min-width) {
     max-width: 75%;
+    margin-left: -1px;
   }
 }
 

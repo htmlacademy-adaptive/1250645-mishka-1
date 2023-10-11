@@ -1,5 +1,23 @@
 @use "common/variables";
 
+@mixin menu-button() {
+  border: none;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &:hover {
+    background-color: transparent;
+    opacity: 0.7;
+  }
+
+  &:active {
+    background-color: transparent;
+    opacity: 0.3;
+  }
+}
+
 .button {
   padding: 14px 18px;
   border: 2px solid variables.$secondary-color;
@@ -10,6 +28,48 @@
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #444444;
+  }
+
+  &:active {
+    color: #ffffff;
+    background-color: #444444;
+
+    .button__label {
+      opacity: 0.3;
+    }
+  }
+
+  &--icon-only {
+    padding: 0;
+    border: none;
+    color: variables.$primary-color;
+
+    .button__icon {
+      opacity: 0.2;
+    }
+  }
+
+  &--icon-only:hover {
+    background-color: transparent;
+
+    .button__icon {
+      color: variables.$color-turquoise;
+      opacity: 1;
+    }
+  }
+
+  &--icon-only:active {
+    background-color: transparent;
+
+    .button__icon {
+      color: variables.$color-turquoise;
+      opacity: 0.3;
+    }
+  }
 
   &--link {
     display: inline-grid;
@@ -24,12 +84,45 @@
     text-transform: none;
     text-align: start;
 
+    .button__icon {
+      margin-left: 2px;
+      opacity: 0.2;
+    }
+
     @media (min-width: variables.$tablet-min-width) {
       display: flex;
 
       .button__label {
         display: none;
       }
+    }
+  }
+
+  &--link:hover {
+    color: variables.$primary-color;
+    background-color: transparent;
+
+    .button__icon {
+      color: variables.$color-turquoise;
+      opacity: 1;
+    }
+
+    .button__label {
+      opacity: 0.6;
+    }
+  }
+
+  &--link:active {
+    color: variables.$primary-color;
+    background-color: transparent;
+
+    .button__icon {
+      color: variables.$color-turquoise;
+      opacity: 0.3;
+    }
+
+    .button__label {
+      opacity: 0.3;
     }
   }
 
@@ -43,21 +136,16 @@
     line-height: 16px;
   }
 
-  &--icon-only {
-    padding: 0;
-    border: none;
-    color: rgba(0, 0, 0, 0.2);
+  &--colored:hover {
+    background-color: #21ceaa;
+  }
 
-    .button__icon {
-      display: block;
-    }
+  &--colored:active {
+    background-color: #21ceaa;
+    opacity: 0.5;
 
-    &:hover {
-      color: variables.$color-turquoise;
-    }
-
-    &:active {
-      color: rgba(99, 209, 187, 0.3);
+    .button__label {
+      opacity: 1;
     }
   }
 
@@ -82,21 +170,13 @@
   }
 
   &--menu-open {
-    border: none;
-    padding: 0;
+    @include menu-button();
     background-image: url("../img/icon/menu-open.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
   }
 
   &--menu-close {
-    border: none;
-    padding: 0;
+    @include menu-button();
     background-image: url("../img/icon/menu-close.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
   }
 
   &--alternate {

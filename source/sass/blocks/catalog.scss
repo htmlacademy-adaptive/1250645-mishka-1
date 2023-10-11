@@ -8,16 +8,31 @@
   @media (min-width: variables.$desktop-min-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 57px;
   }
 }
 
 .catalog__item {
   margin: 0 0 30px;
 
+  &:last-child {
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: variables.$tablet-min-width) {
+    margin-bottom: 54px;
+
+    &:last-child {
+      margin-bottom: 53px;
+    }
+  }
+
   @media (min-width: variables.$desktop-min-width) {
     width: 316px;
-    margin: 0;
+    margin-bottom: 57px;
+
+    &:last-child {
+      margin-bottom: 57px;
+    }
 
     &:nth-child(4n+2) {
       justify-self: center;

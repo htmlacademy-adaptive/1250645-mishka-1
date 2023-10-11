@@ -24,6 +24,10 @@
     }
   }
 
+  &:hover {
+    border-color: variables.$form-hover-color;
+  }
+
   &:focus-visible {
     outline: none;
     border-color: variables.$form-hover-color;
@@ -50,10 +54,6 @@
     &:checked {
       border-color: variables.$form-hover-color;
     }
-  }
-
-  &:hover {
-    border-color: variables.$form-hover-color;
   }
 
   &--radio {
@@ -114,6 +114,7 @@
 
   &--space-reserved {
     padding-right: 39px;
+    padding-bottom: 5px;
 
     @media (min-width: variables.$tablet-min-width) and (max-width: variables.$tablet-max-width) {
       padding-right: 60px;
@@ -127,8 +128,8 @@
   }
 
   &--textarea {
-    border: 2px solid variables.$primary-color;
+    border: 2px solid variables.$secondary-color;
     resize: none;
-    padding: 17px;
+    padding: 15px;
   }
 }

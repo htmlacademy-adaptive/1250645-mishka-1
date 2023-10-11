@@ -1,18 +1,59 @@
 @use "common/variables";
 
+@mixin button-like() {
+  border: 2px solid variables.$secondary-color;
+  background-color: variables.$primary-background-color;
+  color: variables.$secondary-color;
+  font-family: inherit;
+  font-style: inherit;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+
+  &[href]:hover {
+    color: #ffffff;
+    background-color: #444444;
+    opacity: 1;
+  }
+
+  &[href]:active {
+    color: #ffffff;
+    background-color: #444444;
+    opacity: 1;
+
+    .link__label {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    display: inline-block;
+  }
+}
+
 .link {
   display: inline-block;
   color: #000000;
   text-decoration: none;
 
+  &[href]:hover {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+
   &--decorated {
     display: inline-grid;
     grid-template-columns: 46px 1fr;
     align-items: center;
-  }
 
-  @media (min-width: variables.$tablet-min-width) {
-    &--decorated {
+    .link__icon {
+      opacity: 0.2;
+    }
+
+    @media (min-width: variables.$tablet-min-width) {
       display: flex;
 
       .link__icon {
@@ -20,39 +61,77 @@
         flex-shrink: 0;
       }
     }
+
+    @media (min-width: variables.$desktop-min-width) {
+      padding-right: 2px;
+    }
   }
 
-  @media (min-width: variables.$desktop-min-width) {
-    display: flex;
-    align-items: center;
+  &--decorated[href]:hover {
+    opacity: 1;
+
+    .link__icon {
+      color: variables.$color-turquoise;
+      opacity: 1;
+    }
+
+    .link__text {
+      opacity: 0.6;
+    }
   }
 
-  &--emphasising {
+  &--decorated[href]:active {
+    opacity: 1;
+
+    .link__icon {
+      color: variables.$color-turquoise;
+      opacity: 0.3;
+    }
+
+    .link__text {
+      opacity: 0.3;
+    }
+  }
+
+  &--emphasizing {
     text-decoration: underline #62d1ba solid;
     text-underline-offset: 6px;
+
+    &[href]:hover {
+      color: #46c1ae;
+      opacity: 1;
+    }
+
+    &[href]:active {
+      color: #46c1ae;
+      text-decoration: none;
+      opacity: 1;
+    }
 
     @media (min-width: variables.$tablet-min-width) {
       text-underline-offset: 8px;
     }
 
     @media (min-width: variables.$desktop-min-width) {
-      text-underline-offset: 12px;
+      text-underline-offset: 13px;
+    }
+  }
+
+  &--image {
+    &[href]:hover,
+    &[href]:active {
+      opacity: 1;
     }
   }
 
   &--button {
+    @include button-like();
     padding: 14px 18px;
-    border: 2px solid variables.$secondary-color;
-    background-color: variables.$primary-background-color;
-    color: variables.$secondary-color;
-    font-family: inherit;
-    font-style: inherit;
-    text-transform: uppercase;
-    text-align: center;
-    cursor: pointer;
+  }
 
-    @media (min-width: variables.$desktop-min-width) {
-      display: inline-block;
-    }
+  &--button-big {
+    @include button-like();
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }

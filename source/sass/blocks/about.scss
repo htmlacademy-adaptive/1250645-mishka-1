@@ -9,7 +9,7 @@
   }
 
   @media (min-width: variables.$desktop-min-width) {
-    padding: 68px 175px 32px;
+    padding: 68px 175px 31px;
   }
 }
 
@@ -18,7 +18,7 @@
   margin-bottom: 28px;
 
   @media (min-width: variables.$tablet-min-width) {
-    margin-bottom: 42px;
+    margin-bottom: 41px;
   }
 
   @media (min-width: variables.$desktop-min-width) {
@@ -47,6 +47,67 @@
   margin-bottom: 30px;
   flex-basis: 100%;
 
+  &::before {
+    display: block;
+    margin: 0;
+    line-height: 0;
+  }
+
+  &--ecological {
+    margin-bottom: 30px;
+
+    &::before {
+      content: url("../img/icon/flower.svg");
+      margin-bottom: 16px;
+      margin-left: 8px;
+    }
+  }
+
+  &--handmade {
+    margin-bottom: 33px;
+
+    &::before {
+      content: url("../img/icon/ball-thread.svg");
+      margin-bottom: 17px;
+      margin-left: 3px;
+    }
+  }
+
+  &--scandinavian {
+    margin-bottom: 35px;
+
+    &::before {
+      content: url("../img/icon/banknote.svg");
+      margin-bottom: 26px;
+    }
+  }
+
+  &--domestic {
+    margin-bottom: 32px;
+
+    &::before {
+      content: url("../img/icon/rocket.svg");
+      margin-bottom: 26px;
+      margin-left: -6px;
+    }
+  }
+
+  &--likes {
+    margin-bottom: 32px;
+
+    &::before {
+      content: url("../img/icon/heart.svg");
+      margin-bottom: 21px;
+      margin-left: 7px;
+    }
+  }
+
+  &--package::before {
+    content: url("../img/icon/gift-package.svg");
+    margin-bottom: 20px;
+    margin-left: 3px;
+  }
+
   @media (max-width: variables.$mobile-max-width) {
     &:nth-child(2n + 2) {
       order: 1;
@@ -59,12 +120,79 @@
 
   @media (min-width: variables.$tablet-min-width) {
     flex-basis: 50%;
-    padding-right: 50px;
-    margin-bottom: 56px;
+    padding-right: 40px;
+    margin-bottom: 55px;
+
+    &:nth-child(even) {
+      padding-left: 1px;
+    }
+
+    &--ecological::before {
+      margin-bottom: 19px;
+    }
+
+    &--handmade::before {
+      margin-top: 4px;
+      margin-bottom: 20px;
+      margin-left: 2px;
+    }
+
+    &--scandinavian::before {
+      margin-bottom: 27px;
+      margin-left: 1px;
+    }
+
+    &--domestic::before {
+      margin-top: 3px;
+      margin-bottom: 29px;
+      margin-left: -7px;
+    }
+
+    &--likes::before {
+      margin-top: 6px;
+      margin-bottom: 22px;
+      margin-left: 8px;
+    }
+
+    &--package::before {
+      margin-top: 2px;
+      margin-bottom: 22px;
+      margin-left: 2px;
+    }
   }
 
   @media (min-width: variables.$desktop-min-width) {
     margin-bottom: 57px;
+
+    &:nth-child(even) {
+      padding-left: 0;
+    }
+
+    &--handmade::before {
+      margin-bottom: 19px;
+      margin-left: 3px;
+    }
+
+    &--scandinavian::before {
+      margin-bottom: 26px;
+    }
+
+    &--domestic::before {
+      margin-top: 3px;
+      margin-bottom: 28px;
+      margin-left: -6px;
+    }
+
+    &--likes::before {
+      margin-top: 4px;
+      margin-bottom: 22px;
+      margin-left: 8px;
+    }
+
+    &--package::before {
+      margin-top: 0;
+      margin-left: 3px;
+    }
   }
 }
 
