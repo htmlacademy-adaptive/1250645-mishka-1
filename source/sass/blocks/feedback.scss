@@ -1,7 +1,7 @@
 @use "common/variables";
 
 .feedback {
-  padding: 28px 30px 45px;
+  padding: 29px 30px 45px;
   background-color: variables.$primary-background-color;
 
   @media (min-width: variables.$tablet-min-width) {
@@ -10,8 +10,13 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 79px 50px 115px;
-    background-image: url("../img/feedback-background.jpg");
+    background-image: url("../img/knitted-napkin.jpg");
     background-repeat: no-repeat;
+    background-size: 350px 457px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/knitted-napkin@2x.jpg");
+    }
   }
 
   @media (min-width: variables.$desktop-min-width) {

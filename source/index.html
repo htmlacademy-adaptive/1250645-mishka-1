@@ -13,9 +13,11 @@
         <div class="navigation__wrapper">
           <div class="navigation__head-wrapper">
             <a class="logo-link">
-              <img class="logo-link__image" src="img/logo/logo.svg" width="86" height="35" alt="Логотип магазина &laquo;Мишка&raquo;">
-              <img class="logo-link__image logo-link__image--tablet" src="img/logo/logo-tablet.svg" width="113" height="46" alt="Логотип магазина &laquo;Мишка&raquo;">
-              <img class="logo-link__image logo-link__image--desktop" src="img/logo/logo-desktop.svg" width="149" height="72" alt="Логотип магазина &laquo;Мишка&raquo;">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
+                <img class="logo-link__image" src="img/logo/logo.svg" width="86" height="35" alt="Логотип магазина &laquo;Мишка&raquo;">
+              </picture>
             </a>
             <button class="navigation__menu-toggle button button--menu-open" type="button"><span class="visually-hidden">Открыть меню</span></button>
           </div>
@@ -93,7 +95,11 @@
                 <dd class="weekly-goods__property-value">15 см</dd>
               </div>
             </dl>
-            <img class="weekly-goods__image" src="img/knitted-baskets.jpg" width="260" height="315" alt="3 вязаные корзинки разного размера и разсцветки." decoding="async">
+            <picture class="weekly-goods__image-container">
+              <source media="(min-width: 1150px)" srcset="img/knitted-baskets-desktop.jpg, img/knitted-baskets-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/knitted-baskets-tablet.jpg, img/knitted-baskets-tablet@2x.jpg 2x">
+              <img class="weekly-goods__image"   src="img/knitted-baskets-mobile.jpg" width="260" height="315" srcset="img/knitted-baskets-mobile@2x.jpg 2x" alt="3 вязаные корзинки разного размера и разсцветки." decoding="async">
+            </picture>
             <p class="weekly-goods__purchase">
               <b class="weekly-goods__price">Цена: 990 руб.</b>
               <button class="weekly-goods__button button" type="button">

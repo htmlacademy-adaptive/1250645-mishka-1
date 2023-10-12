@@ -13,9 +13,11 @@
         <div class="navigation__wrapper">
           <div class="navigation__head-wrapper">
             <a class="logo-link" href="index.html">
-              <img class="logo-link__image" src="img/logo/logo.svg" width="86" height="35" alt="Логотип магазина &laquo;Мишка&raquo;">
-              <img class="logo-link__image logo-link__image--tablet" src="img/logo/logo-tablet.svg" width="113" height="46" alt="Логотип магазина &laquo;Мишка&raquo;">
-              <img class="logo-link__image logo-link__image--desktop" src="img/logo/logo-desktop.svg" width="149" height="72" alt="Логотип магазина &laquo;Мишка&raquo;">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
+                <img class="logo-link__image" src="img/logo/logo.svg" width="86" height="35" alt="Логотип магазина &laquo;Мишка&raquo;">
+              </picture>
             </a>
             <button class="navigation__menu-toggle button button--menu-open" type="button"><span class="visually-hidden">Открыть меню</span></button>
           </div>
@@ -72,7 +74,7 @@
                 <small class="product-card__info">Рост 30 см, вес 200 г</small>
                 <div class="product-card__description-bottom">
                   <b class="product-card__price">1 200 руб.</b>
-                  <button class="product-card__button button button--icon-only">
+                  <button class="product-card__button button button--icon-only" type="button">
                     <span class="visually-hidden">Добавить в корзину</span>
                     <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="currentColor">
                       <path d="M19.2271 7.23811H15.8454L12.5604 0.402108C12.3672 -9.09136e-06 11.9807 -0.100526 11.5942 0.100532C11.2077 0.301591 11.1111 0.703707 11.3043 1.10582L14.2995 7.23811H5.50723L8.50241 1.10582C8.69565 0.703707 8.50242 0.301591 8.21257 0.100532C7.82609 -0.100526 7.43962 0.10052 7.24638 0.402108L3.96133 7.23811H0.772936C0.386462 7.23811 0 7.53968 0 8.04233C0 8.44445 0.289844 8.84655 0.772936 8.84655H0.966184L1.83574 11.8624C1.64251 11.963 1.54587 12.164 1.54587 12.4656C1.54587 12.8677 1.83574 13.1693 2.22221 13.1693L3.86474 19H16.1353L17.7778 13.1693C18.1643 13.1693 18.4541 12.8677 18.4541 12.4656C18.4541 12.2645 18.3575 11.963 18.1643 11.8624L19.0338 8.84655H19.2271C19.6135 8.84655 20 8.54498 20 8.04233C20 7.53968 19.6135 7.23811 19.2271 7.23811ZM14.8792 17.3915H4.83092L3.67149 13.0688H16.1353L14.8792 17.3915ZM16.4251 11.5609H3.1884L2.41546 8.74605H17.1981L16.4251 11.5609Z"/>
@@ -81,7 +83,12 @@
                 </div>
               </div>
               <a class="product-card__image-link link link--image" href="#">
-                <img class="product-card__image" src="img/hare-toy.jpg" width="334" height="334" alt="Вязаная игрушка зайца в голубой одежде.">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/catalog/hare-toy-desktop.jpg, img/catalog/hare-toy-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/hare-toy-tablet.jpg, img/catalog/hare-toy-tablet@2x.jpg 2x">
+                  <img class="product-card__image" src="img/catalog/hare-toy-mobile.jpg" width="260" height="195" srcset="img/catalog/hare-toy-mobile@2x.jpg 2x" alt="Вязаная игрушка зайца в голубой одежде.">
+                </picture>
+
               </a>
             </li>
             <li class="catalog__item product-card">
@@ -92,7 +99,7 @@
                 <small class="product-card__info">Диаметр 15 см, высота 10 см</small>
                 <div class="product-card__description-bottom">
                   <b class="product-card__price">690 руб.</b>
-                  <button class="product-card__button button button--icon-only">
+                  <button class="product-card__button button button--icon-only" type="button">
                     <span class="visually-hidden">Добавить в корзину</span>
                     <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="currentColor">
                       <path d="M19.2271 7.23811H15.8454L12.5604 0.402108C12.3672 -9.09136e-06 11.9807 -0.100526 11.5942 0.100532C11.2077 0.301591 11.1111 0.703707 11.3043 1.10582L14.2995 7.23811H5.50723L8.50241 1.10582C8.69565 0.703707 8.50242 0.301591 8.21257 0.100532C7.82609 -0.100526 7.43962 0.10052 7.24638 0.402108L3.96133 7.23811H0.772936C0.386462 7.23811 0 7.53968 0 8.04233C0 8.44445 0.289844 8.84655 0.772936 8.84655H0.966184L1.83574 11.8624C1.64251 11.963 1.54587 12.164 1.54587 12.4656C1.54587 12.8677 1.83574 13.1693 2.22221 13.1693L3.86474 19H16.1353L17.7778 13.1693C18.1643 13.1693 18.4541 12.8677 18.4541 12.4656C18.4541 12.2645 18.3575 11.963 18.1643 11.8624L19.0338 8.84655H19.2271C19.6135 8.84655 20 8.54498 20 8.04233C20 7.53968 19.6135 7.23811 19.2271 7.23811ZM14.8792 17.3915H4.83092L3.67149 13.0688H16.1353L14.8792 17.3915ZM16.4251 11.5609H3.1884L2.41546 8.74605H17.1981L16.4251 11.5609Z"/>
@@ -101,7 +108,12 @@
                 </div>
               </div>
               <a class="product-card__image-link link link--image" href="#">
-                <img class="product-card__image" src="img/linen-basket.jpg" width="334" height="334" alt="Вязанная корзинка персико-белого цвета, в которой лежат три свернутых в рулон полотенца.">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/catalog/linen-basket-desktop.jpg, img/catalog/linen-basket-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/linen-basket-tablet.jpg, img/catalog/linen-basket-tablet@2x.jpg 2x">
+                  <img class="product-card__image" src="img/catalog/linen-basket-mobile.jpg" width="260" height="195" srcset="img/catalog/linen-basket-mobile@2x.jpg 2x" alt="Вязанная корзинка персико-белого цвета, в которой лежат три свернутых в рулон полотенца.">
+                </picture>
+
               </a>
             </li>
             <li class="catalog__item product-card">
@@ -112,7 +124,7 @@
                 <small class="product-card__info">Диаметр 30 см, высота 30 см</small>
                 <div class="product-card__description-bottom">
                   <b class="product-card__price">1 500 руб.</b>
-                  <button class="product-card__button button button--icon-only">
+                  <button class="product-card__button button button--icon-only" type="button">
                     <span class="visually-hidden">Добавить в корзину</span>
                     <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="currentColor">
                       <path d="M19.2271 7.23811H15.8454L12.5604 0.402108C12.3672 -9.09136e-06 11.9807 -0.100526 11.5942 0.100532C11.2077 0.301591 11.1111 0.703707 11.3043 1.10582L14.2995 7.23811H5.50723L8.50241 1.10582C8.69565 0.703707 8.50242 0.301591 8.21257 0.100532C7.82609 -0.100526 7.43962 0.10052 7.24638 0.402108L3.96133 7.23811H0.772936C0.386462 7.23811 0 7.53968 0 8.04233C0 8.44445 0.289844 8.84655 0.772936 8.84655H0.966184L1.83574 11.8624C1.64251 11.963 1.54587 12.164 1.54587 12.4656C1.54587 12.8677 1.83574 13.1693 2.22221 13.1693L3.86474 19H16.1353L17.7778 13.1693C18.1643 13.1693 18.4541 12.8677 18.4541 12.4656C18.4541 12.2645 18.3575 11.963 18.1643 11.8624L19.0338 8.84655H19.2271C19.6135 8.84655 20 8.54498 20 8.04233C20 7.53968 19.6135 7.23811 19.2271 7.23811ZM14.8792 17.3915H4.83092L3.67149 13.0688H16.1353L14.8792 17.3915ZM16.4251 11.5609H3.1884L2.41546 8.74605H17.1981L16.4251 11.5609Z"/>
@@ -121,15 +133,24 @@
                 </div>
               </div>
               <a class="product-card__image-link link link--image" href="#">
-                <img class="product-card__image" src="img/toy-basket.jpg" width="334" height="334" alt="Вязаная корзинка салатово-белого цвета, в которой лежит много мягких игрушек.">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/catalog/toy-basket-desktop.jpg, img/catalog/toy-basket-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/toy-basket-tablet.jpg, img/catalog/toy-basket-tablet@2x.jpg 2x">
+                  <img class="product-card__image" src="img/catalog/toy-basket-mobile.jpg" width="260" height="195" srcset="img/catalog/toy-basket-mobile@2x.jpg 2x" alt="Вязаная корзинка салатово-белого цвета, в которой лежит много мягких игрушек.">
+                </picture>
+
               </a>
             </li>
           </ul>
           <article class="manufacturing">
             <h2 class="manufacturing__title">Процесс производства</h2>
             <div class="manufacturing__video-player">
-              <img class="manufacturing__video-window" src="img/video.jpg" width="260" height="150" alt="Кадр из видео о произовдстве наших товаров.">
-              <button class="manufacturing__video-play-button button button--play">
+              <picture>
+                <source media="(min-width: 1150px" srcset="img/video-desktop.jpg, img/video-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px" srcset="img/video-tablet.jpg, img/video-tablet@2x.jpg 2x">
+                <img class="manufacturing__video-window" src="img/video-mobile.jpg" width="260" height="150" srcset="img/video-mobile@2x.jpg 2x" alt="Кадр из видео о произовдстве наших товаров.">
+              </picture>
+              <button class="manufacturing__video-play-button button button--play" type="button">
                 <span class="visually-hidden">Воспроизвести</span>
               </button>
             </div>

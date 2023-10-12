@@ -157,9 +157,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    transition: transform 150ms;
+    transition: transform 190ms;
 
     &:hover {
+      background-color: transparent;
       transform: scale(120%);
     }
 

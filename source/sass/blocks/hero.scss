@@ -3,17 +3,26 @@
 .hero {
   padding-top: 72px;
   background-color: variables.$hero-background-color;
-  background-image: url("../img/house-with-toys.jpg");
+  background-image: url("../img/house-with-toys-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center -18px;
-  background-size: 568.5px 373px;
+  background-size: 569px 373px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/house-with-toys-mobile@2x.jpg");
+  }
 
   @media (min-width: variables.$tablet-min-width) {
     position: relative;
     padding: 101px 50px 12px;
+    background-image: url("../img/house-with-toys-non-mobile.jpg");
     background-position: center bottom;
     background-origin: content-box;
-    background-size: auto;
+    background-size: 1150px 746px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/house-with-toys-non-mobile@2x.jpg");
+    }
 
     &::after {
       content: "";
