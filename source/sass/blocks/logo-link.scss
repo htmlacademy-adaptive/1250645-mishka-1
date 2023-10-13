@@ -59,10 +59,6 @@
   display: block;
 
   @media (min-width: variables.$tablet-min-width) {
-    width: 114px;
-  }
-
-  @media (min-width: variables.$desktop-min-width) {
-    width: 149px;
+    width: auto;
   }
 }
