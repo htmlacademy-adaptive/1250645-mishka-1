@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <script src="js/app.js" defer></script>
     <title>Магазин &laquo;Мишка&raquo;</title>
   </head>
@@ -13,9 +17,11 @@
         <div class="navigation__wrapper">
           <div class="navigation__head-wrapper">
             <a class="logo-link">
-              <img class="logo-link__image" src="img/logo/logo.svg" width="86" height="35" alt="Логотип магазина &laquo;Мишка&raquo;">
-              <img class="logo-link__image logo-link__image--tablet" src="img/logo/logo-tablet.svg" width="113" height="46" alt="Логотип магазина &laquo;Мишка&raquo;">
-              <img class="logo-link__image logo-link__image--desktop" src="img/logo/logo-desktop.svg" width="149" height="72" alt="Логотип магазина &laquo;Мишка&raquo;">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
+                <img class="logo-link__image" src="img/logo/logo.svg" width="86" height="35" alt="Логотип магазина &laquo;Мишка&raquo;">
+              </picture>
             </a>
             <button class="navigation__menu-toggle button button--menu-open" type="button"><span class="visually-hidden">Открыть меню</span></button>
           </div>
@@ -93,7 +99,11 @@
                 <dd class="weekly-goods__property-value">15 см</dd>
               </div>
             </dl>
-            <img class="weekly-goods__image" src="img/knitted-baskets.jpg" width="260" height="315" alt="3 вязаные корзинки разного размера и разсцветки." decoding="async">
+            <picture class="weekly-goods__image-container">
+              <source media="(min-width: 1150px)" srcset="img/knitted-baskets-desktop.jpg, img/knitted-baskets-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/knitted-baskets-tablet.jpg, img/knitted-baskets-tablet@2x.jpg 2x">
+              <img class="weekly-goods__image"   src="img/knitted-baskets-mobile.jpg" width="260" height="315" srcset="img/knitted-baskets-mobile@2x.jpg 2x" alt="3 вязаные корзинки разного размера и разсцветки." decoding="async">
+            </picture>
             <p class="weekly-goods__purchase">
               <b class="weekly-goods__price">Цена: 990 руб.</b>
               <button class="weekly-goods__button button" type="button">
@@ -200,8 +210,13 @@
             </dl>
           </address>
         </div>
-        <div class="contacts__map">
+        <div class="contacts__map contacts__map--nojs">
           <iframe class="contacts__map-image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3018645454931!2d30.322137027859753!3d59.938717446924954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1696223810827!5m2!1sru!2sru" width="320" height="455" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/static-map-desktop.jpg, img/static-map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/static-map-tablet.jpg, img/static-map-tablet@2x.jpg 2x">
+            <img class="contacts__fallback-map-image" src="img/static-map-mobile.jpg" width="320" height="455" srcset="img/static-map-mobile@2x.jpg 2x" alt="Карта Санкт-Петербурга с отмеченным местоположением магазина &laquo;Мишка&raquo;">
+          </picture>
         </div>
         <a class="contacts__write-link link link--button" href="#">
           <span class="link__label">Напишите нам</span>

@@ -120,10 +120,11 @@
   margin: 0;
 }
 
-.weekly-goods__image {
+.weekly-goods__image-container {
   display: block;
-  margin-bottom: 26px;
   width: 100%;
+  margin-bottom: 26px;
+  background-color: variables.$secondary-background-color;
 
   @media (min-width: variables.$tablet-min-width) {
     grid-row: 2 / 5;
@@ -136,6 +137,12 @@
     grid-row: 1 / 5;
     grid-column: 3 / 4;
   }
+}
+
+.weekly-goods__image {
+  display: block;
+  width: 100%;
+  background-color: variables.$secondary-background-color;
 }
 
 .weekly-goods__purchase {

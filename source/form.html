@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <script src="js/app.js" defer></script>
     <title>Магазин &laquo;Мишка&raquo; - вязание на заказ</title>
   </head>
@@ -13,9 +17,11 @@
         <div class="navigation__wrapper">
           <div class="navigation__head-wrapper">
             <a class="logo-link" href="index.html">
-              <img class="logo-link__image" src="img/logo/logo.svg" width="86" height="35" alt="Логотип магазина &laquo;Мишка&raquo;">
-              <img class="logo-link__image logo-link__image--tablet" src="img/logo/logo-tablet.svg" width="113" height="46" alt="Логотип магазина &laquo;Мишка&raquo;">
-              <img class="logo-link__image logo-link__image--desktop" src="img/logo/logo-desktop.svg" width="149" height="72" alt="Логотип магазина &laquo;Мишка&raquo;">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
+                <img class="logo-link__image" src="img/logo/logo.svg" width="86" height="35" alt="Логотип магазина &laquo;Мишка&raquo;">
+              </picture>
             </a>
             <button class="navigation__menu-toggle button button--menu-open" type="button"><span class="visually-hidden">Открыть меню</span></button>
           </div>

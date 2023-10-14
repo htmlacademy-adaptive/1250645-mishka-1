@@ -9,6 +9,9 @@ function switchMenuButton() {
   }
 }
 
+const contactsMap = document.querySelector(".contacts__map");
+contactsMap?.classList.remove("contacts__map--nojs");
+
 const nav = document.querySelector(".navigation");
 const navMenuToggle = document.querySelector(".navigation__menu-toggle");
 nav.classList.remove("navigation--nojs");

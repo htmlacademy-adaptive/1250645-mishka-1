@@ -2,6 +2,7 @@
 
 .logo-link {
   display: block;
+  margin-top: -2px;
 
   &[href]:hover {
     opacity: 0.6;
@@ -18,6 +19,7 @@
 
   @media (min-width: variables.$desktop-min-width) {
     margin-top: 0;
+    margin-left: -2px;
   }
 
   &--footer {
@@ -56,29 +58,7 @@
 .logo-link__image {
   display: block;
 
-  &--tablet {
-    display: none;
-  }
-
-  &--desktop {
-    display: none;
-  }
-
   @media (min-width: variables.$tablet-min-width) {
-    display: none;
-
-    &--tablet {
-      display: block;
-    }
-  }
-
-  @media (min-width: variables.$desktop-min-width) {
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-    }
+    width: auto;
   }
 }
