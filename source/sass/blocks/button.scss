@@ -1,8 +1,8 @@
 @use "common/variables";
 
 @mixin menu-button() {
-  border: none;
   padding: 0;
+  border: none;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -28,6 +28,11 @@
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
+  transition: all 150ms;
+
+  .button__label {
+    transition: all 150ms;
+  }
 
   &:hover {
     color: #ffffff;
@@ -84,9 +89,15 @@
     text-transform: none;
     text-align: start;
 
-    .button__icon {
+    &::before {
+      content: "";
+      width: 18px;
+      height: 18px;
       margin-left: 2px;
+      background-color: variables.$primary-color;
+      mask-image: url("../img/svg/stack.svg#magnifier");
       opacity: 0.2;
+      transition: all 150ms;
     }
 
     @media (min-width: variables.$tablet-min-width) {
@@ -102,13 +113,13 @@
     color: variables.$primary-color;
     background-color: transparent;
 
-    .button__icon {
-      color: variables.$color-turquoise;
-      opacity: 1;
-    }
-
     .button__label {
       opacity: 0.6;
+    }
+
+    &::before {
+      background-color: variables.$color-turquoise;
+      opacity: 1;
     }
   }
 
@@ -116,12 +127,12 @@
     color: variables.$primary-color;
     background-color: transparent;
 
-    .button__icon {
-      color: variables.$color-turquoise;
+    .button__label {
       opacity: 0.3;
     }
 
-    .button__label {
+    &::before {
+      background-color: variables.$color-turquoise;
       opacity: 0.3;
     }
   }
@@ -171,13 +182,17 @@
   }
 
   &--menu-open {
+    width: 20px;
+    height: 14px;
     @include menu-button();
-    background-image: url("../img/icon/menu-open.svg");
+    background-image: url("../img/svg/stack.svg#menu-open");
   }
 
   &--menu-close {
+    width: 21px;
+    height: 20px;
     @include menu-button();
-    background-image: url("../img/icon/menu-close.svg");
+    background-image: url("../img/svg/stack.svg#menu-close");
   }
 
   &--alternate {

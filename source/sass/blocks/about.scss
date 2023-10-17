@@ -57,7 +57,10 @@
     margin-bottom: 30px;
 
     &::before {
-      content: url("../img/icon/flower.svg");
+      content: "";
+      width: 33px;
+      height: 38px;
+      background-image: url("../img/svg/stack.svg#flower");
       margin-bottom: 16px;
       margin-left: 8px;
     }
@@ -67,7 +70,10 @@
     margin-bottom: 33px;
 
     &::before {
-      content: url("../img/icon/ball-thread.svg");
+      content: "";
+      width: 35px;
+      height: 34px;
+      background-image: url("../img/svg/stack.svg#ball-thread");
       margin-bottom: 17px;
       margin-left: 3px;
     }

@@ -21,7 +21,7 @@
     background-color: #444444;
     opacity: 1;
 
-    .link__label {
+    .link__text {
       opacity: 0.3;
     }
   }
@@ -35,6 +35,7 @@
   display: inline-block;
   color: #000000;
   text-decoration: none;
+  transition: all 150ms;
 
   &[href]:hover {
     opacity: 0.6;
@@ -44,19 +45,29 @@
     opacity: 0.3;
   }
 
+  .link__text {
+    transition: all 150ms;
+  }
+
   &--decorated {
     display: inline-grid;
     grid-template-columns: 46px 1fr;
     align-items: center;
 
-    .link__icon {
+    &::before {
+      content: "";
+      width: 21px;
+      height: 18px;
+      background-color: variables.$primary-color;
+      mask-image: url("../img/svg/stack.svg#cart");
       opacity: 0.2;
+      transition: all 150ms;
     }
 
     @media (min-width: variables.$tablet-min-width) {
       display: flex;
 
-      .link__icon {
+      &::before {
         margin-right: 32px;
         flex-shrink: 0;
       }
@@ -70,8 +81,8 @@
   &--decorated[href]:hover {
     opacity: 1;
 
-    .link__icon {
-      color: variables.$color-turquoise;
+    &::before {
+      background-color: variables.$color-turquoise;
       opacity: 1;
     }
 
@@ -83,8 +94,8 @@
   &--decorated[href]:active {
     opacity: 1;
 
-    .link__icon {
-      color: variables.$color-turquoise;
+    &::before {
+      background-color: variables.$color-turquoise;
       opacity: 0.3;
     }
 
