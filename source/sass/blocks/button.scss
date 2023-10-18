@@ -28,7 +28,7 @@
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
-  transition: all 150ms;
+  transition: all 120ms;
 
   .button__label {
     transition: all 150ms;
@@ -48,31 +48,28 @@
     }
   }
 
-  &--icon-only {
+  &--to-cart {
     padding: 0;
     border: none;
-    color: variables.$primary-color;
+    width: 20px;
+    height: 19px;
+    background-color: variables.$primary-color;
+    mask-image: url("../img/svg/stack.svg#cart");
+    opacity: 0.2;
 
-    .button__icon {
-      opacity: 0.2;
-    }
-  }
-
-  &--icon-only:hover {
-    background-color: transparent;
-
-    .button__icon {
-      color: variables.$color-turquoise;
+    &:hover {
+      background-color: variables.$color-turquoise;
       opacity: 1;
     }
-  }
 
-  &--icon-only:active {
-    background-color: transparent;
-
-    .button__icon {
-      color: variables.$color-turquoise;
+    &:active {
+      background-color: variables.$color-turquoise;
       opacity: 0.3;
+    }
+
+    @media (min-width: variables.$tablet-min-width) {
+      width: 21px;
+      height: 18px;
     }
   }
 
@@ -164,7 +161,7 @@
     border: none;
     padding: 0;
     border-radius: 20px;
-    background-image: url("../img/icon/play.svg");
+    background-image: url("../img/svg/stack.svg#play");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

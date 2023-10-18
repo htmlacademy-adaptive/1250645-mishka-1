@@ -14,15 +14,38 @@
 }
 
 .socials__link {
-  color: #231f20;
-
-  &:hover {
-    color: #46c1ae;
+  &::before {
+    content: "";
+    display: block;
+    background-color: #231f20;
+    transition: all 150ms;
   }
 
-  &:active {
-    color: #46c1ae;
+  &:hover::before {
+    background-color: #46c1ae;
+  }
+
+  &:active::before {
+    background-color: #46c1ae;
     opacity: 0.3;
+  }
+
+  &--vk::before {
+    width: 28px;
+    height: 23px;
+    mask-image: url("../img/svg/stack.svg#vkontakte")
+  }
+
+  &--youtube::before {
+    width: 28px;
+    height: 23px;
+    mask-image: url("../img/svg/stack.svg#youtube")
+  }
+
+  &--telegram::before {
+    width: 28px;
+    height: 23px;
+    mask-image: url("../img/svg/stack.svg#telegram")
   }
 }
 

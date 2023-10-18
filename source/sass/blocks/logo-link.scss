@@ -3,6 +3,7 @@
 .logo-link {
   display: block;
   margin-top: -2px;
+  transition: all 150ms;
 
   &[href]:hover {
     opacity: 0.6;
@@ -30,16 +31,11 @@
     @media (min-width: variables.$tablet-min-width) {
       margin: 0;
 
-      .logo-link__image {
-        display: block;
-        color: #000000;
-      }
-
       &[href]:hover {
         opacity: 1;
 
         .logo-link__image {
-          color: #46c1ae;
+          fill: #46c1ae;
         }
       }
 
@@ -47,7 +43,7 @@
         opacity: 1;
 
         .logo-link__image {
-          color: #46c1ae;
+          fill: #46c1ae;
           opacity: 0.3;
         }
       }
@@ -57,6 +53,7 @@
 
 .logo-link__image {
   display: block;
+  transition: all 150ms;
 
   @media (min-width: variables.$tablet-min-width) {
     width: auto;

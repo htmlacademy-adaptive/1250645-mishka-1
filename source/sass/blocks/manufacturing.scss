@@ -4,6 +4,12 @@
   padding: 21px 0 33px;
   border: 1px solid #ececec;
 
+  @media (max-width: variables.$mobile-max-width) {
+    &:hover {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
   @media (min-width: variables.$tablet-min-width) {
     display: flex;
     flex-direction: column;

@@ -84,19 +84,6 @@
     height: 142px;
   }
 
-  &:hover ~ .control__decoration,
-  &:focus-visible ~ .control__decoration {
-    color: variables.$form-hover-color;
-    opacity: 1;
-  }
-
-  @supports not selector(::focus-visible) {
-    &:focus ~ .control__decoration {
-      color: variables.$form-hover-color;
-      opacity: 1;
-    }
-  }
-
   @media (min-width: variables.$tablet-min-width) {
     width: auto;
     background-color: transparent;
@@ -121,7 +108,7 @@
   }
 }
 
-.control__decorated-input-wrapper {
+.control__decorated-input {
   position: relative;
   display: block;
   flex-grow: 1;
@@ -129,29 +116,44 @@
   .control__input {
     width: 100%;
   }
-}
 
-.control__decoration {
-  position: absolute;
-  opacity: 0.2;
-  pointer-events: none;
-
-  &--phone {
-    top: 11px;
-    right: 7px;
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: variables.$primary-color;
+    opacity: 0.2;
+    pointer-events: none;
+    transition: all 100ms;
   }
 
-  &--email {
+  &--phone::after {
+    top: 11px;
+    right: 7px;
+    width: 25px;
+    height: 24px;
+    mask-image: url("../img/svg/stack.svg#phone");
+  }
+
+  &--email::after {
     top: 16px;
     right: 3px;
+    width: 32px;
+    height: 21px;
+    mask-image: url("../img/svg/stack.svg#email");
+  }
+
+  &:hover::after,
+  &:focus-within::after {
+    background-color: variables.$form-hover-color;
+    opacity: 1;
   }
 
   @media (min-width: variables.$tablet-min-width) and (max-width: variables.$tablet-max-width) {
-    &--phone {
+    &--phone::after {
       right: 26px;
     }
 
-    &--email {
+    &--email::after {
       right: 22px;
     }
   }
