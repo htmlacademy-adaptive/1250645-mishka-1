@@ -35,7 +35,7 @@
   display: inline-block;
   color: #000000;
   text-decoration: none;
-  transition: all 150ms;
+  transition: all 120ms;
 
   &[href]:hover {
     opacity: 0.6;
@@ -54,20 +54,16 @@
     grid-template-columns: 46px 1fr;
     align-items: center;
 
-    &::before {
-      content: "";
-      width: 21px;
-      height: 18px;
-      background-color: variables.$primary-color;
-      mask-image: url("../img/svg/stack.svg#cart");
+    .link__icon {
+      color: variables.$primary-color;
       opacity: 0.2;
-      transition: all 150ms;
+      transition: all 120ms;
     }
 
     @media (min-width: variables.$tablet-min-width) {
       display: flex;
 
-      &::before {
+      .link__icon {
         margin-right: 32px;
         flex-shrink: 0;
       }
@@ -81,8 +77,8 @@
   &--decorated[href]:hover {
     opacity: 1;
 
-    &::before {
-      background-color: variables.$color-turquoise;
+    .link__icon {
+      color: variables.$color-turquoise;
       opacity: 1;
     }
 
@@ -94,8 +90,8 @@
   &--decorated[href]:active {
     opacity: 1;
 
-    &::before {
-      background-color: variables.$color-turquoise;
+    .link__icon {
+      color: variables.$color-turquoise;
       opacity: 0.3;
     }
 

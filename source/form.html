@@ -18,9 +18,9 @@
           <div class="navigation__head-wrapper">
             <a class="logo-link" href="index.html">
               <picture>
-                <source media="(min-width: 1150px)" srcset="img/logo/logo-desktop.svg">
-                <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
-                <img class="logo-link__image" src="img/logo/logo.svg" width="86" height="35" alt="Логотип магазина &laquo;Мишка&raquo;">
+                <source media="(min-width: 1150px)" srcset="img/content/logo/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/content/logo/logo-tablet.svg">
+                <img class="logo-link__image" src="img/content/logo/logo.svg" width="86" height="35" alt="Логотип магазина &laquo;Мишка&raquo;">
               </picture>
             </a>
             <button class="navigation__menu-toggle button button--menu-open" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -36,11 +36,17 @@
           <ul class="navigation__menu navigation__menu--user">
             <li class="navigation__menu-item">
               <button class="navigation__menu-item-element button button--link" type="button">
+                <svg class="button__icon" width="18" height="18" aria-hidden="true">
+                  <use href="img/sprite.svg#magnifier"/>
+                </svg>
                 <span class="button__label">Поиск по сайту</span>
               </button>
             </li>
             <li class="navigation__menu-item">
               <a class="navigation__menu-item-element link link--decorated" href="#">
+                <svg class="link__icon" width="21" height="18" aria-hidden="true">
+                  <use href="img/sprite.svg#cart"/>
+                </svg>
                 <span class="link__text">Корзина: пока пуста</span>
               </a>
             </li>
@@ -130,8 +136,11 @@
                 <b class="knitting-order__text-control-name legend">Тел</b>
                 <span class="knitting-order__control control">
                   <label class="visually-hidden" for="phone">Телефон</label>
-                  <span class="control__decorated-input control__decorated-input--phone">
+                  <span class="control__decorated-input">
                     <input class="control__input input input--text input--space-reserved" id="phone" type="tel" name="phone" placeholder="+7 XXX XXX XX XX*" pattern="(\+7|8)\s?(\([0-9]{3}\)|[0-9]{3})\s?[0-9]{3}(\s|-)?[0-9]{2}(\s|-)?[0-9]{2}" required>
+                    <svg class="control__decoration control__decoration--phone" width="25" height="24" aria-hidden="true">
+                      <use href="img/sprite.svg#phone"/>
+                    </svg>
                   </span>
                 </span>
               </p>
@@ -141,6 +150,9 @@
                   <label class="visually-hidden" for="email">Адрес электронной почты</label>
                   <span  class="control__decorated-input control__decorated-input--email">
                     <input class="control__input input input--text input--space-reserved" id="email" type="email" name="email" placeholder="Ваш Email*" required>
+                    <svg class="control__decoration control__decoration--email" width="32" height="21" aria-hidden="true">
+                      <use href="img/sprite.svg#email"/>
+                    </svg>
                   </span>
                 </span>
               </p>
@@ -176,28 +188,42 @@
             <path d="M101.721 18.3983C101.521 17.6027 100.321 17.6027 99.4207 17.6027C99.4207 17.3043 99.4207 16.9066 99.4207 16.6082C99.3207 13.9231 99.2207 11.238 99.0207 8.6524C98.8207 6.1662 97.4207 5.37062 95.0207 5.47007C92.6207 5.56952 89.8207 5.96731 87.5207 6.86234C84.9207 7.85682 83.4207 9.74632 82.9207 12.5309C82.4207 15.5143 83.1207 18.6966 83.3207 21.68C83.5207 25.1607 83.4207 28.6414 83.4207 32.1221C83.4207 32.7187 87.3207 32.1221 87.3207 31.1276C87.3207 28.343 87.3207 25.5585 87.3207 22.8734C87.3207 22.0778 87.2207 21.2823 87.2207 20.4867C88.6207 19.89 90.9207 20.4867 92.3207 20.5861C93.4207 20.6856 94.5207 20.3872 95.5207 20.2878C95.5207 22.5751 95.6207 24.8624 95.7207 27.1497C95.7207 28.343 96.2207 30.6303 95.3207 31.6248C94.9207 32.1221 96.8207 31.9232 96.9207 31.9232C97.7207 31.8237 98.7207 31.5254 99.2207 30.9287C100.121 29.8348 99.7207 27.1497 99.6207 25.8569C99.5207 23.9673 99.5207 22.0778 99.5207 20.1883C100.621 19.9894 101.921 19.2933 101.721 18.3983ZM87.1207 18.2988C87.0207 17.1055 86.9207 15.8126 86.8207 14.6193C86.6207 12.332 86.9207 9.05019 89.1207 7.65792C89.7207 7.26013 90.8207 7.35958 91.5207 7.26013C92.5207 7.06123 93.5207 6.86234 94.3207 7.45902C95.5207 8.25461 95.2207 11.1386 95.2207 12.332C95.2207 14.3209 95.4207 16.3099 95.5207 18.2988C94.9207 18.3983 94.4207 18.3983 93.8207 18.3983C91.5207 18.1994 89.2207 17.8016 87.1207 18.2988Z"/>
             <path d="M24.2204 6.663C24.7204 6.56355 25.2204 6.4641 25.7204 6.16576C25.8204 6.06631 25.9204 5.96686 25.9204 5.96686C26.4204 5.66852 26.9204 5.17128 26.6204 4.57459C26.1204 3.48067 26.2204 2.38675 26.2204 1.19337C26.2204 0.198895 25.2204 0 24.4204 0C23.7204 0.0994477 22.2204 0.596686 22.2204 1.49172C22.2204 2.48619 22.1204 3.48067 22.3204 4.47515C22.3204 4.57459 22.2204 4.67404 22.2204 4.87294C22.1204 5.07183 22.2204 5.27073 22.3204 5.46962V5.56907C22.3204 5.66852 22.3204 5.76797 22.3204 5.86742C22.4204 6.06631 22.5204 6.26521 22.7204 6.36465C23.3204 6.663 23.8204 6.663 24.2204 6.663Z"/>
           </svg>
-          <span class="visually-hidden">На главную</span></a>
+          <span class="visually-hidden">На главную</span>
+        </a>
         <div class="main-footer__socials-wrapper">
           <ul class="socials">
             <li class="socials__item">
-              <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy" target="_blank">
+              <a class="socials__link" href="https://vk.com/htmlacademy" target="_blank">
+                <svg class="socials__icon" width="28" height="23" aria-hidden="true">
+                  <use href="img/sprite.svg#vkontakte"/>
+                </svg>
                 <span class="visually-hidden">Вконтакте</span>
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--youtube" href="https://www.youtube.com/@HTMLAcademyRUS" target="_blank">
+              <a class="socials__link" href="https://www.youtube.com/@HTMLAcademyRUS" target="_blank">
+                <svg class="socials__icon" width="28" height="23" aria-hidden="true">
+                  <use href="img/sprite.svg#youtube"/>
+                </svg>
                 <span class="visually-hidden">Ютьюб</span>
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--telegram" href="https://t.me/htmlacademy" target="_blank">
+              <a class="socials__link" href="https://t.me/htmlacademy" target="_blank">
+                <svg class="socials__icon" width="28" height="23" aria-hidden="true">
+                  <use href="img/sprite.svg#telegram"/>
+                </svg>
                 <span class="visually-hidden">Телеграм</span>
               </a>
             </li>
           </ul>
         </div>
         <div class="main-footer__copyright-wrapper">
-          <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">Разработано<span class="visually-hidden">HTML Academy</span></a>
+          <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">Разработано
+            <svg class="copyright__logo" viewBox="0 0 27 35" width="27" height="35" fill="currentcolor">
+              <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"/>
+            </svg>
+            <span class="visually-hidden">HTML Academy</span></a>
         </div>
       </div>
     </footer>

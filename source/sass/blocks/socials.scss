@@ -8,47 +8,18 @@
   list-style-type: none;
 }
 
-.socials__item {
-  display: flex;
-  align-items: center;
-}
-
 .socials__link {
-  &::before {
-    content: "";
-    display: block;
-    background-color: #231f20;
-    transition: all 150ms;
+  &:hover .socials__icon {
+    color: #46c1ae;
   }
 
-  &:hover::before {
-    background-color: #46c1ae;
-  }
-
-  &:active::before {
-    background-color: #46c1ae;
+  &:active .socials__icon {
+    color: #46c1ae;
     opacity: 0.3;
-  }
-
-  &--vk::before {
-    width: 28px;
-    height: 23px;
-    mask-image: url("../img/svg/stack.svg#vkontakte")
-  }
-
-  &--youtube::before {
-    width: 28px;
-    height: 23px;
-    mask-image: url("../img/svg/stack.svg#youtube")
-  }
-
-  &--telegram::before {
-    width: 28px;
-    height: 23px;
-    mask-image: url("../img/svg/stack.svg#telegram")
   }
 }
 
 .socials__icon {
   display: block;
+  color: #231f20;
 }

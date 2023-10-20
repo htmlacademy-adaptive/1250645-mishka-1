@@ -117,44 +117,78 @@
     width: 100%;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    background-color: variables.$primary-color;
-    opacity: 0.2;
-    pointer-events: none;
-    transition: all 100ms;
+  &:hover .control__decoration,
+  &:focus-within .control__decoration {
+    color: variables.$form-hover-color;
+    opacity: 1;
   }
+}
 
-  &--phone::after {
+.control__decoration {
+  position: absolute;
+  color: #000000;
+  opacity: 0.2;
+  pointer-events: none;
+  transition: all 100ms;
+
+  &--phone {
     top: 11px;
     right: 7px;
-    width: 25px;
-    height: 24px;
-    mask-image: url("../img/svg/stack.svg#phone");
   }
 
-  &--email::after {
+  &--email {
     top: 16px;
     right: 3px;
-    width: 32px;
-    height: 21px;
-    mask-image: url("../img/svg/stack.svg#email");
-  }
-
-  &:hover::after,
-  &:focus-within::after {
-    background-color: variables.$form-hover-color;
-    opacity: 1;
   }
 
   @media (min-width: variables.$tablet-min-width) and (max-width: variables.$tablet-max-width) {
-    &--phone::after {
+    &--phone {
       right: 26px;
     }
 
-    &--email::after {
+    &--email {
       right: 22px;
     }
   }
-}
+  }
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     background-color: variables.$primary-color;
+//     opacity: 0.2;
+//     pointer-events: none;
+//     transition: all 100ms;
+//   }
+
+//   &--phone::after {
+//     top: 11px;
+//     right: 7px;
+//     width: 25px;
+//     height: 24px;
+//     mask-image: url("../img/svg/stack.svg#phone");
+//   }
+
+//   &--email::after {
+//     top: 16px;
+//     right: 3px;
+//     width: 32px;
+//     height: 21px;
+//     mask-image: url("../img/svg/stack.svg#email");
+//   }
+
+//   &:hover::after,
+//   &:focus-within::after {
+//     background-color: variables.$form-hover-color;
+//     opacity: 1;
+//   }
+
+//   @media (min-width: variables.$tablet-min-width) and (max-width: variables.$tablet-max-width) {
+//     &--phone::after {
+//       right: 26px;
+//     }
+
+//     &--email::after {
+//       right: 22px;
+//     }
+//   }
+// }

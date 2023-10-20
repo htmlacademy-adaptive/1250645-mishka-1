@@ -48,21 +48,22 @@
   flex-basis: 100%;
 
   &::before {
+    content: "";
     display: block;
     margin: 0;
     line-height: 0;
+    background-repeat: no-repeat;
   }
 
   &--ecological {
     margin-bottom: 30px;
 
     &::before {
-      content: "";
       width: 33px;
       height: 38px;
-      background-image: url("../img/svg/stack.svg#flower");
       margin-bottom: 16px;
       margin-left: 8px;
+      background-image: url("../img/decoration/svg/icon/flower.svg");
     }
   }
 
@@ -70,12 +71,11 @@
     margin-bottom: 33px;
 
     &::before {
-      content: "";
       width: 35px;
       height: 34px;
-      background-image: url("../img/svg/stack.svg#ball-thread");
       margin-bottom: 17px;
       margin-left: 3px;
+      background-image: url("../img/decoration/svg/icon/ball-thread.svg");
     }
   }
 
@@ -83,11 +83,10 @@
     margin-bottom: 35px;
 
     &::before {
-      content: "";
       width: 47px;
       height: 27px;
-      background-image: url("../img/svg/stack.svg#banknote");
       margin-bottom: 26px;
+      background-image: url("../img/decoration/svg/icon/banknote.svg");
     }
   }
 
@@ -95,12 +94,11 @@
     margin-bottom: 32px;
 
     &::before {
-      content: "";
       width: 55px;
       height: 23px;
-      background-image: url("../img/svg/stack.svg#rocket");
       margin-bottom: 26px;
       margin-left: -6px;
+      background-image: url("../img/decoration/svg/icon/rocket.svg");
     }
   }
 
@@ -108,22 +106,20 @@
     margin-bottom: 32px;
 
     &::before {
-      content: "";
       width: 34px;
       height: 27px;
-      background-image: url("../img/svg/stack.svg#heart");
       margin-bottom: 21px;
       margin-left: 7px;
+      background-image: url("../img/decoration/svg/icon/heart.svg");
     }
   }
 
   &--package::before {
-    content: "";
     width: 33px;
     height: 32px;
-    background-image: url("../img/svg/stack.svg#gift-package");
     margin-bottom: 20px;
     margin-left: 3px;
+    background-image: url("../img/decoration/svg/icon/gift-package.svg");
   }
 
   @media (max-width: variables.$mobile-max-width) {
@@ -212,6 +208,10 @@
       margin-left: 3px;
     }
   }
+}
+
+.about__icon {
+  display: block;
 }
 
 .about__item-title {

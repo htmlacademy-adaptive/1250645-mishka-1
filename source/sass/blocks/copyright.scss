@@ -10,30 +10,27 @@
   font-weight: 700;
   line-height: 18px;
 
-  &::after {
-    content: "";
-    display: block;
-    width: 27px;
-    height: 35px;
-    margin-left: 27px;
-    background-color: #63d1bb;
-    mask-image: url("../img/svg/stack.svg#copyright-logo");
-
-    @media (min-width: variables.$tablet-min-width) {
-      margin-left: 26px;
-    }
-
-    @media (min-width: variables.$desktop-min-width) {
-      margin-left: 28px;
-    }
+  &:hover .copyright__logo {
+    color: #46c1ae;
   }
 
-  &:hover::after {
-    background-color: #46c1ae;
-  }
-
-  &:active::after {
-    background-color: #46c1ae;
+  &:active .copyright__logo {
+    color: #46c1ae;
     opacity: 0.3;
+  }
+}
+
+.copyright__logo {
+  display: block;
+  margin-left: 27px;
+  color: #63d1bb;
+  transition: all 120ms;
+
+  @media (min-width: variables.$tablet-min-width) {
+    margin-left: 26px;
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    margin-left: 28px;
   }
 }
