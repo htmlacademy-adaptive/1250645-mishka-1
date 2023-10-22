@@ -8,19 +8,12 @@
   list-style-type: none;
 }
 
-.socials__item {
-  display: flex;
-  align-items: center;
-}
-
 .socials__link {
-  color: #231f20;
-
-  &:hover {
+  &:hover .socials__icon {
     color: #46c1ae;
   }
 
-  &:active {
+  &:active .socials__icon {
     color: #46c1ae;
     opacity: 0.3;
   }
@@ -28,4 +21,5 @@
 
 .socials__icon {
   display: block;
+  color: #231f20;
 }
