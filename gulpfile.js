@@ -4,6 +4,7 @@ import sass from 'gulp-dart-sass';
 import {deleteAsync} from 'del';
 import postcss from 'gulp-postcss';
 import csso from 'postcss-csso';
+import cssurl from 'postcss-url';
 import concat from 'gulp-concat';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
@@ -20,6 +21,11 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
+      cssurl({
+        filter: '**/svg/url/*.svg',
+        url: 'inline',
+        optimizeSvgEncode: true
+      }),
       autoprefixer(),
       csso()
     ]))
@@ -70,7 +76,7 @@ const convertToWebp = () => {
 
 // SVG
 const svg = () => {
-  return gulp.src(['source/img/**/*.svg', '!source/img/decoration/svg/sprite/*.svg'])
+  return gulp.src(['source/img/**/*.svg', '!source/img/decoration/svg/sprite/*.svg', '!source/img/decoration/svg/url/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
