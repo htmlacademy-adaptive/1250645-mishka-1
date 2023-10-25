@@ -25,20 +25,25 @@
     }
   }
 
-  &:hover {
+  &:hover:not(:disabled) {
     border-color: variables.$form-hover-color;
   }
 
-  &:focus-visible {
+  &:focus-visible:not(:disabled) {
     outline: none;
     border-color: variables.$form-hover-color;
   }
 
   @supports not selector(:focus-visible) {
-    &:focus {
+    &:focus:not(:disabled) {
       outline: none;
       border-color: variables.$form-hover-color;
     }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
   }
 
   &--radio-alternate {
@@ -47,12 +52,12 @@
     border-radius: 0;
     cursor: pointer;
 
-    &:hover {
+    &:hover:not(:disabled) {
       border-color: variables.$input-interaction-color;
     }
 
-    &:active,
-    &:checked {
+    &:active:not(:disabled),
+    &:checked:not(:disabled) {
       border-color: variables.$form-hover-color;
     }
   }
@@ -79,7 +84,7 @@
       margin: auto;
     }
 
-    &:active {
+    &:active:not(:disabled) {
       border-color: variables.$input-interaction-color;
     }
   }
@@ -94,7 +99,8 @@
     &:checked::before {
       content: "";
       position: absolute;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 17' fill='%23000000' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.963 1.68385L22.9687 0.692322L8.76555 14.7862L1.73497 7.77467L0.740742 8.76619L7.77132 15.7777L8.76555 16.7692L9.83079 15.7777L23.963 1.68385Z'/%3E%3C/svg%3E%0A");
+      background-image: url("../img/decoration/svg/url/tick.svg");
+      background-repeat: no-repeat;
       width: 25px;
       height: 17px;
       top: 0;
@@ -108,7 +114,7 @@
       }
     }
 
-    &:active {
+    &:active:not(:disabled) {
       border-color: variables.$input-interaction-color;
     }
   }
