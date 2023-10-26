@@ -3,7 +3,7 @@
 .logo-link {
   display: block;
   margin-top: -2px;
-  transition: all 150ms;
+  transition: opacity 150ms;
 
   &[href]:hover {
     opacity: 0.6;
@@ -52,7 +52,7 @@
 
 .logo-link__image {
   display: block;
-  transition: all 150ms;
+  transition: fill 150ms, opacity 150ms;
 
   @media (min-width: variables.$tablet-min-width) {
     width: auto;

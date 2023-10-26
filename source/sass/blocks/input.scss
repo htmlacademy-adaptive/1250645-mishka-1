@@ -9,7 +9,7 @@
   font-size: 19px;
   font-weight: 400;
   line-height: 18px;
-  transition: all 100ms;
+  transition: border-color 110ms;
 
   &::placeholder {
     color: variables.$primary-color;

@@ -87,7 +87,7 @@
   background-size: 50px 26px;
   background-position: center;
   cursor: pointer;
-  transition: all 150ms;
+  transition: opacity 150ms;
 
   &:hover {
     opacity: 0.6;

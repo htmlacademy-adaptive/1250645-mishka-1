@@ -129,7 +129,7 @@
   color: #000000;
   opacity: 0.2;
   pointer-events: none;
-  transition: all 100ms;
+  transition: color 100ms, opacity 100ms;
 
   &--phone {
     top: 11px;

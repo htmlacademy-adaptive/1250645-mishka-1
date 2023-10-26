@@ -28,7 +28,7 @@
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
-  transition: all 120ms;
+  transition: color 120ms, background-color 120ms, opacity 120ms, transform 120ms;
 
   .button__label {
     transition: all 150ms;

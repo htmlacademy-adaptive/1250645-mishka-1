@@ -35,7 +35,7 @@
   display: inline-block;
   color: #000000;
   text-decoration: none;
-  transition: all 120ms;
+  transition: color 120ms, opacity 120ms, text-decoration 120ms;
 
   &[href]:hover {
     opacity: 0.6;
@@ -46,7 +46,7 @@
   }
 
   .link__text {
-    transition: all 150ms;
+    transition: opacity 150ms;
   }
 
   &--decorated {
@@ -57,7 +57,7 @@
     .link__icon {
       color: variables.$primary-color;
       opacity: 0.2;
-      transition: all 120ms;
+      transition: color 120ms, opacity 120ms;
     }
 
     @media (min-width: variables.$tablet-min-width) {

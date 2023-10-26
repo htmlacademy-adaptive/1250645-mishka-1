@@ -24,7 +24,7 @@
   display: block;
   margin-left: 27px;
   color: #63d1bb;
-  transition: all 120ms;
+  transition: color 120ms, opacity 120ms;
 
   @media (min-width: variables.$tablet-min-width) {
     margin-left: 26px;
