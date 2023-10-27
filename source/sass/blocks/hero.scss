@@ -15,13 +15,13 @@
   @media (min-width: variables.$tablet-min-width) {
     position: relative;
     padding: 101px 50px 7px;
-    background-image: url("../img/decoration/house-with-toys-non-mobile.jpg");
+    background-image: url("../img/decoration/house-with-toys.jpg");
     background-position: center bottom 5px;
     background-origin: content-box;
     background-size: 1150px 746px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/decoration/house-with-toys-non-mobile@2x.jpg");
+      background-image: url("../img/decoration/house-with-toys@2x.jpg");
     }
 
     &::after {
