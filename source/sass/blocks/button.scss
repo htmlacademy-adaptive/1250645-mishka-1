@@ -28,7 +28,7 @@
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
-  transition: all 120ms;
+  transition: color 120ms, background-color 120ms, opacity 120ms, transform 120ms;
 
   .button__label {
     transition: all 150ms;
@@ -94,10 +94,6 @@
 
     @media (min-width: variables.$tablet-min-width) {
       display: flex;
-
-      .button__label {
-        display: none;
-      }
     }
   }
 
@@ -188,5 +184,19 @@
     font-size: 17px;
     font-weight: 700;
     line-height: 16px;
+  }
+}
+
+.button__label {
+  @media (min-width: variables.$tablet-min-width) {
+    &--mobile-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
   }
 }

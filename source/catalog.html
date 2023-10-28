@@ -8,12 +8,22 @@
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <script src="js/app.min.js" defer></script>
     <title>Магазин &laquo;Мишка&raquo; - каталог товаров</title>
   </head>
   <body class="page__page-body page-body">
     <header>
       <nav class="navigation navigation--collapsed navigation--inner navigation--nojs">
+        <script>
+          /* Вынес критическую секцию скрипта по удалению модификатора --nojs в разметку, чтобы оптимизировать загрузку страницы по критерию Cumulative Layout Shift в Lighthouse.
+          Если оставить эту логику во внешнем файле app.min.js (не важно, где подключать в <head> или в конце <body>), то при отрисовке мобильной страницы навигационное меню
+          изначально находится из-за модификатора --nojs в потоке и смещает остальной контент вниз, а после выполнения скрипта скрывается и вызывает перерисовку начального экрана.
+          Lighthouse при такой реализации выдает по критерию CLS ~ 0.4 в красной зоне. Т.е. надо не дать отрисоваться мобильному меню в потоке при наличии JS.
+          После применения данной оптимизации цифры CLS становятся адекватными ~ 0.002 */
+          document.querySelector(".navigation").classList.remove("navigation--nojs");
+        </script>
         <div class="navigation__wrapper">
           <div class="navigation__head-wrapper">
             <a class="logo-link" href="index.html">
@@ -39,7 +49,7 @@
                 <svg class="button__icon" width="18" height="18" aria-hidden="true">
                   <use href="img/decoration/svg/sprite.svg#magnifier"/>
                 </svg>
-                <span class="button__label">Поиск по сайту</span>
+                <span class="button__label button__label--mobile-only">Поиск по сайту</span>
               </button>
             </li>
             <li class="navigation__menu-item">
