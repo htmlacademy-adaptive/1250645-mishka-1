@@ -1,0 +1,26 @@
+@use "common/variables";
+
+.caption {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: variables.$mobile-max-width) {
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      flex-grow: 1;
+      background-color: currentColor;
+    }
+  }
+}
+
+.caption__text {
+  min-width: 60px;
+  max-width: 50%;
+  padding-right: 16px;
+
+  &--narrow {
+    padding-right: 20px;
+  }
+}
