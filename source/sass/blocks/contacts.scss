@@ -42,7 +42,7 @@
   @media (min-width: variables.$desktop-min-width) {
     grid-column: 1 / 3;
     display: grid;
-    grid-template-columns: 175px 1fr;
+    grid-template-columns: 175px minmax(350px, 1fr);
     grid-auto-rows: min-content;
     padding: 0;
 
@@ -57,13 +57,16 @@
 
 .contacts__title {
   margin: 0 0 28px;
+  word-break: break-word;
 
   @media (min-width: variables.$tablet-min-width) {
+    max-width: 85%;
     margin: 23px 0 49px;
     order: 1;
   }
 
   @media (min-width: variables.$desktop-min-width) {
+    max-width: 100%;
     margin: 0;
     margin-left: -1px;
     padding: 79px 40px 35px 0;
@@ -96,6 +99,10 @@
   @media (min-width: variables.$tablet-min-width) {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    display: block;
   }
 }
 
@@ -133,6 +140,8 @@
 
   @media (min-width: variables.$tablet-min-width) {
     width: 78px;
+    flex-shrink: 0;
+    word-break: break-all;
   }
 }
 
@@ -161,6 +170,7 @@
     grid-column: 3 / 4;
     grid-row: 1 / 3;
     margin: 0;
+    align-self: center;
   }
 
   &--nojs {
