@@ -138,7 +138,6 @@
 
   &--button-big {
     @include button-like();
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding: 16px 20px;
   }
 }

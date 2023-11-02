@@ -1,5 +1,19 @@
 @use "common/variables";
 
+@mixin decorated-section() {
+  border-bottom: 6px solid variables.$secondary-background-color;
+  border-image: url("../img/decoration/svg/pattern/zigzag-line.svg") 6 0 repeat;
+
+  @media (min-width: variables.$tablet-min-width) {
+    border-bottom: 17px solid variables.$secondary-background-color;
+    border-image-repeat: stretch;
+  }
+
+  @media (min-width: variables.$desktop-min-width) {
+    border-bottom: 23px solid variables.$secondary-background-color;
+  }
+}
+
 .main-container__header-wrapper {
   background-color: variables.$secondary-background-color;
 
@@ -70,17 +84,18 @@
 
 .main-container__section {
   &--decorated {
-    position: relative;
-    border-bottom: 6px solid variables.$secondary-background-color;
-    border-image: url("../img/decoration/svg/pattern/zigzag-line.svg") 6 0 repeat;
+    @include decorated-section();
+  }
+
+  &--padded {
+    padding-bottom: 45px;
 
     @media (min-width: variables.$tablet-min-width) {
-      border-bottom: 17px solid variables.$secondary-background-color;
-      border-image-repeat: stretch;
+      padding-bottom: 68px;
     }
 
     @media (min-width: variables.$desktop-min-width) {
-      border-bottom: 23px solid variables.$secondary-background-color;
+      padding-bottom: 67px;
     }
   }
 }

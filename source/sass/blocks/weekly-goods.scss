@@ -46,11 +46,17 @@
 .weekly-goods__title {
   margin: 0;
   order: 1;
+  color: variables.$color-turquoise;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
 
   @media (min-width: variables.$tablet-min-width) {
     width: 100px;
     margin-top: 6px;
     margin-right: 13px;
+    line-height: 17px;
     text-align: center;
   }
 

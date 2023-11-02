@@ -8,7 +8,7 @@
 
 .knitting-order__prompt {
   max-width: 1500px;
-  padding: 17px 30px 37px;
+  padding: 17px 30px 29px;
   margin: 0 auto;
   color: variables.$secondary-color;
   font-size: 13px;
@@ -16,7 +16,7 @@
   line-height: 24px;
 
   @media (min-width: variables.$tablet-min-width) {
-    padding: 54px 50px 15px;
+    padding: 54px 50px 14px;
     font-size: 17px;
     line-height: 30px;
   }
@@ -27,14 +27,11 @@
 }
 
 .knitting-order__section {
-  position: relative;
   padding: 0;
   margin: 0;
   border: none;
 
   @media (min-width: variables.$tablet-min-width) {
-    position: static;
-
     &--highlighted {
       background-color: variables.$secondary-background-color;
     }
@@ -46,33 +43,59 @@
   max-width: 1500px;
   padding: 0;
   margin: 0 30px;
-  border-top: 1px solid #62d1ba;
   flex-direction: column;
   align-items: flex-start;
 
   &--type {
-    padding: 38px 0 40px;
-    row-gap: 13px;
+    padding-bottom: 32px;
+
+    .knitting-order__section-name {
+      margin-bottom: 31px;
+    }
+
+    .knitting-order__control:not(:last-child) {
+      margin-bottom: 13px;
+    }
   }
 
   &--color {
-    padding: 32px 0 41px;
-    row-gap: 23px;
+    padding-bottom: 33px;
+
+    .knitting-order__section-name {
+      margin-bottom: 25px;
+    }
+
+    .knitting-order__control:not(:last-child) {
+      margin-bottom: 23px;
+    }
   }
 
   &--name {
-    padding: 36px 0 41px;
-    row-gap: 22px;
+    padding-bottom: 33px;
+
+    .knitting-order__section-name {
+      margin-bottom: 29px;
+    }
+
+    .knitting-order__control:not(:last-child) {
+      margin-bottom: 22px;
+    }
   }
 
   &--contacts {
-    border: none;
-    padding: 0 0 42px;
-    row-gap: 42px;
+    padding-bottom: 34px;
+
+    .knitting-order__text-control:not(:last-child) {
+      margin-bottom: 34px;
+    }
   }
 
   &--info {
-    padding: 30px 0 17px;
+    padding-bottom: 17px;
+
+    .knitting-order__section-name {
+      margin-bottom: 23px;
+    }
   }
 
   @media (min-width: variables.$tablet-min-width) {
@@ -80,11 +103,20 @@
     grid-template-columns: 167px 1fr;
     padding: 50px;
     margin: 0 auto;
-    border: none;
     row-gap: 26px;
     align-items: center;
 
+    .knitting-order__section-name {
+      margin-bottom: 0;
+    }
+
+    .knitting-order__control:not(:last-child) {
+      margin-bottom: 0;
+    }
+
     &--type {
+      padding-bottom: 51px;
+
       .knitting-order__control {
         margin-left: 3px;
       }
@@ -110,6 +142,10 @@
 
     &--contacts {
       display: block;
+
+      .knitting-order__text-control:not(:last-child) {
+        margin-bottom: 24px;
+      }
     }
 
     &--info {
@@ -129,6 +165,12 @@
     grid-template-columns: 175px 1fr;
 
     &--type {
+      padding-bottom: 50px;
+
+      .knitting-order__section-name {
+        margin-top: 2px;
+      }
+
       .knitting-order__control {
         margin-left: 1px;
       }
@@ -167,11 +209,13 @@
 }
 
 .knitting-order__section-name {
-  width: 60px;
+  width: 100%;
+  color: variables.$color-turquoise;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
   background-color: variables.$primary-background-color;
-  position: absolute;
-  top: 0;
-  transform: translateY(-50%);
 
   @media (min-width: variables.$tablet-min-width) {
     position: static;
@@ -181,7 +225,7 @@
   }
 
   @media (min-width: variables.$desktop-min-width) {
-    padding-left: 60px;
+    padding-left: 61px;
     padding-right: 30px;
   }
 }
@@ -196,11 +240,12 @@
 }
 
 .knitting-order__text-control {
-  position: relative;
   width: 100%;
-  padding: 12px 0 0;
   margin: 0;
-  border-top: 1px solid #62d1ba;
+
+  .knitting-order__section-name {
+    margin-bottom: 5px;
+  }
 
   @media (min-width: variables.$tablet-min-width) {
     position: static;
@@ -212,31 +257,18 @@
     &:not(:last-child) {
       margin-bottom: 24px;
     }
-  }
-}
 
-.knitting-order__text-control-name {
-  width: 60px;
-  background-color: variables.$primary-background-color;
-  position: absolute;
-  top: 0;
-  transform: translateY(-50%);
-
-  &--long {
-    width: 78px;
-  }
-
-  @media (min-width: variables.$tablet-min-width) {
-    position: static;
-    background-color: transparent;
-    flex: 0 0 167px;
-    transform: none;
+    .knitting-order__section-name {
+      flex: 0 0 167px;
+    }
   }
 
   @media (min-width: variables.$desktop-min-width) {
-    flex-basis: 175px;
-    padding-left: 62px;
-    padding-right: 28px;
+    .knitting-order__section-name {
+      max-width: 175px;
+      padding-left: 62px;
+      flex-basis: 175px;
+    }
   }
 }
 
@@ -267,6 +299,7 @@
 
   @media (min-width: variables.$tablet-min-width) {
     margin-bottom: 0;
+    margin-left: 30px;
     order: 1;
     font-size: 17px;
     line-height: 30px;

@@ -83,7 +83,9 @@
         <form class="knitting-order__form" action="http://echo.htmlacademy.ru" method="post">
           <fieldset class="knitting-order__section">
             <div class="knitting-order__section-content knitting-order__section-content--type">
-              <b class="knitting-order__section-name legend">Тип</b>
+              <b class="knitting-order__section-name caption">
+                <span class="caption__text">Тип</span>
+              </b>
               <p class="knitting-order__control control control--one-line">
                 <label class="control__label" for="type-accessory">Аксессуар для интерьера</label>
                 <input class="control__input control__input--radio input input--radio" id ="type-accessory" type="radio" name="type" value="accessory" checked>
@@ -96,7 +98,9 @@
           </fieldset>
           <fieldset class="knitting-order__section knitting-order__section--highlighted">
             <div class="knitting-order__section-content knitting-order__section-content--color">
-              <b class="knitting-order__section-name legend">Цвет</b>
+              <b class="knitting-order__section-name caption">
+                <span class="caption__text">Цвет</span>
+              </b>
               <p class="knitting-order__control control control--one-line">
                 <label class="control__label" for="color-white">Белый</label>
                 <input class="control__input control__input--checkbox input input--checkbox" id="color-white" type="checkbox" name="white" checked>
@@ -125,7 +129,9 @@
           </fieldset>
           <fieldset class="knitting-order__section">
             <div class="knitting-order__section-content knitting-order__section-content--name">
-              <b class="knitting-order__section-name legend">ФИО</b>
+              <b class="knitting-order__section-name caption">
+                <span class="caption__text">ФИО</span>
+              </b>
               <p class="knitting-order__control control control--simple">
                 <label class="control__label" for="first-name">Имя:</label>
                 <input class="control__input input input--text" id="first-name" type="text" name="first-name" placeholder="Введите ваше имя*" required>
@@ -143,7 +149,9 @@
           <fieldset class="knitting-order__section knitting-order__section--highlighted">
             <div class="knitting-order__section-content knitting-order__section-content--contacts">
               <p class="knitting-order__text-control">
-                <b class="knitting-order__text-control-name legend">Тел</b>
+                <b class="knitting-order__section-name caption">
+                  <span class="caption__text">Тел</span>
+                </b>
                 <span class="knitting-order__control control">
                   <label class="visually-hidden" for="phone">Телефон</label>
                   <span class="control__decorated-input">
@@ -155,7 +163,9 @@
                 </span>
               </p>
               <p class="knitting-order__text-control">
-                <b class="knitting-order__text-control-name knitting-order__text-control-name--long legend">E-mail</b>
+                <b class="knitting-order__section-name caption">
+                  <span class="caption__text caption__text--narrow">E-mail</span>
+                </b>
                 <span class="knitting-order__control control">
                   <label class="visually-hidden" for="email">Адрес электронной почты</label>
                   <span  class="control__decorated-input control__decorated-input--email">
@@ -170,7 +180,9 @@
           </fieldset>
           <p class="knitting-order__section">
             <span class="knitting-order__section-content knitting-order__section-content--info">
-              <span class="knitting-order__section-name legend">Доп</span>
+              <b class="knitting-order__section-name caption">
+                <span class="caption__text caption__text--narrow">Доп</span>
+              </b>
               <span class="knitting-order__control control">
                 <label class="visually-hidden" for="request">Допопнительная информация</label>
                 <textarea class="control__input control__input--textarea input input--textarea" id="request" name="request" placeholder="Опишите все ваши пожелания к заказу"></textarea>

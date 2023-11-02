@@ -1,7 +1,7 @@
 @use "common/variables";
 
 .feedback {
-  padding: 29px 30px 45px;
+  padding: 29px 30px 0;
   background-color: variables.$primary-background-color;
 
   @media (min-width: variables.$tablet-min-width) {
@@ -9,10 +9,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 79px 50px 115px;
+    padding: 79px 50px 47px;
     background-image: url("../img/decoration/knitted-napkin.jpg");
     background-repeat: no-repeat;
-    background-size: 350px 457px;
+    background-size: auto 100%;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/decoration/knitted-napkin@2x.jpg");
@@ -20,7 +20,7 @@
   }
 
   @media (min-width: variables.$desktop-min-width) {
-    padding: 78px 0 162px 175px;
+    padding: 78px 0 96px 175px;
   }
 }
 
@@ -54,7 +54,7 @@
 
   @media (min-width: variables.$tablet-min-width) {
     flex: 0 0 175px;
-    margin-bottom: 40px;
+    margin-bottom: 39px;
     font-size: 17px;
   }
 

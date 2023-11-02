@@ -23,6 +23,7 @@
 .copyright__logo {
   display: block;
   margin-left: 27px;
+  flex-shrink: 0;
   color: #63d1bb;
   transition: color 120ms, opacity 120ms;
 
