@@ -1,2 +1,2 @@
-const modalShowButton = document.querySelector(".weekly-goods__button");
-modalShowButton?.addEventListener("click", showModal);
+const modalShowButton = document.querySelector('.weekly-goods__button');
+modalShowButton?.addEventListener('click', showModal);
