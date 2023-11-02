@@ -6,6 +6,7 @@
   border-bottom: 2px solid variables.$primary-color;
   border-radius: 0;
   color: variables.$secondary-color;
+  font-family: variables.$font-stack;
   font-size: 19px;
   font-weight: 400;
   line-height: 18px;
@@ -138,5 +139,6 @@
     border: 2px solid variables.$secondary-color;
     resize: none;
     padding: 15px;
+    color: variables.$primary-color;
   }
 }

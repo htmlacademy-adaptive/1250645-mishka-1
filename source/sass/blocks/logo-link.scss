@@ -24,6 +24,8 @@
   }
 
   &--footer {
+    color: variables.$primary-color;
+
     @media (max-width: variables.$mobile-max-width) {
       display: none;
     }
@@ -32,20 +34,13 @@
       margin: 0;
 
       &[href]:hover {
+        color: #46c1ae;
         opacity: 1;
-
-        .logo-link__image {
-          fill: #46c1ae;
-        }
       }
 
       &[href]:active {
-        opacity: 1;
-
-        .logo-link__image {
-          fill: #46c1ae;
-          opacity: 0.3;
-        }
+        color: #46c1ae;
+        opacity: 0.3;
       }
     }
   }
