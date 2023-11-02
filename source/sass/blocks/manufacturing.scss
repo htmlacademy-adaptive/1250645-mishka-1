@@ -118,7 +118,6 @@
   }
 
   @media (min-width: variables.$desktop-min-width) {
-    position: relative;
     grid-row: 1 / 3;
     z-index: 1;
   }

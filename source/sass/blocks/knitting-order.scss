@@ -265,6 +265,7 @@
 
   @media (min-width: variables.$desktop-min-width) {
     .knitting-order__section-name {
+      max-width: 175px;
       padding-left: 62px;
       flex-basis: 175px;
     }
